@@ -3,13 +3,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  // overflow-x: hidden;
   scroll-behavior: smooth;
   font-weight: lighter;
 }
 // -----custom classes-----
 .second-color {
   color: $second;
+}
+.main-color {
+  color: $main;
 }
 .text-special {
   font-family: $text-spec;
@@ -19,24 +21,20 @@
   font-size: 70px;
 }
 // -------contact us form-------
-// .contact-us-form {
-//   width: 60%;
-//   margin: 0 auto;
-// }
+
 .form {
   display: flex;
   flex-direction: column;
   width: 60%;
   margin: 0 auto;
-  label {
-    // color: $main;
-    // font-size: 18px;
+  label:hover {
+    font-size: 17px;
+    transition: 0.5s;
+    color: $second;
   }
   input {
     background-color: rgb(244, 244, 244);
     margin-bottom: 20px;
-    // border-radius: 10px;
-    // width: 80%;
     border: 0px;
     border-bottom: 1px solid $second;
   }
@@ -52,6 +50,7 @@
     margin: 0 auto;
   }
 }
+
 // -----info div-------
 .info {
   // background-image: url("4.png");
