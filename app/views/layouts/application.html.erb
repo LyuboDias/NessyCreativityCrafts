@@ -26,7 +26,11 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
+    <p>
+      <%= link_to "Home", root_path %> |
+      <%= link_to pluralize(current_cart.items_count, 'item'), cart_path %>
+    </p>
+    <hr>
     <%= yield %>
     <%= render 'shared/footer' %>
 
