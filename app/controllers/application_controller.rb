@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   # we want cart to be created as sooon as make first request
   before_action :current_cart
 

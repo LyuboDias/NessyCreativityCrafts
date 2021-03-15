@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_162600) do
+ActiveRecord::Schema.define(version: 2021_03_15_150728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 2021_03_12_162600) do
 
   create_table "order_items", force: :cascade do |t|
     t.integer "quantity", default: 0, null: false
-    t.decimal "price", precision: 15, scale: 2, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "order_id", null: false
     t.bigint "product_id", null: false
+    t.integer "price_cents", default: 0, null: false
     t.index ["order_id"], name: "index_order_items_on_order_id"
     t.index ["product_id"], name: "index_order_items_on_product_id"
   end
@@ -74,20 +74,34 @@ ActiveRecord::Schema.define(version: 2021_03_12_162600) do
 
   create_table "product_variants", force: :cascade do |t|
     t.string "title", null: false
-    t.decimal "price", precision: 15, scale: 2, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "product_id", null: false
+    t.integer "price_cents", default: 0, null: false
     t.index ["product_id"], name: "index_product_variants_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
     t.string "title", null: false
     t.text "description"
-    t.decimal "price", precision: 15, scale: 2, null: false
     t.string "images"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "sku"
+    t.integer "price_cents", default: 0, null: false
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.string "state"
+    t.string "product_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_purchases_on_product_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -108,4 +122,6 @@ ActiveRecord::Schema.define(version: 2021_03_12_162600) do
   add_foreign_key "product_categories", "categories"
   add_foreign_key "product_categories", "products"
   add_foreign_key "product_variants", "products"
+  add_foreign_key "purchases", "products"
+  add_foreign_key "purchases", "users"
 end

@@ -49,7 +49,26 @@ puts 'Creating new data base.'
 # custome_mug.image.attach(io: custome_mug_pic, filename: "custome_mug_pic.jpg", content_type: "image/jpg")
 # custome_mug.save!
 
+
+
+# puts 'Cleaning database...'
+# Teddy.destroy_all if Rails.env.develepment?
+# Category.destroy_all if Rails.env.develepment?
+
+# puts 'Creating categories...'
+# geek = Category.create!(name: 'geek')
+# kids = Category.create!(name: 'kids')
+
+# puts 'Creating teddies...'
+# Teddy.create!(sku: 'original-teddy-bear', name: 'Teddy bear', category: kids, photo_url: 'http://onehdwallpaper.com/wp-content/uploads/2015/07/Teddy-Bears-HD-Images.jpg')
+
+# Teddy.create!(sku: 'jean-mimi', name: 'Jean-Michel - Le Wagon', category: geek, photo_url: 'https://pbs.twimg.com/media/B_AUcKeU4AE6ZcG.jpg:large')
+# Teddy.create!(sku: 'octocat',   name: 'Octocat -  GitHub',      category: geek, photo_url: 'https://cdn-ak.f.st-hatena.com/images/fotolife/s/suzumidokoro/20160413/20160413220730.jpg')
+# puts 'Finished!'
+
 # ------------------Using Faker-----------------------
+
+
 PRODUCTS_COUNT = 100
 
 MAX_CATEGORIES = 3
@@ -73,7 +92,7 @@ PRODUCTS_COUNT.times do
 
   product = Product.new(
     title: title,
-    price: Faker::Commerce.price
+    price_cents: rand(2000)
   )
 
   num_categories = 1 + rand(MAX_CATEGORIES)

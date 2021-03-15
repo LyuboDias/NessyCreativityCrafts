@@ -1,12 +1,22 @@
-<h2>Categories (<%= @categories.length %>)</h2>
 
-<ul class="ml-5">
-  <% @categories.each do |category|%>
-    <li>
-      <%=link_to category_products_path(category) do %>
-        <%= category.title %>
-        (<%= category.products_count %> products)
-      <% end %>
-    </li>
-  <% end%>
-</ul>
+
+
+
+<div class="container">
+  <h2>Categories (<%= @categories.length %>)</h2>
+  <div class="row">
+    <% @categories.each do |category|%>
+      <div class="col-6 col-md-4">
+        <div class="card">
+          <%# <%= image_tag teddy.photo_url , class: "card-img-top" %> 
+          <div class="card-body">
+            <%=link_to category_products_path(category) do %>
+              <%= category.title %>
+              (<%= category.products_count %> products)
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
