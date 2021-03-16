@@ -9,7 +9,9 @@ class OrderItemsController < ApplicationController
       quantity: params[:quantity]
     ) 
 
-    redirect_to cart_path
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: "You have succsefuly added this item!" }
+    end
   end
 
   def destroy

@@ -6,11 +6,11 @@
   Products
 </h2>
   <div class="row">
-    <% @products.each do |product| %>
+    <% @products.each do |product| %> 
       <div class="col-6 col-md-4">
         <div class="card">
           <%= product.title %> ( <%= humanized_money_with_symbol(product.price) %> )
-          <%# <%= image_tag teddy.photo_url , class: "card-img-top" %> 
+          <%= image_tag product.images, class: "card-img-top" %>
           <div class="card-body">
             <%# <h5 class="card-title"><%= teddy.name %></h5> 
             <%# <p class="card-text"><%= teddy.category.name %></p> 
@@ -18,8 +18,9 @@
             <%= form_tag order_items_path do %>
               <%= hidden_field_tag :product_id, product.id%>
               <%= number_field_tag :quantity, 1%>
-              <%= submit_tag "Add to cart"%>
-            <% end %> 
+              <%= submit_tag 'Add to cart'%>
+              <%# <% render products_index_path%> 
+            <% end %>  
             <%# <ul class="ml-5">
               <% product.variants.each do |variant| %>
                 <%#<li><%= variant.title %><%#(<%= number_to_currency variant.price ) </li> %>

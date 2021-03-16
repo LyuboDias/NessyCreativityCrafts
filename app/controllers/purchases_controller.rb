@@ -1,14 +1,18 @@
 class PurchasesController < ApplicationController
  def create
-  product = Product.new(title: 'testing', sku: 'this is testing for stripe payments', price: 25)
-  purchase  = Purchase.create!(product: product, product_sku: product.sku, amount: product.price, state: 'pending', user: current_user)
+  # products = Product.find(params[:@items])
+  product = Product.new(title: 'My cart', sku: 'Thank you for your busenes', price: 25)
+  # purchase  = Purchase.create!(product: product, product_sku: product.sku, amount: current_cart.sub_total.to_f / 100, state: 'pending', user: current_user)
+
+
+  purchase  = Purchase.create!(product: product, product_sku: product.sku, amount: current_cart.sub_total.to_f / 100, state: 'pending', user: current_user)
 
   session = Stripe::Checkout::Session.create(
     payment_method_types: ['card'],
-    line_items: [{ 
+    line_items: [{  
       name: product.title,
       # images: [product.photo_url],
-      amount: product.price_cents,
+      amount: current_cart.sub_total.to_int,
       currency: 'gbp',
       quantity: 1 
     }],
