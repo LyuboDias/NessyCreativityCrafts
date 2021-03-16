@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+skip_before_action :authenticate_user!
 
   def index
    # here we find columns in select query and use them as methods on resulting objects

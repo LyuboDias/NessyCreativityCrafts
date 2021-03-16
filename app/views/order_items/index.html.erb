@@ -13,24 +13,35 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= item.product.title %></td>
-        <td><%= number_to_currency item.price %></td>
-        <td class="pl-3"><%= item.quantity %></td>
+        <td><%= humanized_money_with_symbol(item.price) %> </td>
+        <td class="pl-3"><%= item.quantity  %></td>
+        <%# <td class="pl-3"><%= item.id  %></td> 
         <td>
           <%= form_for item, method: :delete do |f| %>
             <%= f.submit "Remove" %>
           <% end %>
         </td>
-      </tr>
+        <td class="pl-3"><%= form_tag purchases_path do %>
+            <%= hidden_field_tag 'item_id', item.id %> 
+            <%= submit_tag 'Purchase', class: 'btn btn-primary' %> 
+          <% end %> </td>
+        </tr>
     <% end %>
   </tbody>
 
   <tfoot>
     <tr>
       <td colspan="4" align="right">
-        <%= number_to_currency current_cart.sub_total %>
+        Amount: <%= humanized_money_with_symbol(current_cart.sub_total.to_f / 100) %> 
       </td>
     </tr>
   </tfoot>
 </table>
+<br>
+<br>
 
-<%= link_to 'Checkout', checkout_path %>
+
+
+
+
+<%# <%= link_to 'Checkout', checkout_path %> 

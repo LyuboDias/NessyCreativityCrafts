@@ -5,5 +5,6 @@ class Product < ApplicationRecord
 
   has_many :variants, class_name: 'ProductVariant'
   has_one_attached :image
-end
+  monetize :price_cents
+end 
   
