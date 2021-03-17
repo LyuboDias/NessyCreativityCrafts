@@ -3,9 +3,9 @@
 <table>
   <thead>
     <tr>
-      <td>Product</td>
-      <td>Price</td>
-      <td>Quantity</td> 
+      <td class="font-weight-bold">Product</td>
+      <td class="font-weight-bold">Price</td>
+      <td class="font-weight-bold">Quantity</td> 
       <td></td>
     </tr>
   </thead>
@@ -17,12 +17,12 @@
         
         <td><%= humanized_money_with_symbol(item.price) %> </td>
         <td class="pl-3"><%= item.quantity  %></td>
+        
         <td>
           <%= form_for item, method: :delete do |f| %>
-            <%= f.submit "Remove" %>
+            <%= f.submit "Remove" %> 
           <% end %>
         </td>
-         
         </tr>
     <% end %>
   </tbody>
@@ -38,11 +38,11 @@
 <br>
 <br>
 
-
 <%= form_tag purchases_path do %>
   <%= hidden_field_tag 'item_id' %> 
   <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
 <% end %> 
+
 
 
 <%# <%= link_to 'Checkout', checkout_path %> 
