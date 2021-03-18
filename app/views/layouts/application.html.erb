@@ -26,10 +26,8 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-     <hr>
-    <p align="right" class="mr-3">
-      <%= link_to "Shop", categories_path %>  Cart  <%= link_to pluralize(current_cart.items_count, 'item'), cart_path %>
-    </p>
+     
+    
    
     <%= yield %>
     <%= render 'shared/footer' %>

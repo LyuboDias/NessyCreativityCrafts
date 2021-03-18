@@ -28,8 +28,7 @@
   width: 60%;
   margin: 0 auto;
   label:hover {
-    font-size: 17px;
-    transition: 0.5s;
+    transition: 1s ease;
     color: $second;
   }
   input {
@@ -48,6 +47,21 @@
   button {
     width: 40%;
     margin: 0 auto;
+    background: linear-gradient(
+      -45deg,
+      rgb(235, 238, 218),
+      #fedada,
+      #feceda,
+      #e5cdf9
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    border-radius: 5px;
+    border: none;
+    color: rgb(97, 97, 97);
+    &:hover {
+      color: black;
+    }
   }
 }
 
@@ -70,4 +84,15 @@
   width: 50%;
   margin: 0 auto;
   // height: 400px;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

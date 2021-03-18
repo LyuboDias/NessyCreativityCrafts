@@ -1,4 +1,11 @@
-<h2>Current Cart</h2>
+
+ <% unless @items.count > 0 %>
+    <h2>Your cart is empty at the moment,please continue shopping.</h2>
+    <%= link_to "Shop", categories_path %>
+<% else %>
+    <h2>Your Cart</h2>
+    
+<% end %>
 
 <table>
   <thead>
