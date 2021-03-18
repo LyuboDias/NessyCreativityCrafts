@@ -44,22 +44,16 @@
 .navbar-lewagon .navbar-brand img {
   width: 70px;
 }
-.hr {
-  margin: 0 auto;
-  max-width: 90%;
-  height: 1px;
-  background-color: $second;
-  // opacity: 0.3;
-}
+
 .nav-link {
   margin-right: 5px;
-}
-.nav-link:hover {
-  border-bottom: 1px solid $second;
-  -webkit-transition: 1s ease;
-  -moz-transition: 1s ease;
-  -o-transition: 1s ease;
-  transition: 1s ease;
+  &:hover {
+    border-bottom: 1px solid $second;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+  }
 }
 .dropdown-menu {
   border-radius: 5px;

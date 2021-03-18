@@ -13,6 +13,9 @@
 .main-color {
   color: $main;
 }
+.db {
+  color: #c4254e;
+}
 .text-special {
   font-family: $text-spec;
   color: $main;
@@ -20,12 +23,30 @@
 .text-big {
   font-size: 70px;
 }
+.hr {
+  margin: 0 auto;
+  max-width: 90%;
+  height: 1px;
+  background: linear-gradient(
+    -45deg,
+    rgb(235, 238, 218),
+    #fedada,
+    #feceda,
+    #e5cdf9
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
 // -------contact us form-------
 
+.contact-us-form {
+  max-width: 420px;
+  margin: 0 auto;
+}
 .form {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  // width: 60%;
   margin: 0 auto;
   label:hover {
     transition: 1s ease;

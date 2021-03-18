@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/categories', to: 'categories#index'
   get '/contacts', to: 'contacts#index'
+  get '/about', to: 'about#index'
+  get '/terms', to: 'terms#index'
+  get '/privacy', to: 'privacy#index'
+  get '/delivery', to: 'delivery#index'
+  get '/returns', to: 'returns#index'
+  get '/qanda', to: 'qanda#index'
+  get '/covid', to: 'covid#index'
   resources :categories, only: [:index] do
     resources :products, only: [:index] 
   end
