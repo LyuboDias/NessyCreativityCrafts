@@ -2,14 +2,16 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/categories', to: 'categories#index'
-  get '/contacts', to: 'contacts#index'
-  get '/about', to: 'about#index'
-  get '/terms', to: 'terms#index'
-  get '/privacy', to: 'privacy#index'
-  get '/delivery', to: 'delivery#index'
-  get '/returns', to: 'returns#index'
-  get '/qanda', to: 'qanda#index'
-  get '/covid', to: 'covid#index'
+  get '/contacts', to: 'pages#contacts'
+  get '/about', to: 'pages#about'
+  get '/terms', to: 'pages#terms'
+  get '/privacy', to: 'pages#privacy'
+  get '/delivery', to: 'pages#delivery'
+  get '/returns', to: 'pages#returns'
+  get '/qanda', to: 'pages#qanda'
+  get '/covid', to: 'pages#covid'
+  get '/profile', to: 'pages#profile'
+  get '/help', to: 'pages#help'
   resources :categories, only: [:index] do
     resources :products, only: [:index] 
   end
@@ -23,6 +25,8 @@ Rails.application.routes.draw do
   resources :purchases, only: [:show, :create] do
     resources :payments, only: :new
   end
+
+  resources :user_details, only: [:new, :create, :edit, :update, :destroy] 
 
   mount StripeEvent::Engine, at: '/stripe-webhooks'
 end 

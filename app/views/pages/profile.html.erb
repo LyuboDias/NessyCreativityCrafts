@@ -1,0 +1,13 @@
+
+  
+  <div class="profile-container pt-3 text-center">
+    <h1>My Profile</h1>
+  </div>
+  <div class="profile text-center mb-5">
+      <p>My cart----<%= current_cart.items_count %></p>
+      <p> My email----<%= @user.email %></p>
+    <br>
+    <br>
+    <%= link_to new_user_detail_path, class: "form-button btn-lg" do %>Add Details </i>
+      <% end %>
+  </div>

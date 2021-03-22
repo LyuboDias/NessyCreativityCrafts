@@ -4,7 +4,7 @@
       <p class="text-special" data-aos="fade-down"  data-aos-duration="3000" style="font-size:60px"><span class="second-color">Nessy</span>  <span class="main-color">Creativity Crafts</span></p>
       <br>
       <br>
-      <button data-aos="fade-up"  data-aos-duration="3000" >SHOP NOW <i class="fas fa-long-arrow-alt-down arrow-down"></i></button>
+      <a href="#cards" class="shop-now"> SHOP NOW <i class="fas fa-long-arrow-alt-down arrow-down"></i></a>
     </div>
   </div>
 </div>
@@ -24,9 +24,7 @@
       <br>
       <br>
 
-      <div class="flipping-cards">
-  
-        
+      <div class="flipping-cards" id="cards">
           <div class="flipping-card">
             <div class="front card-1">
               <p class="heading2">Mugs</p>
@@ -56,22 +54,7 @@
               <%= link_to "Shop", categories_path, class: "text-dark text-decoration-none" %>
             </div>
           </div>
-        </div><!--end container-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
     
     <%# --------------------------------- %>
         <br>
@@ -82,7 +65,7 @@
         </p>
   </div>
 </div>
-
+ 
 
 <%# ------------------------contact us form -------------------%>
 <br>
@@ -98,18 +81,21 @@
               action="https://formspree.io/f/xbjpaprp"
               method="POST"
               class="form pt-4"
-            >
+            > 
               <label>
                 Full Name:
                 <input type="text" name="name" class="form-control input">
+                <div class="hr"></div>
               </label>
               <label>
                 Email:
                 <input type="text" name="_replyto" class="form-control input">
+                <div class="hr"></div>
               </label>
-              <label>
+              <label> 
                 Your message:
                 <textarea name="message" class="form-control text-area"></textarea>
+                <div class="hr"></div>
               </label>
                <button type="submit" class="btn-lg btn-outline-primary">Send</button>
             </form>

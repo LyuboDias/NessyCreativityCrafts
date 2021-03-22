@@ -1,0 +1,45 @@
+// -----------------------
+.form-wrap {
+  // max-width: 35%;
+  width: 400px;
+  margin: 0 auto;
+}
+.form-control {
+  border: none !important;
+  background-color: rgb(244, 244, 244) !important;
+}
+.form-group {
+  margin: 0;
+}
+.required:hover {
+  color: $second;
+}
+.form-actions {
+  display: flex;
+  justify-content: center;
+}
+.form-button {
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: 0 auto;
+  background: $linear;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border-radius: 5px;
+  border: none;
+  color: rgb(97, 97, 97);
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+.device-links {
+  color: rgb(83, 83, 83);
+  padding-bottom: 3px;
+  &:hover {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid $second;
+    transition: 1s ease;
+  }
+}
+// ---------------------------------

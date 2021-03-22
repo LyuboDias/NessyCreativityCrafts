@@ -1,0 +1,7 @@
+<h2 class="map-popup-chef">first name <%= user_detail.f_name %></h2>
+<h2 class="map-popup-chef">Last name <%= user_detail.l_name %></h2>
+
+<p id="area-popup"><em>addres<%= user_detail.address %></em></p>
+<p id="cuisine-popup"><strong>postcode: </strong><%= user_detail.postcode %></p>
+<p id="cuisine-popup"><strong>phone: </strong><%= user_detail.phone %></p>
+<%= link_to 'See user_detail Profile', user_detail_path(user_detail), class: 'btn btn-info' %>

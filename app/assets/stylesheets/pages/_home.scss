@@ -26,6 +26,7 @@
 }
 .db {
   color: #c4254e;
+  opacity: 0.5;
 }
 .text-special {
   font-family: $text-spec;
@@ -36,7 +37,7 @@
 }
 .hr {
   margin: 0 auto;
-  max-width: 90%;
+  // max-width: 90%;
   height: 1px;
   background: $linear;
   background-size: 400% 400%;
@@ -68,7 +69,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    button {
+    .shop-now {
       border-radius: 50px;
       box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
       font-size: 30px;
@@ -88,6 +89,7 @@
       }
       &:hover {
         color: white;
+        text-decoration: none;
       }
     }
   }
@@ -111,11 +113,11 @@
     background-color: rgb(244, 244, 244);
     margin-bottom: 20px;
     border: 0px;
-    border-bottom: 1px solid $second;
+    // border-bottom: 1px solid $second;
   }
   .text-area {
     border: 0px;
-    border-bottom: 1px solid $second;
+    // border-bottom: 1px solid $second;
     margin-bottom: 20px;
     background-color: rgb(244, 244, 244);
     height: 100px;
@@ -218,10 +220,6 @@
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
-
-// .card-2 .card-3 .card-1 {
-//   background-color: $linear;
-// }
 
 .flipping-card img {
   background-position: center;
