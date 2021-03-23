@@ -1,6 +1,13 @@
-<!-- Don't delete, meta info -->
-<% content_for :meta_title, "#{@user_detail.l_name} is on #{DEFAULT_META["meta_user_name"]}" %>
-<% content_for :meta_description, @user_detail.postcode %>
+  <div class="profile-container pt-3 text-center">
+    <h1>My Profile</h1>
+  </div>
+  <div class="profile text-center mb-5">
+      <p>My cart----<%= current_cart.items_count %></p>
+      <%# <p> My email----<%= @user.email %></p> 
+    <br>
+    <br>
+  </div>
+
 
 <div class="chef-profile-page-container mb-5">
   <div class='chef-info ml-3'>
@@ -9,8 +16,8 @@
     <% end %>
 
     <!-- Chef Bio -->
-    <h2 id="chef-name"><%= @user_detail.f_name %>first name</h2>
-    <h3 id="experience"><%= @user_detail.l_name %> last name</h3>
+    <h2 id="chef-name"><%= @user_detail.f_name %>---first name</h2>
+    <h3 id="experience"><%= @user_detail.l_name %> ---last name</h3>
     <div class='user_detail-deets'>
       <p><strong>address:</strong> <%= @user_detail.address %></p>
       <p><strong> postcode:</strong> £<%= @user_detail.postcode %></p>
@@ -26,12 +33,11 @@
     Delete <i class="far fa-trash-alt"></i>
     <% end %>
     <br>
-    <%= link_to "Return to 'Browse user_details'", user_details_path, class: 'btn btn-info2 mb-3'  %>
+    <%= link_to "Return to My profile", profile_path, class: 'btn btn-info2 mb-3'  %>
   </div>
 
-   <div class="form-actions mt-4">
-    <%= f.submit 'Update', class: "form-button btn-lg" %>
-  </div>
+
+
 
 
  

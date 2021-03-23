@@ -1,7 +1,7 @@
 class UserDetail < ApplicationRecord
   # has_many :bookings
   # has_many :reviews, through: :bookings
-
+  belongs_to :user
 
 # include PgSearch::Model
 #     pg_search_scope :search_by_location,

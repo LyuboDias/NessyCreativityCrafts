@@ -28,8 +28,7 @@ class UserDetailsController < ApplicationController
 
    def show
      @user_detail = UserDetail.find(params[:id])
-     # @booking = Booking.new
-     # @average = @chef.average_review
+    
    end
 
    def new
@@ -37,13 +36,18 @@ class UserDetailsController < ApplicationController
    end
 
    def create
-     @user_detail = UserDetail.new(strong_params)
-     if @user_detail.save
-       redirect_to user_detail_path(@user_detail)
-       # redirect_to profile_path
-     else
-       render :new
-     end
+    # TODO user should be able to create only user_detail
+     # if UserDetail.count < 1 
+      @user_detail = UserDetail.new(strong_params)
+      
+      if @user_detail.save
+        redirect_to user_detail_path(@user_detail)
+        # redirect_to profile_path
+      else
+        # redirect_to root_path
+        render :new
+      end
+    # end
    end
 
    def edit
@@ -62,7 +66,8 @@ class UserDetailsController < ApplicationController
    def destroy
      @user_detail = UserDetail.find(params[:id])
      @user_detail.destroy
-     redirect_to user_details_path
+     # redirect_to user_details_path
+     redirect_to profile_path
    end
 
    private

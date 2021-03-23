@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     resources :payments, only: :new
   end
 
-  resources :user_details, only: [:new, :create, :edit, :update, :destroy] 
+  resources :user_details, only: [:new, :create, :edit, :update, :destroy, :show]  
 
   mount StripeEvent::Engine, at: '/stripe-webhooks'
 end 

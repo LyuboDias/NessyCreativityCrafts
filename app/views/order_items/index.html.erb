@@ -24,7 +24,12 @@
         
         <td><%= humanized_money_with_symbol(item.price) %> </td>
         <td class="pl-3"><%= item.quantity  %></td>
-        
+
+        <%= form_tag purchases_path do %>
+            <%= hidden_field_tag 'item_id', item.id%> 
+            <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+        <% end %>
+
         <td>
           <%= form_for item, method: :delete do |f| %>
             <%= f.submit "Remove" %> 
@@ -44,11 +49,7 @@
 </table>
 <br>
 <br>
-
-<%= form_tag purchases_path do %>
-  <%= hidden_field_tag 'item_id' %> 
-  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-<% end %> 
+ 
 
 
 
