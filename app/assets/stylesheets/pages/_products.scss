@@ -1,0 +1,81 @@
+// ------------index category---------
+.category-card {
+  margin: 0 0 132px 80px;
+  position: relative;
+  display: flex;
+  background: $linear;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  width: 70%;
+  justify-content: center;
+  height: 400px;
+  .category-image {
+    width: 320px;
+  }
+  .category-body {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+  }
+  .category-link {
+    text-decoration: none;
+  }
+  .category-image-div {
+    width: 200px;
+    display: flex;
+    align-items: center;
+  }
+}
+// -------------index products-------------------
+
+.product-wrap {
+  display: flex;
+  justify-content: space-around;
+  .product-card {
+    width: 300px;
+    .product-star {
+      color: $main;
+    }
+  }
+  .product-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .product-heart {
+      color: $main;
+      font-size: 20px;
+    }
+    .product-submit {
+      border: none;
+      position: relative;
+      &:hover ~ .popover-cart {
+        display: block;
+        transition: 0.5s ease;
+      }
+    }
+    .product-number-field {
+      border: none;
+      background: $linear;
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: white;
+      width: 54px;
+      margin-right: 5px;
+      padding: 0 10px;
+      border-radius: 3px;
+    }
+  }
+  .product-image-div {
+    display: flex;
+    align-items: center;
+    .product-image {
+      width: 250px;
+    }
+  }
+}
+.popover-cart {
+  padding: 4px;
+  display: none;
+  position: absolute;
+}

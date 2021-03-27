@@ -1,8 +1,9 @@
 
-  
+<div class="container">
   <div class="profile-container pt-3 text-center">
-    <h1>My Profile</h1>
+    <p class="heading2 ">My Profile</p>
   </div>
+  <div class="hr mt-5 mb-5"></div>
   <div class="profile text-center mb-5">
       <p>My cart----<%= current_cart.items_count %></p>
       <p> My email----<%= @user.email %></p>
@@ -11,5 +12,5 @@
     <%= link_to new_user_detail_path, class: "form-button btn-lg" do %>Add Details </i>
       <% end %>
   </div>
-
+</div>
 

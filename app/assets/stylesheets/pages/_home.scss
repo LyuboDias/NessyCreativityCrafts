@@ -152,7 +152,7 @@
 .find-craft {
   border-radius: 5px;
   box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  height: 200px;
+  height: 150px;
   background-image: $linear;
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -179,8 +179,8 @@
   box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border: none;
   position: relative;
-  width: 22%;
-  padding-bottom: 22%;
+  width: 30%;
+  padding-bottom: 30%;
 }
 
 .front,
@@ -227,4 +227,8 @@
   background-repeat: none;
   background-size: cover;
   width: 100%;
+}
+// -----------------ideas--------------------
+.images img {
+  width: 200px;
 }

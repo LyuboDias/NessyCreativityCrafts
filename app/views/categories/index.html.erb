@@ -1,21 +1,22 @@
-
-
-
-
 <div class="container">
   <p class="heading2 text-center">Here are our product categories </p>
   <div class="hr mt-5 mb-5"></div>
   <%# (<%= @categories.length %>
   <div class="row">
     <% @categories.each do |category|%>
-      <div class="col-6 col-md-4">
-        <div class="card">
-          <%# <%= image_tag category.product.images , class: "card-img-top" %> 
-          <div class="card-body">
-            <%=link_to category_products_path(category) do %>
-              <%= category.title %>
-               ( <%= category.products.count %> )
-            <% end %>
+      <div class="col-12">
+        <div class="category-card mb-5">
+          <div class="category-body text-left ">
+              <div class="pl-5 pr-5" >
+                <p class="heading2"><%= category.title %></p> 
+                <p>( <%= category.products.count %> products )</p>
+                <p> <%= category.description %></p>
+                <br>
+                <p><%=link_to "Shop now", category_products_path(category), class: "form-button btn-lg text-white"  %></p>
+              </div>
+          </div>
+          <div class="category-image-div">
+              <%= image_tag category.images , class: "category-image" %>
           </div>
         </div>
       </div>
