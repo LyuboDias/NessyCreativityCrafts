@@ -16,6 +16,10 @@ class OrderItemsController < ApplicationController
 
   def destroy
     current_cart.remove_item(id: params[:id])
-    redirect_to cart_path
+      # redirect_to cart_path
+
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: "You have succsefuly removed this item!" }
+    end
   end
 end

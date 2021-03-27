@@ -1,0 +1,51 @@
+.about-wrap {
+  display: flex;
+
+  .about-image img {
+    width: 400px;
+  }
+}
+.about-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 550px;
+  .about-text {
+    width: 430px;
+    position: absolute;
+    margin: 0 100px;
+  }
+  .about-div {
+    width: 320px;
+    height: 360px;
+    background-color: $main;
+    opacity: 0.4;
+  }
+}
+// ------------------
+.about-wrap2 {
+  display: flex;
+
+  .about-image2 img {
+    width: 400px;
+  }
+}
+.about-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 550px;
+  .about-text2 {
+    width: 500px;
+    position: absolute;
+    // margin: 0 100px;
+  }
+  .about-div2 {
+    width: 320px;
+    height: 360px;
+    background-color: $main;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+  }
+}

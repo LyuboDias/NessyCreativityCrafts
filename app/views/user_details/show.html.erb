@@ -1,0 +1,45 @@
+  <div class="profile-container pt-3 text-center">
+    <h1>My Profile</h1>
+  </div>
+  <div class="profile text-center mb-5">
+      <p>My cart----<%= current_cart.items_count %></p>
+      <%# <p> My email----<%= @user.email %></p> 
+    <br>
+    <br>
+  </div>
+
+
+<div class="chef-profile-page-container mb-5">
+  <div class='chef-info ml-3'>
+    <% if @user_detail.photo.attached? %>
+    <%= cl_image_tag @user_detail.photo.key, width: 360, fetch_format: :auto, quality: :auto, class: 'cloudinary-img responsive-img-phone' %>
+    <% end %>
+
+    <!-- Chef Bio -->
+    <h2 id="chef-name"><%= @user_detail.f_name %>---first name</h2>
+    <h3 id="experience"><%= @user_detail.l_name %> ---last name</h3>
+    <div class='user_detail-deets'>
+      <p><strong>address:</strong> <%= @user_detail.address %></p>
+      <p><strong> postcode:</strong> £<%= @user_detail.postcode %></p>
+      <p><strong>phone:</strong> <%= @user_detail.phone %></p>
+    </div>
+
+    <!-- Buttons -->
+    <%= link_to "Update", edit_user_detail_path(@user_detail), class: 'btn btn-info2 mb-2' %>
+    <%= link_to user_detail_path(@user_detail),
+                method: :delete,
+                data: { confirm: "Are you sure you want to delete?" },
+                class: 'btn btn-danger2 mb-2' do %>
+    Delete <i class="far fa-trash-alt"></i>
+    <% end %>
+    <br>
+    <%= link_to "Return to My profile", profile_path, class: 'btn btn-info2 mb-3'  %>
+  </div>
+
+
+
+
+
+ 
+
+

@@ -1,0 +1,27 @@
+.footer-link {
+  color: black;
+  padding: 5px;
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px solid $second;
+    transition: 1s ease;
+    color: black;
+  }
+}
+.heading2 {
+  font-size: 30px;
+}
+.s-media {
+  font-size: 30px;
+  color: $main;
+  padding: 0 10px;
+  opacity: 0.8;
+  &:hover {
+    color: $main;
+    opacity: 1;
+  }
+}
+.bank-cards {
+  width: 180px;
+  margin: 10px auto;
+}
