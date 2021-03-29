@@ -232,3 +232,28 @@
 .images img {
   width: 200px;
 }
+// ----------------touts--------------------
+.touts-img {
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+  margin-right: 10px;
+}
+// -------------how we do section------------------
+.how-we-do-img {
+  position: relative;
+}
+.how-we-do-body {
+  position: absolute;
+  background-color: white;
+  width: 80%;
+  height: 115px;
+  // margin: 0 auto;
+  left: 50px;
+  bottom: -50px;
+}
+// ------------hot items------------------
+.hot-item-img {
+  height: 400px;
+  // width: 380px;
+}
