@@ -37,17 +37,18 @@ class UserDetailsController < ApplicationController
 
    def create
     # TODO user should be able to create only user_detail
-     # if UserDetail.count < 1 
-      @user_detail = UserDetail.new(strong_params)
-      
-      if @user_detail.save
-        redirect_to user_detail_path(@user_detail)
-        # redirect_to profile_path
-      else
-        # redirect_to root_path
-        render :new
-      end
-    # end
+    if UserDetail.count < 1
+        @user_detail = UserDetail.new(strong_params)
+        @user_detail.user = current_user
+        if @user_detail.save
+          redirect_to user_detail_path(@user_detail)
+        else
+          render :new
+        end
+      else  
+        
+        redirect_to profile_path, notice: "You have created your details already."
+    end
    end
 
    def edit
@@ -66,13 +67,12 @@ class UserDetailsController < ApplicationController
    def destroy
      @user_detail = UserDetail.find(params[:id])
      @user_detail.destroy
-     # redirect_to user_details_path
      redirect_to profile_path
    end
 
    private
 
    def strong_params
-     params.require(:user_detail).permit(:f_name, :l_name, :address, :postcode, :phone, :photo)
+     params.require(:user_detail).permit(:user_id, :f_name, :l_name, :address, :postcode, :phone, :photo)
    end
 end

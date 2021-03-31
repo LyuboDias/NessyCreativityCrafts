@@ -7,9 +7,17 @@
   <div class="profile text-center mb-5">
       <p>My cart----<%= current_cart.items_count %></p>
       <p> My email----<%= @user.email %></p>
+      <br>
     <br>
     <br>
-    <%= link_to new_user_detail_path, class: "form-button btn-lg" do %>Add Details </i>
+      <% if @user.user_detail == nil %>
+        <%= link_to new_user_detail_path, class: "form-button btn-lg" do %>Add Details </i>
+        <% end %>
+      <% end %>
+      <br>
+      <br>
+      <% if @user.user_detail != nil %>
+        <%= link_to "See my details", user_detail_path(@user.user_detail), class: "form-button btn-lg" %>
       <% end %>
   </div>
 </div>

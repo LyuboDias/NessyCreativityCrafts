@@ -24,22 +24,19 @@
               <%= form_tag order_items_path do %>
                 <%= hidden_field_tag :product_id, product.id%>
                 <p>Quantity</p> <%= number_field_tag :quantity, 1, class: "product-number-field"%>
-                  <%= button_tag :submit, class: "product-submit" do %>
+                  <%= button_tag :submit, class: "product-submit", title: '', data: { toggle: 'tooltip', placement: 'bottom', original_title: 'Add to cart' } do %>
                     <i class="far fa-heart product-heart"></i>
                   <% end %>
-                  <p class="popover-cart">Add to cart</p>
-                  
-                
               <% end %>  
             </div>
         </div>
-        <%# <div class="hr mt-5"></div> %>
         <hr>
       </div>
     <% end %>
   </div>
-  <p class="text-center mt-5">  <%= link_to "Back", categories_path, class: "btn-lg form-button" %>
-</p>
-
+  <div class=" d-flex justify-content-between">
+    <p class="text-center mt-5">  <%= link_to "Back", categories_path, class: "btn-lg form-button" %></p>
+    <p class="text-center mt-5">  <%= link_to "Checkout", cart_path, class: "btn-lg form-button"%></p>
+  </div>
 </div>
 

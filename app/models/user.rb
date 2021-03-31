@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :purchases
   # TODO make sure one user can have one detail, address etc
-  has_one :user_detail 
+  has_one :user_detail
 end

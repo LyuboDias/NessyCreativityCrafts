@@ -1,4 +1,4 @@
-<%= simple_form_for @user_detail do |f| %>
+<%= simple_form_for [ @user, @user_detail ] do |f| %>
 <div class="form-wrap">
       <%= f.input :f_name,
                   label: "First Name" %>
