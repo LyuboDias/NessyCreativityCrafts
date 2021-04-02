@@ -1,10 +1,14 @@
-
-<div class="form-wrap">
-  <p class="heading2 text-center">Add Your Details</p>
-
-  <div class="services-form">
-    <%= render 'form', user_detail: @user_detail %>
-    <br>
-    <%= link_to 'Back', profile_path, class: 'device-links' %>
+<div class="container">
+  <p class="heading2 text-center">Add or update your Details</p>
+  <br>
+  <div class="hr"></div>
+  <br>
+  <br>
+  <div class="form-wrap mt-5">
+    <div class="services-form">
+      <%= render 'form', user_detail: @user_detail %>
+      <br>
+      <%= link_to 'Back', profile_path, class: 'device-links' %>
+    </div>
   </div>
 </div>

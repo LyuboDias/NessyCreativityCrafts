@@ -36,7 +36,6 @@ class UserDetailsController < ApplicationController
    end
 
    def create
-    # TODO user should be able to create only user_detail
     if UserDetail.count < 1
         @user_detail = UserDetail.new(strong_params)
         @user_detail.user = current_user
@@ -60,7 +59,8 @@ class UserDetailsController < ApplicationController
      if @user_detail.update(strong_params)
        redirect_to user_detail_path(@user_detail)
      else
-       render :update
+      render :new
+      #  render :update
      end
    end
 
@@ -73,6 +73,6 @@ class UserDetailsController < ApplicationController
    private
 
    def strong_params
-     params.require(:user_detail).permit(:user_id, :f_name, :l_name, :address, :postcode, :phone, :photo)
+     params.require(:user_detail).permit(:user_id, :f_name, :l_name, :city, :street, :door_number, :postcode, :phone, :photo)
    end
 end

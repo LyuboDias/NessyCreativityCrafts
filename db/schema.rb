@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_31_154237) do
+ActiveRecord::Schema.define(version: 2021_04_02_175937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,12 +93,14 @@ ActiveRecord::Schema.define(version: 2021_03_31_154237) do
   create_table "user_details", force: :cascade do |t|
     t.string "f_name", null: false
     t.string "l_name", null: false
-    t.text "address", null: false
     t.string "postcode", null: false
-    t.integer "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
+    t.string "phone"
+    t.string "city"
+    t.string "street"
+    t.string "door_number"
     t.index ["user_id"], name: "index_user_details_on_user_id"
   end
 

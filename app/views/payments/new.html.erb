@@ -1,27 +1,38 @@
 <div class="container">
-  <div class="row py-4">
-    <div class="col-md-3"></div>
-    <div class="col">
-      <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%= humanized_money_with_symbol @purchase.amount %></strong></p>
-      <br>
-      
-      <br>
-       
-
+  <%# <div class="row py-4"> %>
+    <%# <div class="col-md-3"></div> %>
+    <%# <div class="col"> %>
+      <% if @user.user_detail != nil%>
+        <p class="heading2 text-center">Checkout summary</p>
+        <br>
+        <div class="hr"></div>
+        <br>
+        <p class="heading2">Purchase of <strong><%= humanized_money_with_symbol @purchase.amount %></strong></p>
  
+        <br>
 
-      <button id="pay" class="btn btn-primary">Pay</button>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @purchase.checkout_session_id %>'
-          });
-        }); 
-      </script>
-    </div>
-  </div>
+        <button id="pay" class="form-button btn-lg text-white">Buy now</button>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+          const paymentButton = document.getElementById('pay');
+          paymentButton.addEventListener('click', () => {
+            const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+            stripe.redirectToCheckout({
+              sessionId: '<%= @purchase.checkout_session_id %>'
+            });
+          }); 
+        </script>
+      <% else %>
+        <br>
+        <p class="heading2 text-center">Please add your personal details to proceed to payment!</p>
+        <br>
+        <div class="hr"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="text-center "><%= link_to "Return to My profile", profile_path, class: 'form-button btn-lg text-white'  %></p> 
+      <% end %>
+    <%# </div> %>
+  <%# </div> %>
 </div>
