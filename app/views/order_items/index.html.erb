@@ -1,13 +1,17 @@
 <div class="container">
   <% unless @items.count > 0 %>
       <p class="heading2 text-center mt-5">Your cart is empty at the moment,please continue shopping.</p>
-      <div class="hr mt-5"></div>
+      <div class="hr mt-5"></div> 
       <br>
       <br>
       <p class="heading2 text-center mt-5">Go back and browse trhough our amazing products, you can find the perfect gift for your special one. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident modi veniam mollitia rem laboriosam, minima rerum iste esse necessitatibus cumque?</p>
-  <% else %>
-      <p class="heading2 text-center"><strong><%= current_user.email %>`s</strong>  Cart</p>
-      <div class="hr mt-5"></div>
+  <% else%>
+      <% if @user.user_detail != nil%>
+        <p class="heading2 text-center"><strong><%= @user.user_detail.f_name %>`s</strong>  Cart</p>
+      <% else %>
+        <p class="heading2 text-center">Checkout</p>
+        <div class="hr mt-5"></div>
+      <% end %>
   <% end %>
   <br>
   <br> 

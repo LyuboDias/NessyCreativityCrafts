@@ -1,20 +1,34 @@
 <%= simple_form_for [ @user, @user_detail ] do |f| %>
 <div class="form-wrap">
       <%= f.input :f_name,
-                  label: "First Name" %>
-      <div class="hr"></div>
+                  label: "First Name",
+                  placeholder: "John" %>
+      <div class="hr mb-1"></div>
       <%= f.input :l_name,
-                  label: "Last Name" %>
-      <div class="hr"></div>
-      <%= f.input :address,
-                  label: "Home Address" %>
-      <div class="hr"></div>
+                  label: "Last Name",
+                  placeholder: "Doe" %>
+      <div class="hr mb-1"></div>
+      <%= f.input :door_number,
+                  label: "Door number",
+                  placeholder: "10" %>
+      <div class="hr mb-1"></div>
+      <%= f.input :street,
+                  label: "Street",
+                  placeholder: "Downing Street" %>
+      <div class="hr mb-1"></div>
+      <%= f.input :city,
+                  label: "City/Town",
+                  placeholder: "London" %>
+      <div class="hr mb-1"></div>
       <%= f.input :postcode,
-                  label: "Postcode" %>
-      <div class="hr"></div>
+                  label: "Postcode",
+                  placeholder: "SW1A 0AA" %>
+      <div class="hr mb-1"></div>
       <%= f.input :phone,
-                  label: "Phone Number" %>
-      <div class="hr"></div>
+                  label: "Phone Number",
+                  placeholder: "+44 1234 123 123" %>
+                   
+      <div class="hr mb-1"></div>
       <%# <%= f.input :photo, as: :file, label: 'Profile Picture' %> 
       <%# <div class="hr"></div> %>
   <div class="form-actions mt-4">

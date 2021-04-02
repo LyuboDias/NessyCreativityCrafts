@@ -1,6 +1,7 @@
 class OrderItemsController < ApplicationController
   def index
     @items = current_cart.order.items
+    @user = current_user
   end
 
    def create
