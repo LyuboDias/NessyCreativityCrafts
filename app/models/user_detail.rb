@@ -1,5 +1,7 @@
 class UserDetail < ApplicationRecord
 
+  after_create :send_confirmation_email
+
   belongs_to :user
   has_one_attached :photo
   
@@ -24,5 +26,10 @@ class UserDetail < ApplicationRecord
                  :length => { :minimum => 11, :maximum => 15 }
                  
 
+  private 
+
+  def send_confirmation_email
+    UserMailer.confirmation(self.user).deliver_now
+  end
 end
  
