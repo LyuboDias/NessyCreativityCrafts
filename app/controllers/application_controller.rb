@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   # pushes current_cart method in our view file
   helper_method :current_cart
 
-  private
+  private 
 
   def cart_token
     return @cart_token unless @cart_token.nil?

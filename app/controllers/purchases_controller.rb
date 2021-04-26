@@ -9,7 +9,7 @@ class PurchasesController < ApplicationController
   # purchase  = Purchase.create!(product: product, product_sku: product.sku, amount: current_cart.sub_total.to_f / 100, state: 'pending', user: current_user)
 
  
-    purchase  = Purchase.create!(product: product, product_sku: product.sku, amount: current_cart.sub_total.to_f / 100, state: 'pending', user: current_user)
+  purchase  = Purchase.create!(product: product, product_sku: product.sku, amount: current_cart.sub_total.to_f / 100, state: 'pending', user: current_user)
    
 
 
@@ -24,15 +24,25 @@ class PurchasesController < ApplicationController
     }],
     success_url: purchase_url(purchase),
     cancel_url: purchase_url(purchase)
-  )
+  ) 
 
   purchase.update(checkout_session_id: session.id)
   redirect_to new_purchase_payment_path(purchase)
- end
+  end
 
- def show
-   @purchase = current_user.purchases.find(params[:id])  
- end
- 
+  def show
+    # sent payment confirmation email and reset the current cart 
+    @cart = current_cart.order.items
+    @user = current_user
+    @total = current_cart.sub_total.to_f / 100
+    @purchase = current_user.purchases.find(params[:id])  
+
+    # sending a confirmation email for successful payment
+    if @purchase.state == 'paid'
+      UserMailer.payment(@user, @cart, @total, @purchase).deliver_now
+    end
+    @cart.destroy_all
+  end
   
-end
+end 
+

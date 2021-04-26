@@ -32,7 +32,7 @@
             <div class="cart-product-quantity">
               <p class="pl-3"><%= item.quantity  %></p>
             </div>
-            <div class="cart-submit">
+            <div class="cart-submit"> 
               <p>
                 <%= form_tag purchases_path do %>
                     <%= hidden_field_tag 'item_id', item.id%> 
@@ -52,7 +52,11 @@
           </div>
       <% end %>
       <div class="d-flex justify-content-end w-100"> 
-        <p class="heading2">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 100) %></strong></p>   
+        <% if @items.count > 0 %>
+          <p class="heading2">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 100) %></strong></p>  
+        <% else %>
+          <p class="heading2">Total Amount: <strong>£0</strong></p>
+        <% end %>
       </div>
     </div>
   </div>

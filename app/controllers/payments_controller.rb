@@ -5,3 +5,5 @@ class PaymentsController < ApplicationController
     @user = current_user
   end
 end
+  
+

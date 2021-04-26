@@ -1,1 +1,16 @@
-<p>thank you for adding your details <%= @user.user_detail.f_name %></p>
+<p>Thank you for adding your details <%= @user.user_detail.f_name %></p>
+<br>
+<p>Please check ypur details are correct:</p>
+<br>
+<p>Full name: <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %></p>
+<p>Street: <%= @user.user_detail.door_number %> <%= @user.user_detail.street %></p>
+<p>Postcode: <%= @user.user_detail.postcode %></p>
+<p>Town/City: <%= @user.user_detail.city %></p>
+<p>Contact number: <%= @user.user_detail.phone %></p>
+<%= link_to "Change details", root_url %>
+<br>
+<p>Looks good? <br> Great! you are ready to browse through our awesome items, just click <a href="www.nessycreativitycrafts.com">HERE</a></p>
+
+<br>
+<h2>Reagrds</h2>
+<h2>NCC TEAM</h2>

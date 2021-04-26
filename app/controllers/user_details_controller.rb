@@ -1,7 +1,4 @@
 class UserDetailsController < ApplicationController
-  
-  
-
 
   def show
     @user_detail = UserDetail.find(params[:id])
@@ -17,7 +14,6 @@ class UserDetailsController < ApplicationController
       @user_detail = UserDetail.new(strong_params)
       @user_detail.user = current_user
       if @user_detail.save
-        # UserDetailMailer.create_confirmation(@user_detail.user).deliver_now
         redirect_to user_detail_path(@user_detail)
       else
         render :new
