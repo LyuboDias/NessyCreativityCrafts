@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'contacts@nessycreativitycrafts.com'
+  default from: 'contact@nessycreativitycrafts.com'
   layout 'mailer'
 end 
