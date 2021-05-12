@@ -16,9 +16,12 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # mailing with google acc 
-  config.action_mailer.delivery_method = :smtp
+  # mailing with Postmark
+  config.action_mailer.delivery_method     = :postmark
+  config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
   config.action_mailer.default_url_options = { host: "nessycreativitycrafts.com" }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.default_url_options = { host: "nessycreativitycrafts.com" }
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
