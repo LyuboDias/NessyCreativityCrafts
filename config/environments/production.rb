@@ -1,5 +1,4 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -17,13 +16,9 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   # mailing with Postmark
-  # config.action_mailer.raise_delivery_errors = true
-
   config.action_mailer.delivery_method     = :postmark
   config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
-  config.action_mailer.default_url_options = { host: "nessycreativitycrafts.com" }
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.default_url_options = { host: "nessycreativitycrafts.com" }
+  config.action_mailer.default_url_options = { host: "www.nessycreativitycrafts.com" }
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
