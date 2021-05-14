@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="banner">
     <div class="hero-text">
@@ -8,11 +9,8 @@
     </div>
   </div>
 </div>
+<br> 
 <br>
-<br>
-
- 
-
 <div class="info mt-5">
   <div class="container">  
       <div class="container">
@@ -25,7 +23,6 @@
       </div>
       <br>
       <br>
-
       <div class="flipping-cards" id="cards">
           <div class="flipping-card">
             <div class="front card-1">
@@ -33,7 +30,7 @@
             </div>
             <div class="back">
               <img class="mb-4" src="https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Mugs" />
-              <%= link_to "Shop", categories_path, class: "text-dark text-decoration-none" %>
+              <%= link_to "Shop", categories_path, class: "text-dark " %>
             </div>
           </div>
           <!-- card 2 -->
@@ -43,7 +40,7 @@
             </div>
             <div class="back">
               <img class="mb-4" src="https://images.pexels.com/photos/371285/pexels-photo-371285.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Bracelets" />
-              <%= link_to "Shop", categories_path, class: "text-dark text-decoration-none" %>
+              <%= link_to "Shop", categories_path, class: "text-dark " %>
             </div>
           </div>
           <!-- card 3 -->
@@ -53,7 +50,7 @@
             </div>
             <div class="back">
               <img class="mb-4" src="https://images.pexels.com/photos/7184413/pexels-photo-7184413.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Glasses  " />
-              <%= link_to "Shop", categories_path, class: "text-dark text-decoration-none" %>
+              <%= link_to "Shop", categories_path, class: "text-dark " %>
             </div>
           </div>
         </div>
@@ -85,7 +82,7 @@
           <p class="heading2 text-center">Hot Items this month!</p>
           <br>
           <div class="hot-items-body d-flex justify-content-around">
-            <div  style="width: 18rem;">
+            <div  class="hot-itmes-inner">
               <img class="hot-item-img" src="https://images.pexels.com/photos/885218/pexels-photo-885218.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
@@ -98,7 +95,7 @@
                 <p ><%=link_to "Buy for £9.99", category_products_path(2), class: "form-button btn-lg "  %></p>
               </div>
             </div>
-            <div  style="width: 18rem;">
+            <div  class="hot-itmes-inner">
               <img class="hot-item-img" src="https://images.pexels.com/photos/1129482/pexels-photo-1129482.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
@@ -111,7 +108,7 @@
                 <p ><%=link_to "Get for £12.99", category_products_path(3), class: "form-button btn-lg "  %></p>
               </div>
             </div>
-            <div  style="width: 18rem;">
+            <div  class="hot-itmes-inner">
               <img class="hot-item-img" src="https://images.pexels.com/photos/894608/pexels-photo-894608.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
@@ -237,19 +234,8 @@
               </div>
           </div>
         </div> 
-
-        
-
-
-
-
-        
   </div>
 </div>
-
-
-
-
 <%# ------------------------contact us form -------------------%>
 <br>
 <br>

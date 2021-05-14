@@ -7,6 +7,7 @@
   font-weight: lighter;
   // overflow-x: hidden;
 }
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -114,11 +115,9 @@
     background-color: rgb(244, 244, 244);
     margin-bottom: 20px;
     border: 0px;
-    // border-bottom: 1px solid $second;
   }
   .text-area {
     border: 0px;
-    // border-bottom: 1px solid $second;
     margin-bottom: 20px;
     background-color: rgb(244, 244, 244);
     height: 100px;
@@ -164,7 +163,7 @@
 // ---------flipping cards --------
 .flipping-cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 2%;
   text-align: center;
@@ -230,22 +229,18 @@
 }
 // -----------------ideas carousel--------------------
 
-/* Position the image container (needed to position the left and right arrows) */
 .container-carousel {
   position: relative;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
 .cursor {
   cursor: pointer;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -262,13 +257,11 @@
   -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(233, 233, 233, 0.8);
@@ -277,7 +270,6 @@
   transition: 0.5s ease;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: white;
   font-size: 12px;
@@ -286,12 +278,10 @@
   top: 0;
 }
 
-/* Container for image text */
 .caption-container {
   text-align: center;
   background-color: rgba(233, 233, 233, 0.8);
   padding: 10px 16px;
-  // color: white;
   width: 80%;
   margin: 0 auto;
 }
@@ -307,13 +297,11 @@
   clear: both;
 }
 
-/* Six columns side by side */
 .column {
   float: left;
   width: 16.66%;
 }
 
-/* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
 }
@@ -325,6 +313,14 @@
 }
 
 // ----------------touts--------------------
+.touts {
+  flex-wrap: wrap;
+}
+.touts-element {
+  margin: 10px;
+  margin-left: 10px;
+  min-width: 210px;
+}
 .touts-img {
   width: 60px;
   border-radius: 50%;
@@ -332,6 +328,11 @@
   margin-right: 10px;
 }
 // -------------how we do section------------------
+.how-we-do {
+  .card {
+    margin-bottom: 140px;
+  }
+}
 .how-we-do-img {
   position: relative;
 }
@@ -340,12 +341,37 @@
   background-color: white;
   width: 80%;
   height: 115px;
-  // margin: 0 auto;
+  // margin: 20px auto;
   left: 50px;
   bottom: -50px;
 }
 // ------------hot items------------------
 .hot-item-img {
   height: 400px;
-  // width: 380px;
+}
+.hot-items-body {
+  flex-wrap: wrap;
+}
+// ------------------------Media  queries ----------------------
+@media only screen and (max-width: 500px) {
+  .front {
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .back img {
+    margin-bottom: 0 !important;
+  }
+
+  .flipping-cards {
+    // flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .front {
+    p {
+      font-size: 16px;
+    }
+  }
 }
