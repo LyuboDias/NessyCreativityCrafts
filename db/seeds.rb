@@ -15,22 +15,15 @@ bracelets = Category.create!(title: 'Bracelets', images: "https://images.pexels.
 glasses = Category.create!(title: 'Glasses', images: "https://images.pexels.com/photos/6210895/pexels-photo-6210895.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", description: "Found out more of our glass and glitter crafts that looks amazing and bring that special emotions every time when on a table.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
 # -----------Products-----------------
 
-# puts 'Creating products...'
-# Teddy.create!(sku: 'original-teddy-bear', name: 'Teddy bear', category: kids, photo_url: 'http://onehdwallpaper.com/wp-content/uploads/2015/07/Teddy-Bears-HD-Images.jpg')
-
-# Teddy.create!(sku: 'jean-mimi', name: 'Jean-Michel - Le Wagon', category: geek, photo_url: 'https://pbs.twimg.com/media/B_AUcKeU4AE6ZcG.jpg:large')
-# Teddy.create!(sku: 'octocat',   name: 'Octocat -  GitHub',      category: geek, photo_url: 'https://cdn-ak.f.st-hatena.com/images/fotolife/s/suzumidokoro/20160413/20160413220730.jpg')
-
-
 
 bday_mug = Product.create!({
   title: 'Bday mug',
   sku: 'Bday mug',
-  price: 8.99,
+  price: 8.99, 
   description: "Birth day custome made mug, ideal for special ocassions gift.\n
   
   You can chose from many different styles.", 
-  images: 'https://images.pexels.com/photos/1207918/pexels-photo-1207918.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/bday-mug_lnuz9x.jpg',
   category: mugs
 })
 # bday_mug_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/bday-mug_lnuz9x.jpg")
@@ -45,7 +38,7 @@ my_mug = Product.create!({
   description: "Birth day custome made mug, ideal for special ocassions gift.\n
   
   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?", 
-  images: 'https://images.pexels.com/photos/1207918/pexels-photo-1207918.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg',
   category: mugs
 })
 # my_mug_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/bday-mug_lnuz9x.jpg")
@@ -75,7 +68,7 @@ custome_glass = Product.create!({
   description: "Pichk wine glass in your fav color\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://images.pexels.com/photos/225228/pexels-photo-225228.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/purple-glass_y8uko8.jpg',
   category: glasses
 })
 # custome_glass_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -92,7 +85,7 @@ craft_glass = Product.create!({
   Pic you favourite pic and we gonna print it on a mug.
   Pic you favourite pic and we gonna print it on a mug.
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://images.pexels.com/photos/6210895/pexels-photo-6210895.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/silver-wine_jnzzl3.jpg',
   category: glasses
 })
 # craft_glass_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -106,7 +99,7 @@ wine_glass = Product.create!({
   description: "This is perfect wine glass\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/pink-wine_uwct8f.jpg',
   category: glasses
 })
 # wine_glass_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -122,7 +115,7 @@ bracelet = Product.create!({
   description: "This is custome made bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://images.pexels.com/photos/553236/pexels-photo-553236.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773269/bracelet3_pdul41.jpg',
   category: bracelets
 })
 # bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -137,7 +130,7 @@ name_bracelet = Product.create!({
   description: "This is custome made name_bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://images.pexels.com/photos/234798/pexels-photo-234798.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773046/bracelet2_clondr.jpg',
   category: bracelets
 })
 # name_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -152,7 +145,7 @@ african_bracelet = Product.create!({
   description: "This is custome made african_bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug. Some traditional african style and colors bracelet. Looking amazing!", 
-  images: 'https://images.pexels.com/photos/935985/pexels-photo-935985.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773050/bracelets_avmy1u.jpg',
   category: bracelets
 })
 # african_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -167,7 +160,7 @@ love_bracelet = Product.create!({
   description: "This is custome made love_bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug. Some veru very nice LOOOVEEE bracelet for coupleees", 
-  images: 'https://images.pexels.com/photos/567983/pexels-photo-567983.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/bracelet4_xqtter.jpg',
   category: bracelets
 })
 # love_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -184,7 +177,7 @@ love_bracelet = Product.create!({
   Pic you favourite pic and we gonna print it on a mug.
   Pic you favourite pic and we gonna print it on a mug.
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://images.pexels.com/photos/371285/pexels-photo-371285.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/bracelet-black-white_vamws1.jpg',
   category: bracelets
 })
 # love_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")

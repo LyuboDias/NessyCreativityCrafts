@@ -7,7 +7,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :purchases
-  # TODO make sure one user can have one detail, address etc
   has_one :user_detail
 
   private 

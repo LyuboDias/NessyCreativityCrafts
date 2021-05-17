@@ -46,6 +46,8 @@
   animation: gradient 15s ease infinite;
 }
 // -----------------banner----------------
+.banner-img {
+}
 .banner {
   border-radius: 5px;
   box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -53,7 +55,7 @@
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("banner.jpeg");
+    url("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1602611882/coding-keyboard_yclssh.jpg");
   height: 70vh;
   background-position: center;
   background-repeat: no-repeat;

@@ -32,6 +32,7 @@
 .product-wrap {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   .product-card {
     width: 300px;
     .product-star {

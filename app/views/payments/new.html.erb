@@ -7,11 +7,18 @@
         <br>
         <div class="hr"></div>
         <br>
-        <p class="heading2">Purchase of <strong><%= humanized_money_with_symbol @purchase.amount %></strong></p>
- 
+        <ul>
+          <% @cart.each do |item| %>
+            <li><p>Product: <%= item.product.title %></p></li>
+            <li><p>Proce: <%= humanized_money_with_symbol(item.price) %> </p></li>
+            <li><p>Quantity: <%= item.quantity %></p></li>
+          <% end %>
+        </ul>
+        <p class="heading2">Total: <strong><%= humanized_money_with_symbol @purchase.amount %></strong></p>
+  
         <br>
 
-        <button id="pay" class="form-button btn-lg text-white">Buy now</button>
+        <button id="pay" class="form-button btn-lg text-white">Pay now</button>
         <script src="https://js.stripe.com/v3/"></script>
         <script>
           const paymentButton = document.getElementById('pay');

@@ -8,11 +8,13 @@
       <h2>Thank you for your busenes.</h2>
       <ul class="list-unstyled">
         <li><strong>ISSUED ON</strong> <%= @purchase.created_at.to_date %></li>
-        <li><strong>ITEM</strong> <%= @purchase.product.title %> </li>
+        <%# <li><strong>ITEM</strong> <%= @purchase.product.title %>  
         <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @purchase.amount %></li>
         </li>
       </ul> 
       <p>Estimated delivery in <strong>2 business days</strong></p>
+      <br>
+      <h3>We have sent you confirmation email with all details of your purchase!</h3>
     </div>
   </div>
 </div>

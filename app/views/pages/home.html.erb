@@ -1,6 +1,7 @@
 
 <div class="container">
   <div class="banner">
+    <%# <%= cl_image_tag("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1602611882/coding-keyboard_yclssh.jpg", class: "") %> 
     <div class="hero-text">
       <p class="text-special" data-aos="fade-down"  data-aos-duration="3000" style="font-size:60px"><span class="second-color">Nessy</span>  <span class="main-color">Creativity Crafts</span></p>
       <br>
@@ -30,7 +31,7 @@
             </div>
             <div class="back">
               <img class="mb-4" src="https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Mugs" />
-              <%= link_to "Shop", categories_path, class: "text-dark " %>
+              <%= link_to "Browse Mugs", category_products_path(1), class: "text-dark " %>
             </div>
           </div>
           <!-- card 2 -->
@@ -40,7 +41,7 @@
             </div>
             <div class="back">
               <img class="mb-4" src="https://images.pexels.com/photos/371285/pexels-photo-371285.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Bracelets" />
-              <%= link_to "Shop", categories_path, class: "text-dark " %>
+              <%= link_to "Browse Bracelets", category_products_path(2), class: "text-dark " %>
             </div>
           </div>
           <!-- card 3 -->
@@ -50,7 +51,7 @@
             </div>
             <div class="back">
               <img class="mb-4" src="https://images.pexels.com/photos/7184413/pexels-photo-7184413.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Glasses  " />
-              <%= link_to "Shop", categories_path, class: "text-dark " %>
+              <%= link_to "Browse Glasses", category_products_path(3), class: "text-dark " %>
             </div>
           </div>
         </div>

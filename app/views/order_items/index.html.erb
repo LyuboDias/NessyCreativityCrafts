@@ -33,12 +33,12 @@
               <p class="pl-3"><%= item.quantity  %></p>
             </div>
             <div class="cart-submit"> 
-              <p>
+              <%# <p>
                 <%= form_tag purchases_path do %>
-                    <%= hidden_field_tag 'item_id', item.id%> 
-                    <%= submit_tag 'Purchase', class: 'form-button p-2 text-white' %>
-                <% end %>
-              </p>
+                    <%# <%= hidden_field_tag 'item_id', item.id%>  
+                    <%# <%= submit_tag 'Purchase', class: 'form-button p-2 text-white' %> 
+                <%# <% end %> 
+              <%# </p> %> 
             </div>
             <div class="cart-delete">
               <p>
@@ -51,9 +51,16 @@
             <hr>
           </div>
       <% end %>
-      <div class="d-flex justify-content-end w-100"> 
+      <div class="d-flex justify-content-between p-5 w-100 "> 
         <% if @items.count > 0 %>
           <p class="heading2">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 100) %></strong></p>  
+          <br>
+          <div>
+            <%= form_tag purchases_path do %>
+              <%# <%= hidden_field_tag 'item_id', item.id%>  
+              <%= submit_tag 'Go to checkout', class: 'form-button p-2 text-white' %>
+            <% end %>
+          </div>
         <% else %>
           <p class="heading2">Total Amount: <strong>£0</strong></p>
         <% end %>

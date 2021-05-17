@@ -1,44 +1,30 @@
 class PurchasesController < ApplicationController
- def create
-  product = Product.find(params[:item_id])
+  def create
   
-  # TODO when press purchase need to create purchase or checkput session that display all items titles and pass the current_cart sub total amount 
-
-  # create purchase with current_cart instead with single product
-  # cart = current_cart
-  # purchase  = Purchase.create!(product_sku: "Checkout nowwwwwww", amount: current_cart.sub_total.to_f / 100, state: 'pending', user: current_user)
-
-  #  session = Stripe::Checkout::Session.create(
-  #   payment_method_types: ['card'], 
-  #   line_items: [{  
-  #     name: product.sku,
-  #     amount: current_cart.sub_total.to_int,
-  #     currency: 'gbp',
-  #     quantity: 1 
-  #   }],
-  #   success_url: purchase_url(purchase),
-  #   cancel_url: purchase_url(purchase)
-  # ) 
+    unless current_user.user_detail != nil  
+      redirect_to profile_path
  
-  purchase  = Purchase.create!(product: product, product_sku: product.sku, amount: current_cart.sub_total.to_f / 100, state: 'pending', user: current_user)
-   
+    else
 
+      purchase  = Purchase.create!(product_sku: "you have made purchase of..", amount: current_cart.sub_total.to_f / 100, state: 'pending', user: current_user)
+      
+      session = Stripe::Checkout::Session.create(
+        payment_method_types: ['card'], 
+        line_items: [{  
+          name: "#{current_user.user_detail.f_name}, your total is ...", 
+          # images: [product.images],
+          amount: current_cart.sub_total.to_int,
+          currency: 'gbp',
+          quantity: 1 
+        }],
+        success_url: purchase_url(purchase),
+        cancel_url: purchase_url(purchase)
+      ) 
 
-  session = Stripe::Checkout::Session.create(
-    payment_method_types: ['card'], 
-    line_items: [{  
-      name: product.title,
-      images: [product.images],
-      amount: current_cart.sub_total.to_int,
-      currency: 'gbp',
-      quantity: 1 
-    }],
-    success_url: purchase_url(purchase),
-    cancel_url: purchase_url(purchase)
-  ) 
+      purchase.update(checkout_session_id: session.id)
+      redirect_to new_purchase_payment_path(purchase)
 
-  purchase.update(checkout_session_id: session.id)
-  redirect_to new_purchase_payment_path(purchase)
+    end
   end
 
   def show
