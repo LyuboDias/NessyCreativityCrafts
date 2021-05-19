@@ -3,7 +3,7 @@
   <div class="banner">
     <%# <%= cl_image_tag("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1602611882/coding-keyboard_yclssh.jpg", class: "") %> 
     <div class="hero-text">
-      <p class="text-special" data-aos="fade-down"  data-aos-duration="3000" style="font-size:60px"><span class="second-color">Nessy</span>  <span class="main-color">Creativity Crafts</span></p>
+      <p class="" data-aos="fade-down"  data-aos-duration="3000" style="font-size:60px"><span class="second-color">Nessy</span>  <span class="main-color">Creativity Crafts</span></p>
       <br>
       <br>
       <a href="#cards" class="shop-now"> SHOP NOW </a>
@@ -31,7 +31,7 @@
             </div>
             <div class="back">
               <img class="mb-4" src="https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Mugs" />
-              <%= link_to "Browse Mugs", category_products_path(1), class: "text-dark " %>
+              <%= link_to "Buy Now", category_products_path(1), class: "text-dark " %>
             </div>
           </div>
           <!-- card 2 -->
@@ -41,7 +41,7 @@
             </div>
             <div class="back">
               <img class="mb-4" src="https://images.pexels.com/photos/371285/pexels-photo-371285.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Bracelets" />
-              <%= link_to "Browse Bracelets", category_products_path(2), class: "text-dark " %>
+              <%= link_to "Buy Now", category_products_path(2), class: "text-dark " %>
             </div>
           </div>
           <!-- card 3 -->
@@ -51,7 +51,7 @@
             </div>
             <div class="back">
               <img class="mb-4" src="https://images.pexels.com/photos/7184413/pexels-photo-7184413.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Glasses  " />
-              <%= link_to "Browse Glasses", category_products_path(3), class: "text-dark " %>
+              <%= link_to "Buy Now", category_products_path(3), class: "text-dark " %>
             </div>
           </div>
         </div>
@@ -63,20 +63,20 @@
             <p>Only on<strong> NessyCreativityCrafts.com</strong></p> 
           </div>
           <div class="touts-element d-flex">
-            <img class="touts-img" src="https://images.pexels.com/photos/194094/pexels-photo-194094.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="shipping">
+            <%= image_tag("airplane.png", :class => "touts-img") %>
             <p>FREE SHIPPING <br> (in orders over £30)</p>
           </div>
           <div class="touts-element d-flex">
-            <img class="touts-img" src="https://images.pexels.com/photos/276267/pexels-photo-276267.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="samples">
+            <%= image_tag("shopping-bag.png", :class => "touts-img") %>
             <p>Free goodies <br> (yes please)</p>
           </div>
           <div class="touts-element d-flex">
-            <img class="touts-img" src="https://images.pexels.com/photos/360624/pexels-photo-360624.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="surprise">
+            <%= image_tag("sun.png", :class => "touts-img") %>
             <p>Surprises <br> (you will love, Trust)</p>
           </div>
         </div>
         <hr>
-
+ 
 <%# -------------hot items-------- %>
 
         <div class="hot-items mt-5">
@@ -141,8 +141,8 @@
                 <img class="card-img-top" src="https://images.pexels.com/photos/3996289/pexels-photo-3996289.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
               </div>
               <div class="how-we-do-body">
-                <p class="text-center heading2">How we create our crafts</p>
-                <p class="text-center">What ever we do we do with Love!.</p>
+                <p class="text-center heading2">How we work</p>
+                <p class="text-center small-txt">What ever we do we do with Love!.</p>
                 <p class="text-center"><%= link_to "Learn more!", about_path, class: "form-button btn-lg text-white" %></p>
               </div>
             </div>
@@ -154,7 +154,7 @@
               </div>
               <div class="how-we-do-body">
                 <p class="text-center heading2">How we started</p>
-                <p class="text-center">We was insipred in early years.</p>
+                <p class="text-center small-txt">We was insipred in early years.</p>
                 <p class="text-center"><%= link_to "Read some more!", about_path, class: "form-button btn-lg text-white" %></p> 
               </div>
             </div>

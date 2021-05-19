@@ -1,51 +1,65 @@
-.about-wrap {
-  display: flex;
-
-  .about-image img {
-    width: 400px;
-  }
-}
-.about-right {
-  display: flex;
+.about-container {
+  justify-content: flex-end;
   align-items: center;
+  height: 700px;
+  border-radius: 5px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1621433930/NCC/output-onlinepngtools_kynjer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   position: relative;
-  width: 550px;
+}
+
+.about-container2 {
+  justify-content: flex-start;
+  align-items: center;
+  height: 700px;
+  border-radius: 5px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1621433931/NCC/output-onlinepngtools_2_nohr6b.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.about-text {
+  min-width: 260px;
+  max-width: 40%;
+  padding: 0 20px;
+  margin-right: 110px;
+}
+
+.about-text2 {
+  min-width: 260px;
+  max-width: 40%;
+  padding: 0 20px;
+  margin-left: 110px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-container2 {
+    justify-content: center;
+  }
+
+  .about-container {
+    justify-content: center;
+  }
+
   .about-text {
-    width: 430px;
-    position: absolute;
-    margin: 0 100px;
+    max-width: 80%;
+    margin-right: 0;
   }
-  .about-div {
-    width: 320px;
-    height: 360px;
-    background-color: $main;
-    opacity: 0.4;
-  }
-}
-// ------------------
-.about-wrap2 {
-  display: flex;
 
-  .about-image2 img {
-    width: 400px;
-  }
-}
-.about-left {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 550px;
   .about-text2 {
-    width: 500px;
-    position: absolute;
-    // margin: 0 100px;
-  }
-  .about-div2 {
-    width: 320px;
-    height: 360px;
-    background-color: $main;
-    opacity: 0.4;
-    position: absolute;
-    right: 0;
+    max-width: 80%;
+    margin-left: 0;
   }
 }
