@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def site
+  end
+
    def profile
     @user = current_user
   end
