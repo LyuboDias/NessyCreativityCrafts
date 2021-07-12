@@ -24,14 +24,15 @@
       </div>
       <br>
       <br>
+      <%# ----------flipping cards ------- %>
       <div class="flipping-cards" id="cards">
           <div class="flipping-card">
             <div class="front card-1">
               <p class="heading2">Mugs</p>
             </div>
             <div class="back">
-              <img class="mb-4" src="https://images.pexels.com/photos/2417857/pexels-photo-2417857.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Mugs" />
-              <%= link_to "Buy Now", category_products_path(1), class: "text-dark " %>
+              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106130/NCC/IMG-20210709-WA0002_jaomqa.jpg" alt="Mugs" />
+              <%= link_to "Buy Now", category_products_path(1), class: "text-dark form-button btn-lg  " %>
             </div>
           </div>
           <!-- card 2 -->
@@ -40,8 +41,8 @@
               <p class="heading2">Bracelets</p>
             </div>
             <div class="back">
-              <img class="mb-4" src="https://images.pexels.com/photos/371285/pexels-photo-371285.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Bracelets" />
-              <%= link_to "Buy Now", category_products_path(2), class: "text-dark " %>
+              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773046/NCC/bracelet2_clondr.jpg" alt="Bracelets" />
+              <%= link_to "Buy Now", category_products_path(2), class: "text-dark form-button btn-lg  " %>
             </div>
           </div>
           <!-- card 3 -->
@@ -50,8 +51,8 @@
               <p class="heading2">Glasses</p>
             </div>
             <div class="back">
-              <img class="mb-4" src="https://images.pexels.com/photos/7184413/pexels-photo-7184413.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(3), class: "text-dark " %>
+              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/NCC/purple-glass_y8uko8.jpg" alt="Glasses  " />
+              <%= link_to "Buy Now", category_products_path(3), class: "text-dark form-button btn-lg " %>
             </div>
           </div>
         </div>
@@ -84,7 +85,7 @@
           <br>
           <div class="hot-items-body d-flex justify-content-around">
             <div  class="hot-itmes-inner">
-              <img class="hot-item-img" src="https://images.pexels.com/photos/885218/pexels-photo-885218.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
+              <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106130/NCC/IMG-20210709-WA0004_gqtdlm.jpg" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
                 <i class="fas fa-star product-star"></i>
@@ -97,7 +98,7 @@
               </div>
             </div>
             <div  class="hot-itmes-inner">
-              <img class="hot-item-img" src="https://images.pexels.com/photos/1129482/pexels-photo-1129482.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
+              <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/NCC/silver-wine_jnzzl3.jpg" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
                 <i class="fas fa-star product-star"></i>
@@ -110,7 +111,7 @@
               </div>
             </div>
             <div  class="hot-itmes-inner">
-              <img class="hot-item-img" src="https://images.pexels.com/photos/894608/pexels-photo-894608.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
+              <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106131/NCC/IMG-20210709-WA0003_mqpkud.jpg" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
                 <i class="fas fa-star product-star"></i>
@@ -138,7 +139,7 @@
           <div class="hot-items-body d-flex justify-content-around">
             <div class="card" style="width: 30rem;">
               <div class="how-we-do-img">
-                <img class="card-img-top" src="https://images.pexels.com/photos/3996289/pexels-photo-3996289.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
+                <img class="card-img-top" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626115193/NCC/how-we-work_ouw6sy.jpg" alt="Card image cap">
               </div>
               <div class="how-we-do-body">
                 <p class="text-center heading2">How we work</p>
@@ -150,7 +151,7 @@
 
             <div class="card" style="width: 30rem;">
               <div class="how-we-do-img">
-                <img class="card-img-top" src="https://images.pexels.com/photos/3972013/pexels-photo-3972013.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
+                <img class="card-img-top" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626115193/NCC/how-we-started_msrcar.jpg" alt="Card image cap">
               </div>
               <div class="how-we-do-body">
                 <p class="text-center heading2">How we started</p>
@@ -172,34 +173,38 @@
               <div class="container-carousel">
 
                 <!-- Full-width images with number text -->
+
+                <%# --- TODO use landscape photos------ %>
+
+
                 <div class="mySlides">
                   <div class="numbertext">1 / 6</div>
-                    <img src="https://images.pexels.com/photos/1207918/pexels-photo-1207918.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/NCC/bracelet-black-white_vamws1.jpg" style="width:80%">
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">2 / 6</div>
-                    <img src="https://images.pexels.com/photos/606542/pexels-photo-606542.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/NCC/bday-mug_lnuz9x.jpg" style="width:80%">
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">3 / 6</div>
-                    <img src="https://images.pexels.com/photos/939833/pexels-photo-939833.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/NCC/mugs_zur7kg.jpg" style="width:80%">
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">4 / 6</div>
-                    <img src="https://images.pexels.com/photos/1755215/pexels-photo-1755215.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773050/NCC/bracelets_avmy1u.jpg" style="width:80%">
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">5 / 6</div>
-                    <img src="https://images.pexels.com/photos/1421177/pexels-photo-1421177.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773269/NCC/bracelet3_pdul41.jpg" style="width:80%">
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">6 / 6</div>
-                    <img src="https://images.pexels.com/photos/1566308/pexels-photo-1566308.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106130/NCC/IMG-20210709-WA0004_gqtdlm.jpg" style="width:80%">
                 </div>
 
                 <!-- Next and previous buttons -->
@@ -214,22 +219,22 @@
                 <!-- Thumbnail images -->
                 <div class="carousel-row">
                   <div class="column">
-                    <img class="demo cursor" src="https://images.pexels.com/photos/1207918/pexels-photo-1207918.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%" onclick="currentSlide(1)" alt="Coffee Mug">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/NCC/bracelet-black-white_vamws1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Coffee Mug">
                   </div>
                   <div class="column">
-                    <img  class="demo cursor" src="https://images.pexels.com/photos/606542/pexels-photo-606542.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%" onclick="currentSlide(2)" alt="Plain white Mug">
+                    <img  class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/NCC/bday-mug_lnuz9x.jpg" style="width:100%" onclick="currentSlide(2)" alt="Plain white Mug">
                   </div>
                   <div class="column">
-                    <img class="demo cursor" src="https://images.pexels.com/photos/939833/pexels-photo-939833.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%" onclick="currentSlide(3)" alt="Nice nail varnish">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/NCC/mugs_zur7kg.jpg" style="width:100%" onclick="currentSlide(3)" alt="Nice nail varnish">
                   </div>
                   <div class="column">
-                    <img class="demo cursor" src="https://images.pexels.com/photos/1755215/pexels-photo-1755215.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%" onclick="currentSlide(4)" alt="She believe in Unicorns">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773050/NCC/bracelets_avmy1u.jpg" style="width:100%" onclick="currentSlide(4)" alt="She believe in Unicorns">
                   </div>
                   <div class="column">
-                    <img class="demo cursor" src="https://images.pexels.com/photos/1421177/pexels-photo-1421177.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%" onclick="currentSlide(5)" alt="All black everything">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773269/NCC/bracelet3_pdul41.jpg" style="width:100%" onclick="currentSlide(5)" alt="All black everything">
                   </div>
                   <div class="column">
-                    <img class="demo cursor" src="https://images.pexels.com/photos/1566308/pexels-photo-1566308.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%" onclick="currentSlide(6)" alt="Classic coffee mug">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106130/NCC/IMG-20210709-WA0004_gqtdlm.jpg" style="width:100%" onclick="currentSlide(6)" alt="Classic coffee mug">
                   </div>
                 </div>
               </div>

@@ -210,6 +210,11 @@
   background: #f4f4f4;
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding-top: 10px;
 }
 
 .flipping-card:hover .front {
@@ -226,7 +231,8 @@
   background-position: center;
   background-repeat: none;
   background-size: cover;
-  width: 100%;
+  width: 70%;
+  height: 80%;
 }
 // -----------------ideas carousel--------------------
 
