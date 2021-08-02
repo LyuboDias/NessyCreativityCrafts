@@ -14,10 +14,9 @@
             <li><p>Quantity: <%= item.quantity %></p></li>
           <% end %>
         </ul>
-        <p class="heading2">Total: <strong><%= humanized_money_with_symbol @purchase.amount %></strong></p>
-  
+        <p class="heading2">Total including discounts: <strong><%= humanized_money_with_symbol @purchase.amount %></strong></p>
+        
         <br>
-
         <button id="pay" class="form-button btn-lg text-white">Pay now</button>
         <script src="https://js.stripe.com/v3/"></script>
         <script>

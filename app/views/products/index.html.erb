@@ -10,7 +10,6 @@
           </div>
           <div class="product-card">
             <p class="heading2 mt-0 mb-1"><%= product.title %> </p> 
-            <strong><%= humanized_money_with_symbol(product.price) %></strong> 
             <br>
             <%= product.description %> 
             <br>
@@ -19,18 +18,24 @@
             <i class="fas fa-star product-star"></i>
             <i class="fas fa-star product-star"></i> 
             <i class="far fa-star product-star"></i>
+            <br>
+            <br>
+            <strong><h4><%= humanized_money_with_symbol(product.price) %></h4> </strong> 
           </div>
           <div class="product-body">
               <%= form_tag order_items_path do %>
                 <%= hidden_field_tag :product_id, product.id%>
-                <p>Quantity</p> <%= number_field_tag :quantity, 1, class: "product-number-field"%>
-                  <%= button_tag :submit, class: "product-submit", title: '', data: { toggle: 'tooltip', placement: 'bottom', original_title: 'Add to cart' } do %>
-                    <i class="far fa-heart product-heart"></i>
-                  <% end %>
+                <p>Qty:</p> <%= number_field_tag :quantity, 1, class: "product-number-field"%>
+                  <%# <%= button_tag :submit, class: "product-submit", title: 'Add to cart', data: { toggle: 'tooltip', placement: 'bottom', original_title: 'Add to cart' } do %>
+                    <%# <i class="far fa-heart product-heart"></i> %>
+                  <%# <% end %> 
+                  <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
+                    content_tag(:strong, 'Add to cart')
+                  end %>
               <% end %>  
             </div>
         </div>
-        <hr>
+        <hr> 
       </div>
     <% end %>
   </div>

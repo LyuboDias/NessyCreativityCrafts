@@ -10,9 +10,12 @@ puts 'Creating new data base ...'
 
 # ------------Categories-------------------
 puts 'Creating categories...'
-mugs = Category.create!(title: 'Mugs', images: "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106131/NCC/IMG-20210709-WA0003_mqpkud.jpg", description: "Here you can browse and select from our hand crafted mugs wich are great for your special ocassions.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
-bracelets = Category.create!(title: 'Bracelets', images: "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106130/NCC/IMG-20210709-WA0002_jaomqa.jpg", description: "Select bracelet witth your custome message or favorite gems colors.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
-glasses = Category.create!(title: 'Glasses', images: "https://images.pexels.com/photos/6210895/pexels-photo-6210895.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", description: "Found out more of our glass and glitter crafts that looks amazing and bring that special emotions every time when on a table.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
+mugs = Category.create!(title: 'Personalised Mugs', images: "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/3_u7umqm.png", description: "Here you can browse and select from our hand crafted mugs wich are great for your special ocassions.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
+bracelets = Category.create!(title: 'Custom Bracelets', images: "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/1_ivkwkz.png", description: "Select bracelet witth your custome message or favorite gems colors.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
+glasses = Category.create!(title: 'Glitter Glasses', images: "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png", description: "Found out more of our glass and glitter crafts that looks amazing and bring that special emotions every time when on a table.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
+key_chain = Category.create!(title: 'Key Chain', images: "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906959/NCC/4_mysffs.png", description: "Found out more of our key chains crafts that looks amazing and bring that special emotions every time when on a table.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
+domino = Category.create!(title: 'Art Domino', images: "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906940/NCC/4_wgf3kz.png", description: "Found out more of our art domino crafts that looks amazing and bring that special emotions every time when on a table.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
+body_chain = Category.create!(title: 'Body Key Chain', images: "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906889/NCC/1_gli6xw.png", description: "Found out more of our body key chains crafts that looks amazing and bring that special emotions every time when on a table.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?")
 # -----------Products-----------------
 
 
@@ -23,7 +26,7 @@ bday_mug = Product.create!({
   description: "Birth day custome made mug, ideal for special ocassions gift.\n
   
   You can chose from many different styles.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/bday-mug_lnuz9x.jpg',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/3_u7umqm.png',
   category: mugs
 })
 # bday_mug_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/bday-mug_lnuz9x.jpg")
@@ -38,7 +41,7 @@ my_mug = Product.create!({
   description: "Birth day custome made mug, ideal for special ocassions gift.\n
   
   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/NCC/mugs_zur7kg.jpg',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png',
   category: mugs
 })
 # my_mug_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/bday-mug_lnuz9x.jpg")
@@ -53,7 +56,7 @@ custome_mug = Product.create!({
   description: "Print your photo on a coffeee mug\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://images.pexels.com/photos/50676/coffee-mugs-t-brown-drink-50676.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png',
   category: mugs
 })
 # custome_mug_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -68,7 +71,7 @@ custome_glass = Product.create!({
   description: "Pichk wine glass in your fav color\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/NCC/purple-glass_y8uko8.jpg',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png',
   category: glasses
 })
 # custome_glass_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -85,7 +88,7 @@ craft_glass = Product.create!({
   Pic you favourite pic and we gonna print it on a mug.
   Pic you favourite pic and we gonna print it on a mug.
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/NCC/silver-wine_jnzzl3.jpg',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906982/NCC/3_pdyg4n.png',
   category: glasses
 })
 # craft_glass_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -99,7 +102,7 @@ wine_glass = Product.create!({
   description: "This is perfect wine glass\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/NCC/pink-wine_uwct8f.jpg',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906983/NCC/2_ewctko.png',
   category: glasses
 })
 # wine_glass_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -115,7 +118,7 @@ bracelet = Product.create!({
   description: "This is custome made bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773269/NCC/bracelet3_pdul41.jpg',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/5_fesq26.png',
   category: bracelets
 })
 # bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -130,7 +133,7 @@ name_bracelet = Product.create!({
   description: "This is custome made name_bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773050/NCC/bracelets_avmy1u.jpg',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906917/NCC/2_xm6bsa.png',
   category: bracelets
 })
 # name_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -145,7 +148,7 @@ african_bracelet = Product.create!({
   description: "This is custome made african_bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug. Some traditional african style and colors bracelet. Looking amazing!", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/NCC/bracelet4_xqtter.jpg',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png',
   category: bracelets
 })
 # african_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -160,7 +163,7 @@ love_bracelet = Product.create!({
   description: "This is custome made love_bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug. Some veru very nice LOOOVEEE bracelet for coupleees", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/NCC/bracelet-black-white_vamws1.jpg',
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906919/NCC/4_hvctf6.png',
   category: bracelets
 })
 # love_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -168,21 +171,53 @@ love_bracelet = Product.create!({
 love_bracelet.save!
 
 
-love_bracelet = Product.create!({
-  title: 'love_bracelet',
-  sku: 'love_bracelet',
-  price: 11.99,
-  description: "This is custome made love_bracelet\n
+# --------------- Domino ---------------------
+
+domino = Product.create!({
+  title: 'Art Domino',
+  sku: 'domino',
+  price: 9.99,
+  description: "This is custome made domino\n
   
-  Pic you favourite pic and we gonna print it on a mug.
-  Pic you favourite pic and we gonna print it on a mug.
-  Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773046/NCC/bracelet2_clondr.jpg',
-  category: bracelets
+  Pic you favourite pic and we gonna print it on a mug. Some veru very nice LOOOVEEE bracelet for coupleees", 
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906936/NCC/2_rmhez9.png',
+  category: domino
 })
-# love_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
-# love_bracelet.image.attach(io: love_bracelet_pic, filename: "love_bracelet_pic.jpg", content_type: "image/jpg")
-love_bracelet.save!
+# domino_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
+# domino.image.attach(io: domino_pic, filename: "domino_pic.jpg", content_type: "image/jpg")
+domino.save!
+
+# -------------- Key Chain ------------------------
+
+key_chain = Product.create!({
+  title: 'Custom Key Chain',
+  sku: 'key_chain',
+  price: 9.99,
+  description: "This is custome made key_chain\n
+  
+  Pic you favourite pic and we gonna print it on a mug. Some veru very nice LOOOVEEE bracelet for coupleees", 
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906962/NCC/2_rwhrak.png',
+  category: key_chain
+})
+# key_chain_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
+# key_chain.image.attach(io: key_chain_pic, filename: "key_chain_pic.jpg", content_type: "image/jpg")
+key_chain.save!
+
+# ---------------- Body Key Chain ---------------------------
+
+body_chain = Product.create!({
+  title: 'Custom Key Chain',
+  sku: 'Body Key Chain',
+  price: 9.99,
+  description: "This is custome made body_chain\n
+  
+  Pic you favourite pic and we gonna print it on a mug. Some veru very nice LOOOVEEE bracelet for coupleees", 
+  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906895/NCC/7_wluvhc.png',
+  category: body_chain
+})
+# body_chain_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
+# body_chain.image.attach(io: body_chain_pic, filename: "body_chain_pic.jpg", content_type: "image/jpg")
+body_chain.save!
 
 # ------------------Using Faker-----------------------
 

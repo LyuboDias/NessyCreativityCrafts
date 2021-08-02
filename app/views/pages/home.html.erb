@@ -26,33 +26,64 @@
       <br>
       <%# ----------flipping cards ------- %>
       <div class="flipping-cards" id="cards">
+          <%# -------- Mugs ---------------- %>
           <div class="flipping-card">
             <div class="front card-1">
               <p class="heading2">Mugs</p>
             </div>
             <div class="back">
-              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106130/NCC/IMG-20210709-WA0002_jaomqa.jpg" alt="Mugs" />
-              <%= link_to "Buy Now", category_products_path(1), class: "text-dark form-button btn-lg  " %>
+              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png" alt="Mugs" />
+              <%= link_to "Buy Now", category_products_path(1), class: "nav-link  " %>
             </div>
           </div>
-          <!-- card 2 -->
+          <!--------- Bracelets ---------------- -->
           <div class="flipping-card">
             <div class="front card-2">
               <p class="heading2">Bracelets</p>
             </div>
             <div class="back">
-              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773046/NCC/bracelet2_clondr.jpg" alt="Bracelets" />
-              <%= link_to "Buy Now", category_products_path(2), class: "text-dark form-button btn-lg  " %>
+              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/1_ivkwkz.png" alt="Bracelets" />
+              <%= link_to "Buy Now", category_products_path(2), class: "nav-link  " %>
             </div>
           </div>
-          <!-- card 3 -->
+          <!-------- Glasses ----------->
           <div class="flipping-card">
             <div class="front card-3">
               <p class="heading2">Glasses</p>
             </div>
             <div class="back">
-              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/NCC/purple-glass_y8uko8.jpg" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(3), class: "text-dark form-button btn-lg " %>
+              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png" alt="Glasses  " />
+              <%= link_to "Buy Now", category_products_path(3), class: "nav-link " %>
+            </div>
+          </div>
+          <%# --------- Key Chain ---------- %>
+          <div class="flipping-card">
+            <div class="front card-3">
+              <p class="heading2">Key Chain</p>
+            </div>
+            <div class="back">
+              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906959/NCC/4_mysffs.png" alt="Glasses  " />
+              <%= link_to "Buy Now", category_products_path(4), class: "nav-link " %>
+            </div>
+          </div>
+          <%# ----------  Domino ---------- %>
+          <div class="flipping-card">
+            <div class="front card-3">
+              <p class="heading2">Domino</p>
+            </div>
+            <div class="back">
+              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906936/NCC/2_rmhez9.png" alt="Glasses  " />
+              <%= link_to "Buy Now", category_products_path(5), class: "nav-link " %>
+            </div>
+          </div>
+          <%# ---------- Bdoy Key Chain-------- %>
+          <div class="flipping-card">
+            <div class="front card-3">
+              <p class="heading2">Art Body</p>
+            </div>
+            <div class="back">
+              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906890/NCC/5_uoslei.png" alt="Glasses  " />
+              <%= link_to "Buy Now", category_products_path(6), class: "nav-link" %>
             </div>
           </div>
         </div>
@@ -84,8 +115,8 @@
           <p class="heading2 text-center">Hot Items this month!</p>
           <br>
           <div class="hot-items-body d-flex justify-content-around">
-            <div  class="hot-itmes-inner">
-              <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106130/NCC/IMG-20210709-WA0004_gqtdlm.jpg" alt="Card image cap">
+            <div  class="hot-items-inner">
+              <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
                 <i class="fas fa-star product-star"></i>
@@ -97,8 +128,8 @@
                 <p ><%=link_to "Buy for £9.99", category_products_path(2), class: "form-button btn-lg "  %></p>
               </div>
             </div>
-            <div  class="hot-itmes-inner">
-              <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773049/NCC/silver-wine_jnzzl3.jpg" alt="Card image cap">
+            <div  class="hot-items-inner">
+              <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
                 <i class="fas fa-star product-star"></i>
@@ -110,15 +141,15 @@
                 <p ><%=link_to "Get for £12.99", category_products_path(3), class: "form-button btn-lg "  %></p>
               </div>
             </div>
-            <div  class="hot-itmes-inner">
-              <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106131/NCC/IMG-20210709-WA0003_mqpkud.jpg" alt="Card image cap">
+            <div  class="hot-items-inner">
+              <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906940/NCC/4_wgf3kz.png" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
                 <i class="fas fa-star product-star"></i>
                 <i class="fas fa-star product-star"></i>
                 <i class="fas fa-star product-star"></i> 
                 <i class="far fa-star product-star"></i>
-                <p class="card-title">Bday Mug</p>
+                <p class="card-title">Domino</p>
                 <p class="card-text">Some quick example text to build on .</p>
                 <p ><%=link_to "Add it for £10", category_products_path(1), class: "form-button btn-lg "  %></p>
               </div>
@@ -171,40 +202,34 @@
           <!-- Container for the image gallery -->
           <div class="container">
               <div class="container-carousel">
-
-                <!-- Full-width images with number text -->
-
-                <%# --- TODO use landscape photos------ %>
-
-
                 <div class="mySlides">
                   <div class="numbertext">1 / 6</div>
-                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/NCC/bracelet-black-white_vamws1.jpg" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906963/NCC/1_g2geky.png" style="width:60%" >
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">2 / 6</div>
-                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/NCC/bday-mug_lnuz9x.jpg" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906941/NCC/3_w9cowo.png" style="width:60%" >
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">3 / 6</div>
-                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/NCC/mugs_zur7kg.jpg" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/5_fesq26.png" style="width:60%">
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">4 / 6</div>
-                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773050/NCC/bracelets_avmy1u.jpg" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906892/NCC/3_bvxfah.png" style="width:60%">
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">5 / 6</div>
-                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773269/NCC/bracelet3_pdul41.jpg" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png" style="width:60%">
                 </div>
 
                 <div class="mySlides">
                   <div class="numbertext">6 / 6</div>
-                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106130/NCC/IMG-20210709-WA0004_gqtdlm.jpg" style="width:80%">
+                    <img src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906890/NCC/5_uoslei.png" style="width:60%">
                 </div>
 
                 <!-- Next and previous buttons -->
@@ -219,22 +244,22 @@
                 <!-- Thumbnail images -->
                 <div class="carousel-row">
                   <div class="column">
-                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/NCC/bracelet-black-white_vamws1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Coffee Mug">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906963/NCC/1_g2geky.png" style="width:100%" onclick="currentSlide(1)" alt="Custom letters Key Chain">
                   </div>
                   <div class="column">
-                    <img  class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/NCC/bday-mug_lnuz9x.jpg" style="width:100%" onclick="currentSlide(2)" alt="Plain white Mug">
+                    <img  class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906941/NCC/3_w9cowo.png" style="width:100%" onclick="currentSlide(2)" alt="Colorful Art Domino">
                   </div>
                   <div class="column">
-                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/NCC/mugs_zur7kg.jpg" style="width:100%" onclick="currentSlide(3)" alt="Nice nail varnish">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/5_fesq26.png" style="width:100%" onclick="currentSlide(3)" alt="Personalised Bracelet">
                   </div>
                   <div class="column">
-                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773050/NCC/bracelets_avmy1u.jpg" style="width:100%" onclick="currentSlide(4)" alt="She believe in Unicorns">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906892/NCC/3_bvxfah.png" style="width:100%" onclick="currentSlide(4)" alt="Art Human Body">
                   </div>
                   <div class="column">
-                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773269/NCC/bracelet3_pdul41.jpg" style="width:100%" onclick="currentSlide(5)" alt="All black everything">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png" style="width:100%" onclick="currentSlide(5)" alt="Personalised Mug">
                   </div>
                   <div class="column">
-                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626106130/NCC/IMG-20210709-WA0004_gqtdlm.jpg" style="width:100%" onclick="currentSlide(6)" alt="Classic coffee mug">
+                    <img class="demo cursor" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906890/NCC/5_uoslei.png" style="width:100%" onclick="currentSlide(6)" alt="Body Key Chain">
                   </div>
                 </div>
               </div>

@@ -5,7 +5,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-weight: lighter;
-  // overflow-x: hidden;
 }
 
 @keyframes gradient {
@@ -39,7 +38,6 @@
 }
 .hr {
   margin: 0 auto;
-  // max-width: 90%;
   height: 1px;
   background: $linear;
   background-size: 400% 400%;
@@ -170,6 +168,7 @@
   text-align: center;
   color: white;
   padding-top: 10%;
+  flex-wrap: wrap;
   p {
     padding-top: 35%;
   }
@@ -181,6 +180,7 @@
   position: relative;
   width: 30%;
   padding-bottom: 30%;
+  margin-bottom: 40px;
 }
 
 .front,
@@ -231,9 +231,10 @@
   background-position: center;
   background-repeat: none;
   background-size: cover;
-  width: 70%;
-  height: 80%;
+  width: 60%;
+  height: 70%;
 }
+
 // -----------------ideas carousel--------------------
 
 .container-carousel {
@@ -350,8 +351,16 @@
   height: 115px;
 }
 // ------------hot items------------------
+.hot-items-inner {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+}
+
 .hot-item-img {
-  height: 400px;
+  height: 300px;
   padding: 1.25rem;
 }
 .hot-items-body {

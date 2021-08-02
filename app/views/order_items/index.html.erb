@@ -13,7 +13,7 @@
         <div class="hr mt-5"></div>
       <% end %>
   <% end %>
-  <br>
+  <br> 
   <br> 
   <div class="cart-wrap">
     <div class="row">
@@ -33,12 +33,6 @@
               <p class="pl-3"><%= item.quantity  %></p>
             </div>
             <div class="cart-submit"> 
-              <%# <p>
-                <%= form_tag purchases_path do %>
-                    <%# <%= hidden_field_tag 'item_id', item.id%>  
-                    <%# <%= submit_tag 'Purchase', class: 'form-button p-2 text-white' %> 
-                <%# <% end %> 
-              <%# </p> %> 
             </div>
             <div class="cart-delete">
               <p>
@@ -47,21 +41,34 @@
                 <% end %>
               </p>
             </div>
-            </div>
-            <hr>
           </div>
+          <hr>
+          
+        </div>
       <% end %>
+      <p class="heading2">You have <strong><%= current_cart.items_count %></strong> items in your Cart!</p>
       <div class="d-flex justify-content-between p-5 w-100 "> 
-        <% if @items.count > 0 %>
-          <p class="heading2">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 100) %></strong></p>  
-          <br>
+        <% if @items.count > 0 && current_cart.sub_total.to_f >= 3000%>
+        <%# --------- Total INCLUDING discount ove £30 spent -----------------%>
+          <p class="heading2">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 120) %></strong></p>  
+          <br> 
+          <p>You save: <%= humanized_money_with_symbol((current_cart.sub_total.to_f / 100) - (current_cart.sub_total.to_f / 120)) %></p>
           <div>
             <%= form_tag purchases_path do %>
-              <%# <%= hidden_field_tag 'item_id', item.id%>  
               <%= submit_tag 'Go to checkout', class: 'form-button p-2 text-white' %>
             <% end %>
           </div>
-        <% else %>
+          <% elsif @items.count > 0 %>
+            <%# ---------- Total WITHOUT discount -----------%>
+            <p class="heading2">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 100) %></strong></p>  
+            <br>
+            <div>
+              <%= form_tag purchases_path do %>
+                <%= submit_tag 'Go to checkout', class: 'form-button p-2 text-white' %>
+              <% end %>
+            </div>
+          <% else %>
+          <%# ----------- EMPTY Cart ------------ %>
           <p class="heading2">Total Amount: <strong>£0</strong></p>
         <% end %>
       </div>
@@ -72,9 +79,14 @@
   <br>
   
   <div class=" d-flex justify-content-center">
-    <p class="p-5 heading2"><%=link_to "Mugs", category_products_path(1), class: "nav-link text-dark"  %></p>
-    <p class="p-5 heading2"><%=link_to "Bracelets", category_products_path(2), class: "nav-link text-dark"  %></p>
-    <p class="p-5 heading2"><%=link_to "Glasses", category_products_path(3), class: "nav-link text-dark"  %></p>
+      <p class="p-5 heading2"><%=link_to "Mugs", category_products_path(1), class: "nav-link text-dark"  %></p>
+      <p class="p-5 heading2"><%=link_to "Bracelets", category_products_path(2), class: "nav-link text-dark"  %></p>
+      <p class="p-5 heading2"><%=link_to "Glasses", category_products_path(3), class: "nav-link text-dark"  %></p>
+    </div>
+    <div class=" d-flex justify-content-center">
+      <p class="p-5 heading2"><%=link_to "Key Chain", category_products_path(4), class: "nav-link text-dark"  %></p>
+      <p class="p-5 heading2"><%=link_to "Domino", category_products_path(5), class: "nav-link text-dark"  %></p>
+      <p class="p-5 heading2"><%=link_to "Body Key Chain", category_products_path(6), class: "nav-link text-dark"  %></p>
   </div>
   <hr>
 </div>
