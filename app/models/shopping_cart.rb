@@ -16,7 +16,7 @@ class ShoppingCart
     order.items.sum(:quantity)
   end
 
-  def add_item(product_id:, quantity:)
+  def add_item(product_id:, quantity:, message:)
       product = Product.find(product_id)
 
       order_item = order.items.find_or_initialize_by(
@@ -25,6 +25,7 @@ class ShoppingCart
 
       order_item.price = product.price
       order_item.quantity = quantity
+      order_item.message = message
       
 
       # transaction will ensure we have the correct data when ever we add or remove an item

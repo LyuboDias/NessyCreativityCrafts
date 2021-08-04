@@ -4,8 +4,8 @@
   <div class="row">
     <% @products.each do |product| %> 
       <div class="col-12 ">
-        <div class="product-wrap"> 
-          <div class="product-image-div">
+        <div class="product-wrap box-shadow mb-4 p-3" > 
+          <div class="product-image-div ">
             <%= image_tag product.images, class: "product-image" %>
           </div>
           <div class="product-card">
@@ -25,23 +25,59 @@
           <div class="product-body">
               <%= form_tag order_items_path do %>
                 <%= hidden_field_tag :product_id, product.id%>
-                <p>Qty:</p> <%= number_field_tag :quantity, 1, class: "product-number-field"%>
+                <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, class: "product-number-field"%>
                   <%# <%= button_tag :submit, class: "product-submit", title: 'Add to cart', data: { toggle: 'tooltip', placement: 'bottom', original_title: 'Add to cart' } do %>
                     <%# <i class="far fa-heart product-heart"></i> %>
+                  <%# <% end %>
+
+
+                  <%# <%= form_tag '/upload' do %>
+                    <%# <label for="file">File to Upload</label> <%= file_field_tag "file" %>
+                    <%# <%= submit_tag %> 
                   <%# <% end %> 
+                    <br>
+                    <strong>Personal message</strong> 
+                    <br>
+                    <%= text_area_tag 'message', "", size: "20x3" %>
+
+                    <br>
+                    <strong>Size</strong> 
+                    <br>
+                    <%= check_box_tag 'size', 's', false %> Small
+                    <%= check_box_tag 'size', 'm', false %> Medium
+                    <%= check_box_tag 'size', 'l', false %> Large
+                    <br>
+                    <strong>Colour</strong> 
+                    <br>
+                    <%= check_box_tag 'color', 'red', false %> red
+                    <%= check_box_tag 'color', 'blue', false %> blue
+                    <%= check_box_tag 'color', 'green', false %> green
+                  <br>
+                 
                   <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
-                    content_tag(:strong, 'Add to cart')
+                    content_tag(:strong, 'Add to cart') 
                   end %>
               <% end %>  
             </div>
-        </div>
-        <hr> 
+        </div> 
+        <%# <hr>  %>
       </div>
     <% end %>
   </div>
   <div class=" d-flex justify-content-between">
     <p class="text-center mt-5">  <%= link_to "Back", categories_path, class: "btn-lg form-button" %></p>
     <p class="text-center mt-5">  <%= link_to "Checkout", cart_path, class: "btn-lg form-button"%></p>
+  </div>
+  <br>
+  <div class=" d-flex justify-content-center">
+      <p class="p-5 heading2"><%=link_to "Mugs", category_products_path(1), class: "nav-link text-dark"  %></p>
+      <p class="p-5 heading2"><%=link_to "Bracelets", category_products_path(2), class: "nav-link text-dark"  %></p>
+      <p class="p-5 heading2"><%=link_to "Glasses", category_products_path(3), class: "nav-link text-dark"  %></p>
+    </div>
+    <div class=" d-flex justify-content-center">
+      <p class="p-5 heading2"><%=link_to "Key Chain", category_products_path(4), class: "nav-link text-dark"  %></p>
+      <p class="p-5 heading2"><%=link_to "Domino", category_products_path(5), class: "nav-link text-dark"  %></p>
+      <p class="p-5 heading2"><%=link_to "Body Key Chain", category_products_path(6), class: "nav-link text-dark"  %></p>
   </div>
 </div>
 

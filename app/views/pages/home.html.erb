@@ -1,13 +1,67 @@
 
-<div class="container">
-  <div class="banner">
-    <%# <%= cl_image_tag("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1602611882/coding-keyboard_yclssh.jpg", class: "") %> 
-    <div class="hero-text">
-      <p class="" data-aos="fade-down"  data-aos-duration="3000" style="font-size:60px"><span class="second-color">Nessy</span>  <span class="main-color">Creativity Crafts</span></p>
-      <br>
-      <br>
-      <a href="#cards" class="shop-now"> SHOP NOW </a>
+
+
+<div class="row ">
+  <div class="banner col-lg-6 col-sm-12 col-md-6">
+    <article class="wwdc">
+      <span class="spin span-anime">
+        <!-- Large Circles -->
+        <div class="large circle one"></div>
+        <div class="large circle two"></div>
+        <div class="large circle three"></div>
+        <div class="large circle four"></div>
+        <div class="large circle five"></div>
+        <div class="large circle six"></div>
+        <div class="large circle seven"></div>
+        <div class="large circle eight"></div>
+      </span>
+      <span class="pulse span-anime">
+        <!-- Small Shapes -->
+        <div class="small circle one"></div>
+        <div class="small squircle two"></div>
+        <div class="small circle three"></div>
+        <div class="small squircle four"></div>
+        <div class="small circle five"></div>
+        <div class="small squircle six"></div>
+        <div class="small circle seven"></div>
+        <div class="small squircle eight"></div>
+      </span>
+        <!-- Squircles -->
+        <span class="spin-reverse span-anime">
+          <div class="large squircle one"></div>
+        </span>
+        <div class="large squircle two">
+          <div class="content">
+          <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627909810/NCC/new-ncc-logo-trans_mptn3q.png", class: 'w-75 mt-5' %>
+        </div>
+      </div>
+    </article>
+  </div>
+  <%# -------------- NCC moving text ----------- %>
+  <div class="col-lg-6 col-sm-12 col-md-6">
+    <div class="typing-text">
+		<div class=" mb-5">
+      <h1><span class=" static-text main-color ">Nessy Creativity Crafts</span></h1>  
+      <h3> <span class="static-text  second-color">Arts</span> </h3>
     </div>
+			<ul class="dynamic-text">
+				<li><span>Mugs</span></li>
+				<li><span>Glitter Glasses</span></li>
+				<li><span>Dominos</span></li>
+				<%# <li><span>Key Chains</span></li> %>
+        <li><span>Bracelets</span></li>
+			</ul>
+	</div>
+  </div>
+</div>
+<%# ---- Arrow down animation --------- %>
+  <div class="arrow-wrap">
+  <div class="arrow-down">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </div>
 <br> 
@@ -115,7 +169,7 @@
           <p class="heading2 text-center">Hot Items this month!</p>
           <br>
           <div class="hot-items-body d-flex justify-content-around">
-            <div  class="hot-items-inner">
+            <div  class="hot-items-inner box-shadow">
               <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
@@ -128,7 +182,7 @@
                 <p ><%=link_to "Buy for £9.99", category_products_path(2), class: "form-button btn-lg "  %></p>
               </div>
             </div>
-            <div  class="hot-items-inner">
+            <div  class="hot-items-inner box-shadow">
               <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
@@ -141,7 +195,7 @@
                 <p ><%=link_to "Get for £12.99", category_products_path(3), class: "form-button btn-lg "  %></p>
               </div>
             </div>
-            <div  class="hot-items-inner">
+            <div  class="hot-items-inner box-shadow">
               <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906940/NCC/4_wgf3kz.png" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
@@ -168,7 +222,7 @@
         <br>
         <div class="how-we-do mb-5">
           <div class="hot-items-body d-flex justify-content-around">
-            <div class="card" style="width: 30rem;">
+            <div class="card box-shadow" style="width: 30rem;">
               <div class="how-we-do-img">
                 <img class="card-img-top" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626115193/NCC/how-we-work_ouw6sy.jpg" alt="Card image cap">
               </div>
@@ -180,7 +234,7 @@
             </div>
 
 
-            <div class="card" style="width: 30rem;">
+            <div class="card box-shadow" style="width: 30rem;">
               <div class="how-we-do-img">
                 <img class="card-img-top" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626115193/NCC/how-we-started_msrcar.jpg" alt="Card image cap">
               </div>

@@ -1,10 +1,10 @@
-<h2> Dear <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %> your h2ayment was succseful!</p>
+<h2>  <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %> places a NEW order!!!</p>
 <br>
 <h3>This payment was with status: <%= @purchase.state %> !!!</h3>
 <br>
 
 <ul class="list-unstyled">
-  <li><p>You ordere id: <%= @purchase.id %></p></li>
+  <li><p>Order id: <%= @purchase.id %></p></li>
   <li><strong>ISSUED ON</strong> <%= @purchase.created_at.to_date %></li>
   <% @cart.each do |item| %>
     <li><p>Product: <%= item.product.title %></p></li>
@@ -15,17 +15,13 @@
   <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @purchase.amount %></li>
 </ul>
 <br>
-<p>Your order will be delivered to: </p>
+<p>Delivere to: </p>
 <br>
 <p><%= @user.user_detail.door_number %> <%= @user.user_detail.street %></p>
 <p><%= @user.user_detail.postcode %></p>
 <p><%= @user.user_detail.city %></p>
 <br>
-<p>Your contact number:<%= @user.user_detail.phone %></p>
-<br>
-<br>
-<p>Delivery times at the moment are two working days.</p>
-<p>Meanwhile if you have any questions please contact us on support@nessycrativitycrafts.com</p>
-<p>Thank you</p>
+<p>Contact number:<%= @user.user_detail.phone %></p>
+
 
  

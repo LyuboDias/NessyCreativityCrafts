@@ -12,22 +12,26 @@
             <li><p>Product: <%= item.product.title %></p></li>
             <li><p>Proce: <%= humanized_money_with_symbol(item.price) %> </p></li>
             <li><p>Quantity: <%= item.quantity %></p></li>
+            <li><p>Personal message: <%= item.message %></p></li>
           <% end %>
         </ul>
         <p class="heading2">Total including discounts: <strong><%= humanized_money_with_symbol @purchase.amount %></strong></p>
-        
         <br>
-        <button id="pay" class="form-button btn-lg text-white">Pay now</button>
-        <script src="https://js.stripe.com/v3/"></script>
-        <script>
-          const paymentButton = document.getElementById('pay');
-          paymentButton.addEventListener('click', () => {
-            const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-            stripe.redirectToCheckout({
-              sessionId: '<%= @purchase.checkout_session_id %>'
-            });
-          }); 
-        </script>
+        <div class="d-flex justify-content-between w-100">
+          <p class="mt-5">  <%= link_to "Go back", cart_path, class: "btn-lg form-button"%></p>
+          <br>
+          <button id="pay" class="form-button btn-lg text-white ">Confirm and pay</button>
+          <script src="https://js.stripe.com/v3/"></script>
+          <script>
+            const paymentButton = document.getElementById('pay');
+            paymentButton.addEventListener('click', () => {
+              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+              stripe.redirectToCheckout({
+                sessionId: '<%= @purchase.checkout_session_id %>'
+              });
+            }); 
+          </script>
+        </div>
       <% else %>
         <br>
         <p class="heading2 text-center">Please add your personal details to proceed to payment!</p>

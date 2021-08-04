@@ -3,11 +3,12 @@ class OrderItemsController < ApplicationController
     @items = current_cart.order.items
     @user = current_user
   end
-
+ 
    def create
     current_cart.add_item(
       product_id: params[:product_id], 
-      quantity: params[:quantity]
+      quantity: params[:quantity],
+      message: params[:message] 
     ) 
 
     respond_to do |format|

@@ -24,7 +24,16 @@ class UserMailer < ApplicationMailer
     #   @total = current_cart.sub_total.to_f / 100
       mail(to: user.email, subject: 'Your payment was successful')
       # This will render a view in `app/views/user_mailer`!
-  end
+  end 
+
+  def order(user, cart, purchase)
+    @cart = cart
+    @user = user # Instance variable => available in view
+    @purchase = purchase
+    #   @total = current_cart.sub_total.to_f / 100
+      # This will render a view in `app/views/user_mailer`!
+      mail(to: 'contact@nessycreativitycrafts.com', subject: 'Your payment was successful')
+  end 
 
 end
  

@@ -55,6 +55,7 @@ class PurchasesController < ApplicationController
     # sending a confirmation email for successful payment
     if @purchase.state == 'paid'
       UserMailer.payment(@user, @cart, @purchase).deliver_now
+      UserMailer.order(@user, @cart, @purchase).deliver_now
     end
     @cart.destroy_all
   end
