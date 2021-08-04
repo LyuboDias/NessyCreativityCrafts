@@ -16,18 +16,19 @@ class ShoppingCart
     order.items.sum(:quantity)
   end
 
-  def add_item(product_id:, quantity:, message:)
+  def add_item(product_id:, quantity:, message:, user_pic:, color:, size:)
       product = Product.find(product_id)
 
       order_item = order.items.find_or_initialize_by(
         product_id: product_id
       )
 
-      order_item.price = product.price
+      order_item.price = product.price 
       order_item.quantity = quantity
       order_item.message = message
-      # TODO add color, size and image
-      
+      order_item.user_pic = user_pic
+      order_item.color = color
+      order_item.size = size      
 
       # transaction will ensure we have the correct data when ever we add or remove an item
       ActiveRecord::Base.transaction do

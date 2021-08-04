@@ -28,7 +28,7 @@
           <div class="product-body">
             <% case product.category.title%>
                 <% when 'Personalised Mugs'%>
-                  <%= form_tag order_items_path do %>
+                  <%= form_tag order_items_path, multipart: true do %>
                     <%= hidden_field_tag :product_id, product.id%>
                     <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, class: "product-number-field"%>
                         <br>
@@ -38,10 +38,7 @@
                         <br>
                         <%# TODO style the file upload %>
                         <div class="d-flex"> 
-                          <%= form_tag '/upload', multipart: true do %>
                             <label for="file">File to Upload</label> <%= file_field_tag 'user_pic', accept: 'image/png,image/gif,image/jpeg' %>
-                            <%= submit_tag %> 
-                          <% end %>
                         </div>
                         <br>
                       <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
@@ -59,15 +56,15 @@
                         <br>
                         <strong>Size</strong> 
                         <br>
-                        <%= check_box_tag 'size', 's', false %> Small 
-                        <%= check_box_tag 'size', 'm', false %> Medium
-                        <%= check_box_tag 'size', 'l', false %> Large
+                        <%= radio_button_tag 'size', "small", false, class: "size_input" %> S
+                        <%= radio_button_tag 'size', "medium", false, class: "size_input" %> M
+                        <%= radio_button_tag 'size', "large", false, class: "size_input" %> L
                         <br>
                         <strong>Colour</strong> 
                         <br>
-                        <%= check_box_tag 'color', 'red', false %> red
-                        <%= check_box_tag 'color', 'blue', false %> blue
-                        <%= check_box_tag 'color', 'green', false %> green
+                        <%= radio_button_tag 'color', "green", false, class: "color_input" %> Green
+                        <%= radio_button_tag 'color', "red", false, class: "color_input" %> Red
+                        <%= radio_button_tag 'color', "blue", false, class: "color_input" %> Blue
                       <br>
                       <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
                         content_tag(:strong, 'Add to cart') 
@@ -84,9 +81,9 @@
                         <br>
                         <strong>Colour</strong> 
                         <br>
-                        <%= check_box_tag 'color', 'red', false %> red
-                        <%= check_box_tag 'color', 'blue', false %> blue
-                        <%= check_box_tag 'color', 'green', false %> green
+                        <%= radio_button_tag 'color', "green", false, class: "color_input" %> green
+                        <%= radio_button_tag 'color', "red", false, class: "color_input" %> red
+                        <%= radio_button_tag 'color', "blue", false, class: "color_input" %> blue
                       <br>
                       <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
                         content_tag(:strong, 'Add to cart') 
@@ -103,9 +100,9 @@
                         <br>
                         <strong>Colour</strong> 
                         <br>
-                        <%= check_box_tag 'color', 'red', false %> red
-                        <%= check_box_tag 'color', 'blue', false %> blue
-                        <%= check_box_tag 'color', 'green', false %> green
+                        <%= radio_button_tag 'color', "green", false, class: "color_input" %> green
+                        <%= radio_button_tag 'color', "red", false, class: "color_input" %> red
+                        <%= radio_button_tag 'color', "blue", false, class: "color_input" %> blue
                       <br>
                       <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
                         content_tag(:strong, 'Add to cart') 
@@ -122,9 +119,9 @@
                         <br>
                         <strong>Colour</strong> 
                         <br>
-                        <%= check_box_tag 'color', 'red', false %> red
-                        <%= check_box_tag 'color', 'blue', false %> blue
-                        <%= check_box_tag 'color', 'green', false %> green
+                        <%= radio_button_tag 'color', "green", false, class: "color_input" %> green
+                        <%= radio_button_tag 'color', "red", false, class: "color_input" %> red
+                        <%= radio_button_tag 'color', "blue", false, class: "color_input" %> blue
                       <br>
                       <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
                         content_tag(:strong, 'Add to cart') 
@@ -141,9 +138,9 @@
                         <br>
                         <strong>Colour</strong> 
                         <br>
-                        <%= check_box_tag 'color', 'red', false %> red
-                        <%= check_box_tag 'color', 'blue', false %> blue
-                        <%= check_box_tag 'color', 'green', false %> green
+                        <%= radio_button_tag 'color', "green", false, class: "color_input" %> green
+                        <%= radio_button_tag 'color', "red", false, class: "color_input" %> red
+                        <%= radio_button_tag 'color', "blue", false, class: "color_input" %> blue
                       <br>
                       <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
                         content_tag(:strong, 'Add to cart') 

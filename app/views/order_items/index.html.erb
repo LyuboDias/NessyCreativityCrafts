@@ -12,7 +12,7 @@
         <p class="heading2 text-center">Checkout</p>
         <div class="hr mt-5"></div>
       <% end %>
-  <% end %>
+  <% end %> 
   <br> 
   <br> 
   <div class="cart-wrap">
@@ -35,7 +35,15 @@
             <div class="cart-product-quantity">
               <p class="pl-3"><%= item.message  %></p>
             </div>
-            <%# TODO add item.message %>
+            <div class="cart-product-quantity">
+              <p class="pl-3"><%= item.user_pic  %></p>
+            </div>
+            <div class="cart-product-quantity">
+              <p class="pl-3"><%= item.color  %></p>
+            </div>
+            <div class="cart-product-quantity">
+              <p class="pl-3"><%= item.size  %></p>
+            </div>
             <div class="cart-submit">  
             </div>
             <div class="cart-delete">

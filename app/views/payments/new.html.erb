@@ -13,6 +13,9 @@
             <li><p>Proce: <%= humanized_money_with_symbol(item.price) %> </p></li>
             <li><p>Quantity: <%= item.quantity %></p></li>
             <li><p>Personal message: <%= item.message %></p></li>
+            <li><p>Photo: <%= item.user_pic %></p></li>
+            <li><p>Colour: <%= item.color %></p></li>
+            <li><p>Size: <%= item.size %></p></li>
           <% end %>
         </ul>
         <p class="heading2">Total including discounts: <strong><%= humanized_money_with_symbol @purchase.amount %></strong></p>

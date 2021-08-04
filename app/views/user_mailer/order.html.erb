@@ -11,10 +11,13 @@
     <li><p>Proce: <%= humanized_money_with_symbol(item.price) %> </p></li>
     <li><p>Quantity: <%= item.quantity %></p></li>
     <li><p>Personal Message: <%= item.message %></p></li>
+    <li><p>Photo: <%= item.user_pic %></p></li>
+    <li><p>Color: <%= item.color %></p></li>
+    <li><p>Size: <%= item.size %></p></li>
   <% end %>
   <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @purchase.amount %></li>
 </ul>
-<br>
+<br> 
 <p>Delivere to: </p>
 <br>
 <p><%= @user.user_detail.door_number %> <%= @user.user_detail.street %></p>

@@ -8,8 +8,10 @@ class OrderItemsController < ApplicationController
     current_cart.add_item(
       product_id: params[:product_id], 
       quantity: params[:quantity],
-      message: params[:message] 
-      # TODO add color, size and image
+      message: params[:message],
+      user_pic: params[:user_pic],
+      color: params[:color],
+      size: params[:size]
     ) 
 
     respond_to do |format|
