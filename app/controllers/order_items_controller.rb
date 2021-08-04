@@ -9,6 +9,7 @@ class OrderItemsController < ApplicationController
       product_id: params[:product_id], 
       quantity: params[:quantity],
       message: params[:message] 
+      # TODO add color, size and image
     ) 
 
     respond_to do |format|

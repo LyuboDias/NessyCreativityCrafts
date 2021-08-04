@@ -1,0 +1,29 @@
+<%= form_tag order_items_path do %>
+  <%= hidden_field_tag :product_id, product.id%>
+  <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, class: "product-number-field"%>
+    <%# <%= form_tag '/upload' do %>
+      <%# <label for="file">File to Upload</label> <%= file_field_tag "file" %>
+      <%# <%= submit_tag %> 
+    <%# <% end %> 
+      <br>
+      <strong>Personal message</strong> 
+      <br>
+      <%= text_area_tag 'message', "", size: "20x3" %>
+
+      <br>
+      <strong>Size</strong> 
+      <br>
+      <%= check_box_tag 'size', 's', false %> Small 
+      <%= check_box_tag 'size', 'm', false %> Medium
+      <%= check_box_tag 'size', 'l', false %> Large
+      <br>
+      <strong>Colour</strong> 
+      <br>
+      <%= check_box_tag 'color', 'red', false %> red
+      <%= check_box_tag 'color', 'blue', false %> blue
+      <%= check_box_tag 'color', 'green', false %> green
+    <br>
+    <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
+      content_tag(:strong, 'Add to cart') 
+    end %>
+<% end %> 

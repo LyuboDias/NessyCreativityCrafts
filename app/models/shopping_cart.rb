@@ -26,6 +26,7 @@ class ShoppingCart
       order_item.price = product.price
       order_item.quantity = quantity
       order_item.message = message
+      # TODO add color, size and image
       
 
       # transaction will ensure we have the correct data when ever we add or remove an item
