@@ -27,9 +27,26 @@
     <%= render 'shared/footer' %>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      // ------- product image modal ---------------
+        let modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" and "src" text as a caption
+        let modalImg = document.getElementById("img01");
+        let captionText = document.getElementById("caption");
+        function openModal(e){
+          modal.style.display = "block";
+          modalImg.src = e.src;
+          captionText.innerHTML = e.alt;
+        }
+
+        let close = document.getElementsByClassName("modal")[0];
+
+        close.onclick = function() { 
+          modal.style.display = "none";
+        }
     
 
-      // -----------------carousel-----------------------
+      // -----------------ideas carousel-----------------------
 
       let slideIndex = 1;
       showSlides(slideIndex);

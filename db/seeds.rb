@@ -26,11 +26,18 @@ bday_mug = Product.create!({
   description: "Birth day custome made mug, ideal for special ocassions gift.\n
   
   You can chose from many different styles.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/3_u7umqm.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/2_utpg6n.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/3_u7umqm.png',
   category: mugs
 })
-# bday_mug_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/bday-mug_lnuz9x.jpg")
-# bday_mug.image.attach(io: bday_mug_pic, filename: "bday_mug_pic.jpg", content_type: "image/jpg")
+# pic_1 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png")
+# pic_2 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/2_utpg6n.png")
+# pic_3 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png")
+# bday_mug.images.attach(io: pic_1, filename: "pic_1.jpg", content_type: "image/png")
+# bday_mug.images.attach(io: pic_2, filename: "pic_2.jpg", content_type: "image/png")
+# bday_mug.images.attach(io: pic_3, filename: "pic_3.jpg", content_type: "image/png")
 bday_mug.save!
 
 
@@ -41,11 +48,18 @@ my_mug = Product.create!({
   description: "Birth day custome made mug, ideal for special ocassions gift.\n
   
   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum fugiat accusamus nam tempora cumque et eligendi commodi nesciunt sunt?", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/2_utpg6n.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/3_u7umqm.png',
   category: mugs
 })
-# my_mug_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773047/bday-mug_lnuz9x.jpg")
-# my_mug.image.attach(io: my_mug_pic, filename: "my_mug_pic.jpg", content_type: "image/jpg")
+# pic_1 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png")
+# pic_2 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/2_utpg6n.png")
+# pic_3 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png")
+# my_mug.images.attach(io: pic_1, filename: "pic_1.jpg", content_type: "image/png")
+# my_mug.images.attach(io: pic_2, filename: "pic_2.jpg", content_type: "image/png")
+# my_mug.images.attach(io: pic_3, filename: "pic_3.jpg", content_type: "image/png")
 my_mug.save!
 
 
@@ -56,11 +70,18 @@ custome_mug = Product.create!({
   description: "Print your photo on a coffeee mug\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/2_utpg6n.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/3_u7umqm.png',
   category: mugs
 })
-# custome_mug_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
-# custome_mug.image.attach(io: custome_mug_pic, filename: "custome_mug_pic.jpg", content_type: "image/jpg")
+# pic_1 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png")
+# pic_2 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/2_utpg6n.png")
+# pic_3 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png")
+# custome_mug.images.attach(io: pic_1, filename: "pic_1.jpg", content_type: "image/png")
+# custome_mug.images.attach(io: pic_2, filename: "pic_2.jpg", content_type: "image/png")
+# custome_mug.images.attach(io: pic_3, filename: "pic_3.jpg", content_type: "image/png")
 custome_mug.save!
 
 # ---------Glasses------------------
@@ -71,11 +92,17 @@ custome_glass = Product.create!({
   description: "Pichk wine glass in your fav color\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906983/NCC/2_ewctko.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906982/NCC/3_pdyg4n.png',
   category: glasses
 })
-# custome_glass_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
-# custome_glass.image.attach(io: custome_glass_pic, filename: "custome_glass_pic.jpg", content_type: "image/jpg")
+# pic_1 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png")
+# pic_2 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906983/NCC/2_ewctko.png")
+# pic_3 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906982/NCC/3_pdyg4n.png")
+# custome_glass.images.attach(io: pic_1, filename: "pic_1.jpg", content_type: "image/png")
+# custome_glass.images.attach(io: pic_2, filename: "pic_2.jpg", content_type: "image/png")
+# custome_glass.images.attach(io: pic_3, filename: "pic_3.jpg", content_type: "image/png")
 custome_glass.save!
 
 
@@ -88,11 +115,17 @@ craft_glass = Product.create!({
   Pic you favourite pic and we gonna print it on a mug.
   Pic you favourite pic and we gonna print it on a mug.
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906982/NCC/3_pdyg4n.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906983/NCC/2_ewctko.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906982/NCC/3_pdyg4n.png',
   category: glasses
 })
-# craft_glass_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
-# craft_glass.image.attach(io: craft_glass_pic, filename: "craft_glass_pic.jpg", content_type: "image/jpg")
+# pic_1 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png")
+# pic_2 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906983/NCC/2_ewctko.png")
+# pic_3 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906982/NCC/3_pdyg4n.png")
+# craft_glass.images.attach(io: pic_1, filename: "pic_1.jpg", content_type: "image/png")
+# craft_glass.images.attach(io: pic_2, filename: "pic_2.jpg", content_type: "image/png")
+# craft_glass.images.attach(io: pic_3, filename: "pic_3.jpg", content_type: "image/png")
 craft_glass.save!
 
 wine_glass = Product.create!({
@@ -102,11 +135,17 @@ wine_glass = Product.create!({
   description: "This is perfect wine glass\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906983/NCC/2_ewctko.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906983/NCC/2_ewctko.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906982/NCC/3_pdyg4n.png',
   category: glasses
 })
-# wine_glass_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
-# wine_glass.image.attach(io: wine_glass_pic, filename: "wine_glass_pic.jpg", content_type: "image/jpg")
+# pic_1 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png")
+# pic_2 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906983/NCC/2_ewctko.png")
+# pic_3 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906982/NCC/3_pdyg4n.png")
+# wine_glass.images.attach(io: pic_1, filename: "pic_1.jpg", content_type: "image/png")
+# wine_glass.images.attach(io: pic_2, filename: "pic_2.jpg", content_type: "image/png")
+# wine_glass.images.attach(io: pic_3, filename: "pic_3.jpg", content_type: "image/png")
 wine_glass.save!
 
 # -----------Bracelets---------------------
@@ -118,11 +157,18 @@ bracelet = Product.create!({
   description: "This is custome made bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/5_fesq26.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906917/NCC/2_xm6bsa.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906919/NCC/4_hvctf6.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/1_ivkwkz.png',
   category: bracelets
 })
-# bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
-# bracelet.image.attach(io: bracelet_pic, filename: "bracelet_pic.jpg", content_type: "image/jpg")
+# pic_1 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png")
+# pic_2 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906917/NCC/2_xm6bsa.png")
+# pic_3 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/5_fesq26.png")
+# bracelet.images.attach(io: pic_1, filename: "pic_1.jpg", content_type: "image/png")
+# bracelet.images.attach(io: pic_2, filename: "pic_2.jpg", content_type: "image/png")
+# bracelet.images.attach(io: pic_3, filename: "pic_3.jpg", content_type: "image/png")
 bracelet.save!
 
 
@@ -133,7 +179,10 @@ name_bracelet = Product.create!({
   description: "This is custome made name_bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug.", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906917/NCC/2_xm6bsa.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906917/NCC/2_xm6bsa.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906919/NCC/4_hvctf6.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/1_ivkwkz.png',
   category: bracelets
 })
 # name_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -148,7 +197,10 @@ african_bracelet = Product.create!({
   description: "This is custome made african_bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug. Some traditional african style and colors bracelet. Looking amazing!", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906917/NCC/2_xm6bsa.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906919/NCC/4_hvctf6.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/1_ivkwkz.png',
   category: bracelets
 })
 # african_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -163,7 +215,10 @@ love_bracelet = Product.create!({
   description: "This is custome made love_bracelet\n
   
   Pic you favourite pic and we gonna print it on a mug. Some veru very nice LOOOVEEE bracelet for coupleees", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906919/NCC/4_hvctf6.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906917/NCC/2_xm6bsa.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906919/NCC/4_hvctf6.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/1_ivkwkz.png',
   category: bracelets
 })
 # love_bracelet_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -180,7 +235,10 @@ domino = Product.create!({
   description: "This is custome made domino\n
   
   Pic you favourite pic and we gonna print it on a mug. Some veru very nice LOOOVEEE bracelet for coupleees", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906936/NCC/2_rmhez9.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906940/NCC/4_wgf3kz.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906936/NCC/2_rmhez9.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906941/NCC/3_w9cowo.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906942/NCC/1_rdthap.png',
   category: domino
 })
 # domino_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -196,7 +254,10 @@ key_chain = Product.create!({
   description: "This is custome made key_chain\n
   
   Pic you favourite pic and we gonna print it on a mug. Some veru very nice LOOOVEEE bracelet for coupleees", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906962/NCC/2_rwhrak.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906962/NCC/2_rwhrak.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906959/NCC/4_mysffs.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906962/NCC/3_y7mgtr.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906963/NCC/1_g2geky.png',
   category: key_chain
 })
 # key_chain_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")
@@ -212,7 +273,10 @@ body_chain = Product.create!({
   description: "This is custome made body_chain\n
   
   Pic you favourite pic and we gonna print it on a mug. Some veru very nice LOOOVEEE bracelet for coupleees", 
-  images: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906895/NCC/7_wluvhc.png',
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906889/NCC/1_gli6xw.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906895/NCC/7_wluvhc.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906890/NCC/5_uoslei.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906891/NCC/4_mq2567.png',
   category: body_chain
 })
 # body_chain_pic = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773048/mugs_zur7kg.jpg")

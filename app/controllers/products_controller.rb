@@ -6,4 +6,10 @@ skip_before_action :authenticate_user!
     @category = Category.find(params[:category_id])
     @products = @category.products.order(:title)
   end
+
+  private
+
+  def strong_params
+    params.require(:product).permit(:title, :sku, :price, :description, images: [])
+  end
 end    

@@ -2,7 +2,6 @@
 <br>
 <h3>This payment was with status: <%= @purchase.state %> !!!</h3>
 <br>
-
 <ul class="list-unstyled">
   <li><p>Order id: <%= @purchase.id %></p></li>
   <li><strong>ISSUED ON</strong> <%= @purchase.created_at.to_date %></li>
@@ -25,6 +24,6 @@
 <p><%= @user.user_detail.city %></p>
 <br>
 <p>Contact number:<%= @user.user_detail.phone %></p>
-
+<p>Contact email:<%= @user.email %></p>
 
  
