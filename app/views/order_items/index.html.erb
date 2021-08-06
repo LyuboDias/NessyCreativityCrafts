@@ -36,9 +36,14 @@
               <p class="pl-3"><%= item.message  %></p>
             </div>
             <div class="cart-product-quantity">
-              <p class="pl-3"><%= item.user_pic  %></p>
-              
+              <p class="pl-3"><%= item.product_id  %></p>
             </div>
+            <% if  item.product.category.title == 'Personalised Mugs' %>
+              <div class="cart-product-quantity">
+                Your image:
+                <%= image_tag item.user_pic, class: 'w-25' %>
+              </div>
+            <% end %>
             <div class="cart-product-quantity">
               <p class="pl-3"><%= item.color  %></p>
             </div>
@@ -67,7 +72,7 @@
           <br> 
           <p>You save: <%= humanized_money_with_symbol((current_cart.sub_total.to_f / 100) - (current_cart.sub_total.to_f / 120)) %></p>
           <div>
-            <%= form_tag purchases_path do %>
+            <%= form_tag purchases_path do %> 
               <%= submit_tag 'Go to checkout', class: 'form-button p-2 text-white' %>
             <% end %>
           </div>

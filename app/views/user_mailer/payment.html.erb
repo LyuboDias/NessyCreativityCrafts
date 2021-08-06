@@ -10,7 +10,7 @@
     <li><p>Product: <%= item.product.title %></p></li>
     <li><p>Proce: <%= humanized_money_with_symbol(item.price) %> </p></li>
     <li><p>Quantity: <%= item.quantity %></p></li>
-    <li><p>Personal Message: <%= item.message %></p></li>
+    <li><p>Personal Message: <%= item.message %></p></li> 
   <% end %>
   <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @purchase.amount %></li>
 </ul>

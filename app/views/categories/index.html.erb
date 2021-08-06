@@ -12,7 +12,9 @@
                 <p>( <%= category.products.count %> products )</p>
                 <p> <%= category.description %></p>
                 <br>
+                <%# ------- displaying ID of category ---------------- %>
                 <p><%= category.id %> </p>
+                <%# ---------TODO CHANGE ABOVE----------- %>
                 <p><%=link_to "Shop now", category_products_path(category), class: "form-button btn-lg text-white"  %></p>
               </div>
           </div>

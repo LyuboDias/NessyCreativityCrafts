@@ -5,14 +5,15 @@ class OrderItemsController < ApplicationController
   end
  
    def create
-    current_cart.add_item(
-      product_id: params[:product_id], 
-      quantity: params[:quantity],
-      message: params[:message],
-      user_pic: params[:user_pic],
-      color: params[:color],
-      size: params[:size]
-    ) 
+        current_cart.add_item(
+          product_id: params[:product_id], 
+          quantity: params[:quantity],
+          message: params[:message],
+          user_pic: params[:user_pic],
+          color: params[:color],
+          size: params[:size]
+        )     
+
 
     respond_to do |format|
       format.html { redirect_to request.referrer, notice: "You have succsefuly added this item!" }

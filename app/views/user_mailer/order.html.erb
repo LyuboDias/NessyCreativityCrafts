@@ -10,7 +10,7 @@
     <li><p>Proce: <%= humanized_money_with_symbol(item.price) %> </p></li>
     <li><p>Quantity: <%= item.quantity %></p></li>
     <li><p>Personal Message: <%= item.message %></p></li>
-    <li><p>Photo: <%= item.user_pic %></p></li>
+    <li>Photo <%= image_tag item.user_pic, class: 'w-100' %></li> 
     <li><p>Color: <%= item.color %></p></li>
     <li><p>Size: <%= item.size %></p></li>
   <% end %>

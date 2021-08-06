@@ -76,16 +76,24 @@
                 <% when 'Personalised Mugs'%>
                   <%= form_tag order_items_path, multipart: true do %>
                     <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, class: "product-number-field"%>
+                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
                         <br>
                         <strong>Personal message</strong> 
                         <br>
                         <%= text_area_tag 'message', "", size: "20x3" %>
                         <br>
-                        <%# TODO style the file upload %>
+                        <%# ------------- file upload ------------- %>
+
+
+
+
+
+
                         <div class="d-flex"> 
-                            <label for="file">File to Upload</label> <%= file_field_tag 'user_pic', accept: 'image/png,image/gif,image/jpeg' %>
+                            <label for="file">Upload Photo</label><%= file_field_tag 'user_pic', accept: 'image/png,image/gif,image/jpeg' %>
                         </div>
+
+                        <%# ---------------------------- %>
                         <br>
                       <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
                         content_tag(:strong, 'Add to cart') 
@@ -94,7 +102,7 @@
                 <% when 'Custom Bracelets'%>
                   <%= form_tag order_items_path do %>
                     <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, class: "product-number-field"%>
+                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
                         <br>
                         <strong>Personal message</strong> 
                         <br>
@@ -118,7 +126,7 @@
                 <% when 'Glitter Glasses'%> 
                   <%= form_tag order_items_path do %>
                     <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, class: "product-number-field"%>
+                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
                         <br>
                         <strong>Personal message</strong> 
                         <br>
@@ -135,7 +143,7 @@
                 <%when 'Key Chain'%> 
                   <%= form_tag order_items_path do %>
                     <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, class: "product-number-field"%>
+                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
                         <br>
                         <strong>Personal message</strong> 
                         <br>
@@ -152,7 +160,7 @@
                 <%when 'Art Domino'%> 
                   <%= form_tag order_items_path do %>
                     <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, class: "product-number-field"%>
+                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
                         <br>
                         <strong>Personal message</strong> 
                         <br>
@@ -169,7 +177,7 @@
                 <%when 'Body Key Chain'%> 
                   <%= form_tag order_items_path do %>
                     <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, class: "product-number-field"%>
+                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
                         <br>
                         <strong>Personal message</strong> 
                         <br>
