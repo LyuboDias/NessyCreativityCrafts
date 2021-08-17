@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/profile', to: 'pages#profile'
   get '/help', to: 'pages#help'
   resources :categories, only: [:index] do
-    resources :products, only: [:index] 
+    resources :products, only: [:index, :show]  
   end
 
   get '/cart', to: 'order_items#index'

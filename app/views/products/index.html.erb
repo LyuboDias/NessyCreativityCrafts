@@ -5,61 +5,13 @@
   <h5>Please use the "Personal message area to add specific enquaries as: <br> 'Personal Name' <br> 'Desired Letter' <br> 'Shape of Body Chain' <br> 'Any message you want to include to your order'.x</h5>
   <br>
   <div class="row">
-    <% @products.each do |product| %> 
+    <% @products.each do |product| %>  
       <div class="col-12 ">
         <div class="product-wrap box-shadow mb-4 p-3" > 
-          <div class="product-image-div ">
-            <%# ----- image modal -------------------- %>
-            <div id="myModal" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="img01">
-              <div id="caption"></div>
-            </div>
-          <%# -------------------------------------- %>
-              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
-                <ol class="carousel-indicators ">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active "></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <%# <img class="d-block w-100" src="..." alt="First slide"> %>
-                    <%= image_tag product.photo_1, class: 'product-image', alt: 'imageeee', onClick: "openModal(this)" %>
-                  </div>
-                  <div class="carousel-item">
-                    <%# <img class="d-block w-100" src="..." alt="Second slide"> %>
-                    <%= image_tag product.photo_2, class: 'product-image', alt: 'imageeee', onClick: "openModal(this)" %>
-                  </div>
-                  <% if product.photo_3 != nil %>
-                    <div class="carousel-item">
-                      <%# <img class="d-block w-100" src="..." alt="Third slide"> %>
-                      <%= image_tag product.photo_3, class: 'product-image', alt: 'imageeee', onClick: "openModal(this)" %>
-                    </div>
-                  <% end %>
-                  <% if product.photo_4 != nil %>
-                    <div class="carousel-item">
-                      <%# <img class="d-block w-100" src="..." alt="Third slide"> %>
-                      <%= image_tag product.photo_4, class: 'product-image', alt: 'imageeee', onClick: "openModal(this)" %>
-                    </div>
-                  <% end %>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon " aria-hidden="true"><i class="fas fa-chevron-left main-color h4"></i></span>
-                  <span class="sr-only ">Previous</span>
-                </a>
-                <a class="carousel-control-next " href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon " aria-hidden="true"><i class="fas fa-chevron-right main-color h4"></i></span>
-                  <span class="sr-only ">Next</span> 
-                </a>
-              </div>
-              
-            
-          </div>
+        <%= image_tag product.photo_1, class: 'product-image w-25', alt: 'imageeee', onClick: "openModal(this)" %>
+          
           <div class="product-card">
-            <p class="heading2 mt-0 mb-1"><%= product.title %> </p> 
-            <br>
+            <p class="heading2 mt-0 "><%= link_to product.title, category_product_path(@category.id, product.id), class: " " %> </p> 
             <%= product.description %> 
             <br>
             <i class="fas fa-star product-star"></i>
@@ -83,44 +35,23 @@
                         <%= text_area_tag 'message', "", size: "20x3" %>
                         <br>
                         <%# ------------- file upload ------------- %>
-
-
-
-
-
-
                         <div class="d-flex"> 
                             <label for="file">Upload Photo</label><%= file_field_tag 'user_pic', accept: 'image/png,image/gif,image/jpeg' %>
                         </div>
 
-                        <%# ---------------------------- %>
+                        <%# ----------- TODO check if image nill with if statement----------------- %>
                         <br>
                       <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
-                        content_tag(:strong, 'Add to cart') 
+                        raw('<i class="far fa-heart"></i>')
+                        # content_tag(:strong, 'Add to cart') 
                       end %>
                   <% end %>
                 <% when 'Custom Bracelets'%>
                   <%= form_tag order_items_path do %>
                     <%= hidden_field_tag :product_id, product.id%>
                     <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
-                        <br>
-                        <strong>Personal message</strong> 
-                        <br>
-                        <%= text_area_tag 'message', "", size: "20x3" %>
-                        <br>
-                        <strong>Size</strong> 
-                        <br>
-                        <%= radio_button_tag 'size', "small", false, class: "size_input" %> S
-                        <%= radio_button_tag 'size', "medium", false, class: "size_input" %> M
-                        <%= radio_button_tag 'size', "large", false, class: "size_input" %> L
-                        <br>
-                        <strong>Colour</strong> 
-                        <br>
-                        <%= select_tag "color", raw("<option>🔴Red</option><option>🟢Green</option><option>🔵Blue</option><option>🟡yellow</option><option>🟤brown</option><option>⚪white</option>"), multiple: false %>
-                        
-                      <br>
                       <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
-                        content_tag(:strong, 'Add to cart') 
+                        raw('<i class="far fa-heart"></i>') 
                       end %>
                   <% end %>
                 <% when 'Glitter Glasses'%> 
@@ -205,7 +136,9 @@
     <p class="text-center mt-5">  <%= link_to "Checkout", cart_path, class: "btn-lg form-button"%></p>
   </div>
   <br> 
-  <div class=" d-flex justify-content-center">
+  <%# iterate over categories and display links  %>
+  <div class=" d-flex justify-content-center"> 
+    
       <p class="p-5 heading2"><%=link_to "Mugs", category_products_path(7), class: "nav-link text-dark"  %></p>
       <p class="p-5 heading2"><%=link_to "Bracelets", category_products_path(8), class: "nav-link text-dark"  %></p>
       <p class="p-5 heading2"><%=link_to "Glasses", category_products_path(9), class: "nav-link text-dark"  %></p>
