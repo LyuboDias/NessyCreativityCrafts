@@ -15,10 +15,12 @@
     <meta name="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <%= favicon_link_tag asset_path('ncc-logo-trans.png') %>
-  </head>
+
+  </head> 
 
   <body>
     <%= render 'shared/navbar' %>
@@ -82,7 +84,6 @@
         dots[slideIndex - 1].className += " active";
         captionText.innerHTML = dots[slideIndex - 1].alt;
       }
-
     </script>
   </body>
 </html>

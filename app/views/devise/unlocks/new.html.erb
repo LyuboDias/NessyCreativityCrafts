@@ -1,6 +1,6 @@
 
-<div class="form-wrap">
-  <p class="heading2 text-center">Resend unlock instructions</p>
+<div class="form-wrap mb-6">
+  <h3 class="text-center text-5xl my-6">Resend unlock instructions</h3>
 
   <%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
     <%= f.error_notification %>

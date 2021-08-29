@@ -5,6 +5,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-weight: lighter;
+  // overflow-x: hidden;
 }
 
 @keyframes gradient {
@@ -46,7 +47,7 @@
 }
 .hr {
   margin: 0 auto;
-  height: 1px;
+  height: 2px;
   background: $linear;
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -56,10 +57,10 @@
 .span-anime {
   display: block;
   position: absolute;
-  top: calc(50% - 10em);
-  left: calc(50% - 10em);
-  width: 20em;
-  height: 20em;
+  top: calc(50% - 5em);
+  left: calc(50% - 5em);
+  width: 10em;
+  height: 10em;
 }
 
 span.spin {
@@ -97,9 +98,9 @@ span.pulse {
 
 .circle {
   border-radius: 50%;
-  left: calc(50% - 6.25em);
-  top: calc(50% - 12.5em);
-  transform-origin: 50% 12.5em;
+  left: calc(50% - 3em);
+  top: calc(50% - 6em);
+  transform-origin: 50% 6em;
 }
 
 .squircle {
@@ -108,8 +109,8 @@ span.pulse {
 
 .circle,
 .squircle {
-  width: 12.5em;
-  height: 12.5em;
+  width: 6em;
+  height: 6em;
   position: absolute;
   border-top: 0.1em solid rgba(255, 255, 255, 0.4);
 }
@@ -119,11 +120,11 @@ span.pulse {
 }
 
 .small {
-  width: 4em;
-  height: 4em;
-  left: calc(50% - 2em);
-  top: calc(50% - 15em);
-  transform-origin: 50% 15em;
+  width: 2em;
+  height: 2em;
+  left: calc(50% - 1em);
+  top: calc(50% - 7.5em);
+  transform-origin: 50% 7.5em;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
 }
 
@@ -195,10 +196,10 @@ $transparency: 0.75;
   position: absolute;
   background: rgba(30, 7, 66, 0.65);
   border: none;
-  left: calc(50% - 7.5em);
-  top: calc(50% - 7.5em);
-  width: 15em;
-  height: 15em;
+  left: calc(50% - 3.5em);
+  top: calc(50% - 3.5em);
+  width: 7.5em;
+  height: 7.5em;
   transform: none;
 
   &.one {
@@ -210,64 +211,11 @@ $transparency: 0.75;
   text-align: center;
 }
 
-// ---------------- Typing text animation ----------------
-
-.typing-text {
-  display: flexbox;
-}
-
-.typing-text .static-text {
-  font-size: 4rem;
-  font-weight: 500;
-}
-
-.typing-text .dynamic-text {
-  margin-left: 15px;
-  line-height: 90px;
-  height: 100px;
-  overflow: hidden;
-}
-
-.dynamic-text li {
-  list-style: none;
-  font-size: 60px;
-  font-weight: 500;
-  color: $main;
-  position: relative;
-  top: -12px;
-  animation: slide 6s steps(4) infinite;
-}
-
-@keyframes slide {
-  100% {
-    top: -360px;
-  }
-}
-
-.dynamic-text li span {
-  position: relative;
-}
-
-.dynamic-text li span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  background: transparent;
-  width: 100%;
-  animation: typing 1.5s steps(15) infinite;
-}
-
-@keyframes typing {
-  100% {
-    left: 100%;
-    margin: 0 -35px 0 35px;
-  }
-}
 //----- banner container ----------------
 .banner {
-  height: 55vh;
-  position: relative;
+  height: 100%;
+  width: 100%;
+  position: absolute;
   .arrow-down {
     color: rgb(97, 97, 97);
     background-color: white;
@@ -278,77 +226,77 @@ $transparency: 0.75;
 
 // ------- arrow down animation -----
 
-.arrow-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-  // background: #000;
-}
+// .arrow-wrap {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 10vh;
+//   // background: #000;
+// }
 
-.arrow-down {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  transform: rotate(45deg);
-}
+// .arrow-down {
+//   position: relative;
+//   width: 50px;
+//   height: 50px;
+//   transform: rotate(45deg);
+// }
 
-.arrow-down span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-right: 3px solid $second;
-  border-bottom: 3px solid $second;
-  animation: arrow-down 1s linear infinite;
-}
+// .arrow-down span {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   border: none;
+//   border-right: 3px solid $second;
+//   border-bottom: 3px solid $second;
+//   animation: arrow-down 1s linear infinite;
+// }
 
-.arrow-down span:nth-child(1) {
-  top: -30px;
-  left: -30px;
-  animation-delay: 0;
-}
+// .arrow-down span:nth-child(1) {
+//   top: -30px;
+//   left: -30px;
+//   animation-delay: 0;
+// }
 
-.arrow-down span:nth-child(2) {
-  top: -15px;
-  left: -15px;
-  animation-delay: 0.2s;
-}
+// .arrow-down span:nth-child(2) {
+//   top: -15px;
+//   left: -15px;
+//   animation-delay: 0.2s;
+// }
 
-.arrow-down span:nth-child(3) {
-  top: 0;
-  left: 0;
-  animation-delay: 0.4s;
-}
+// .arrow-down span:nth-child(3) {
+//   top: 0;
+//   left: 0;
+//   animation-delay: 0.4s;
+// }
 
-.arrow-down span:nth-child(4) {
-  top: 15px;
-  left: 15px;
-  animation-delay: 0.6s;
-}
+// .arrow-down span:nth-child(4) {
+//   top: 15px;
+//   left: 15px;
+//   animation-delay: 0.6s;
+// }
 
-.arrow-down span:nth-child(5) {
-  top: 30px;
-  left: 30px;
-  animation-delay: 0.8s;
-}
+// .arrow-down span:nth-child(5) {
+//   top: 30px;
+//   left: 30px;
+//   animation-delay: 0.8s;
+// }
 
-@keyframes arrow-down {
-  0% {
-    border-color: $main;
-    transform: translate(0, 0);
-  }
-  20% {
-    border-color: $main;
-    transform: translate(15px, 15px);
-  }
-  20.1%,
-  100% {
-    border-color: $second;
-  }
-}
+// @keyframes arrow-down {
+//   0% {
+//     border-color: $main;
+//     transform: translate(0, 0);
+//   }
+//   20% {
+//     border-color: $main;
+//     transform: translate(15px, 15px);
+//   }
+//   20.1%,
+//   100% {
+//     border-color: $second;
+//   }
+// }
 // -------contact us form-------
 
 .contact-us-form {

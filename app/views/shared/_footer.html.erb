@@ -1,14 +1,89 @@
 
+<div class="hr mx-6"></div>
+
+<div class="flex flex-wrap justify-around items-center py-6 lg:px-12 px-6 w-full">
+  <div class=" relative w-56 h-56">
+  <div class="banner">
+    <article class="wwdc">
+      <span class="spin span-anime">
+        <!-- Large Circles -->
+        <div class="large circle one"></div>
+        <div class="large circle two"></div>
+        <div class="large circle three"></div>
+        <div class="large circle four"></div>
+        <div class="large circle five"></div>
+        <div class="large circle six"></div>
+        <div class="large circle seven"></div>
+        <div class="large circle eight"></div>
+      </span>
+      <span class="pulse span-anime">
+        <!-- Small Shapes -->
+        <div class="small circle one"></div>
+        <div class="small squircle two"></div>
+        <div class="small circle three"></div>
+        <div class="small squircle four"></div>
+        <div class="small circle five"></div>
+        <div class="small squircle six"></div>
+        <div class="small circle seven"></div>
+        <div class="small squircle eight"></div>
+      </span>
+        <!-- Squircles -->
+        <%# <span class="spin-reverse span-anime">
+          <div class="large squircle one"></div>
+        </span> %>
+        <div class="large squircle two">
+          <div class="flex justify-center content-center">
+            <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1606773052/NCC/ncc-logo-trans_uufe2h.png", class: 'w-36' %>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+
+  <%# <div class='mx-6 my-2'>
+    <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627909810/NCC/new-ncc-logo-trans_mptn3q.png", class: 'w-36' %>
+  <%# </div> %> 
+  <div class='mx-6 my-2'>
+    <p class="text-xl font-medium">Products</p>
+    
+      <div class=''>
+      <%# @categories.each do |category|%>
+        <ul>
+          <li><%#link_to category.title, category_products_path(category), class: " hover:text-purple-800"  %></li>
+        </ul>
+      <%# end %>
+    </div>
+    
+  </div>
+  <div class='mx-6 my-2'>
+    <p class="text-xl font-medium">Quick Links</p>
+    <ul>
+      <li><%= link_to "Help", help_path, class: "hover:text-purple-800" %></li>
+      <li><%= link_to "About", about_path, class: "hover:text-purple-800" %></li>
+      <li><%= link_to "Contacts", contacts_path, class: "hover:text-purple-800" %></li>
+      <li><%= link_to "Cart", cart_path, class: "hover:text-purple-800" %></li>
+      <li><%= link_to "My Profile", profile_path, class: "hover:text-purple-800" %></li>
+    </ul>
+  </div>
+  <div class='mx-6 my-2'>
+    <p class="text-xl font-medium">Something else</p>
+    <ul>
+      <li>Conetent</li>
+      <li>Lorem</li>
+      <li>Hellooo</li>
+      <li>News</li>
+      <li>Careers</li>
+    </ul>
+  </div>
+</div>
 
 <div class="footer h-100 p-3">
   <div class="container text-center">
-    <br>
-    <br>
     <p class="heading2">Follow Us</p>
     <p><a href="" target="blanked" class="s-media"><i class="fab fa-twitter"></i></a>
     <a href="#" target="blanked" class="s-media"><i class="fab fa-instagram"></i></a> <a href="#" target="blanked" class="s-media"><i class="fab fa-facebook-square"></i></a></p>
     <br>
-    <div class="hr"></div>
     <br> 
       <p>
         <%= link_to "Terms & Conditions", terms_path, class: "footer-link" %>
@@ -25,9 +100,7 @@
       </p>
     <%= image_tag "bank-cards.png", class: "bank-cards" %>
     <br>
-    <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627909810/NCC/new-ncc-logo-trans_mptn3q.png", class: 'w-25' %>
     <p class="trademark">© 2021 <span class="second-color">Nessy</span > <span class="main-color">Creativity Crafts</span></p>
-    
     <p><a href="https://www.db-uk.net/" target="_blank" class="text-dark text-decoration-none text-muted">created by  <strong class="db">db</strong> </a></p>
   </div>
-</div>
+</div> 

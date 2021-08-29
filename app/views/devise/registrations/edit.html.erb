@@ -1,6 +1,6 @@
 
- <div class="form-wrap">
-  <p class="heading2 text-center">Edit <%= resource_name.to_s.humanize %></p>
+ <div class="form-wrap mb-6">
+  <h3 class="text-center text-5xl my-6">Edit <%= resource_name.to_s.humanize %></h3>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>

@@ -1,15 +1,11 @@
-<div class="big-container">
-  <div class="outside">
-    <div class="container">
-  <p class="heading2 text-center">Update My Details</p>
-  <br>
-  <div class="hr mb-5"></div>
-  <br>
-  <div class="services-form">
-    <%= render 'form', user_detail: @user_detail %>
-    <br>
-    <p class="text-center"><%= link_to 'Back', profile_path, class: 'device-links' %></p> 
-  </div>
-</div>
-  </div>
+<div class="lg:px-16 py-6 px-6">
+      <h3 class="text-center text-5xl my-6">Update Details</h3>
+      <br>
+      <div class="hr mb-5"></div>
+      <br>
+      <div class="services-form">
+        <%= render 'form', user_detail: @user_detail %>
+        <br>
+        <p class="text-center"><%= link_to 'Back', profile_path, class: 'device-links' %></p> 
+      </div>
 </div>

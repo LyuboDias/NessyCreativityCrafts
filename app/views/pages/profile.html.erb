@@ -1,24 +1,24 @@
 
-<div class="container">
-  <div class="profile-container pt-3 text-center">
+<div class="lg:px-16 py-6 px-6"> 
+  <div class=" text-center">
       <% if @user.user_detail == nil %>
-        <p class="heading2 text-center">Please add your details to be able to continue shopping.</p>
+        <h3 class="text-center text-5xl my-6">Please add your details</h3>
         <br>
         <br>
         <div class="hr"></div>
-        <p class="mt-5"> <%= link_to "Add details", new_user_detail_path, class: "form-button btn-lg " %> </p>
+        <p class="my-40"> <%= link_to "Add details", new_user_detail_path, class: "form-button btn-lg " %> </p>
       <% end %>
   </div>
   <div class="profile  mb-5">
 
       <% if @user.user_detail != nil %>
-      <p class="heading2 text-center">Welcome to your profile page <strong><%= @user.user_detail.f_name %></strong>  .</p>
+      <h3 class="text-center text-5xl my-6">Welcome to your profile page <strong><%= @user.user_detail.f_name %></strong></h3>
       <br>
-      <div class="hr  "></div>
+      <div class="hr"></div>
       <br>
       <p class="heading2 text-center">Here are your details...</p>
       <br>
-      <div class="profile-details">
+      <div class="lg:px-16 py-6 px-6">
         <p ><strong>First name - </strong><%= @user.user_detail.f_name %></p>
         <p ><strong>Last name - </strong> <%= @user.user_detail.l_name %></p>
         <% if current_cart.items_count == 0%>

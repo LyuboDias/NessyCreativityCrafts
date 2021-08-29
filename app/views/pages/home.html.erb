@@ -1,69 +1,23 @@
 
 
 
-<div class="row ">
-  <div class="banner col-lg-6 col-sm-12 col-md-6">
-    <article class="wwdc">
-      <span class="spin span-anime">
-        <!-- Large Circles -->
-        <div class="large circle one"></div>
-        <div class="large circle two"></div>
-        <div class="large circle three"></div>
-        <div class="large circle four"></div>
-        <div class="large circle five"></div>
-        <div class="large circle six"></div>
-        <div class="large circle seven"></div>
-        <div class="large circle eight"></div>
-      </span>
-      <span class="pulse span-anime">
-        <!-- Small Shapes -->
-        <div class="small circle one"></div>
-        <div class="small squircle two"></div>
-        <div class="small circle three"></div>
-        <div class="small squircle four"></div>
-        <div class="small circle five"></div>
-        <div class="small squircle six"></div>
-        <div class="small circle seven"></div>
-        <div class="small squircle eight"></div>
-      </span>
-        <!-- Squircles -->
-        <span class="spin-reverse span-anime">
-          <div class="large squircle one"></div>
-        </span>
-        <div class="large squircle two">
-          <div class="content">
-          <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627909810/NCC/new-ncc-logo-trans_mptn3q.png", class: 'w-75 mt-5' %>
-        </div>
-      </div>
-    </article>
+  <div class="">
+    <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1630069892/NCC/Handmade_crafts._n6na6m.png", class: 'w-full lg:h-screen' %>
   </div>
-  <%# -------------- NCC moving text ----------- %>
-  <div class="col-lg-6 col-sm-12 col-md-6">
-    <div class="typing-text">
-		<div class=" mb-5">
-      <h1><span class=" static-text main-color ">Nessy Creativity Crafts</span></h1>  
-      <h3> <span class="static-text  second-color">Arts</span> </h3>
+  
+  <%# ---- Arrow down animation --------- %>
+<%# <div class="flex fustify-center items-center w-full">
+  <div class="arrow-wrap ">
+    <div class="arrow-down">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-			<ul class="dynamic-text">
-				<li><span>Mugs</span></li>
-				<li><span>Glitter Glasses</span></li>
-				<li><span>Dominos</span></li>
-				<%# <li><span>Key Chains</span></li> %>
-        <li><span>Bracelets</span></li>
-			</ul>
-	</div>
   </div>
-</div>
-<%# ---- Arrow down animation --------- %>
-  <div class="arrow-wrap">
-  <div class="arrow-down">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
+</div> %>
+
 <br> 
 <br>
 <div class="info mt-5">
@@ -124,7 +78,7 @@
           <div class="flipping-card">
             <div class="front card-3">
               <p class="heading2">Domino</p>
-            </div>
+            </div> 
             <div class="back">
               <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906936/NCC/2_rmhez9.png" alt="Glasses  " />
               <%= link_to "Buy Now", category_products_path(11), class: "nav-link " %>

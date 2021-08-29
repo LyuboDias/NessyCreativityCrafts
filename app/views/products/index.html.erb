@@ -1,134 +1,36 @@
-<div class="container">
-  <p class="heading2 text-center">Here are our <%= @category.title %></p>
-  <div class="hr mb-5"></div>
+<div class="container px-12">
+  <div class="my-6">
+    <p class="heading2 text-center my-6 text-5xl"><%= @category.title %></p>
+    <div class="hr "></div> 
+  </div>
   <br>
-  <h5>Please use the "Personal message area to add specific enquaries as: <br> 'Personal Name' <br> 'Desired Letter' <br> 'Shape of Body Chain' <br> 'Any message you want to include to your order'.x</h5>
-  <br>
-  <div class="row">
-    <% @products.each do |product| %>  
-      <div class="col-12 ">
-        <div class="product-wrap box-shadow mb-4 p-3" > 
-        <%= image_tag product.photo_1, class: 'product-image w-25', alt: 'imageeee', onClick: "openModal(this)" %>
-          
-          <div class="product-card">
-            <p class="heading2 mt-0 "><%= link_to product.title, category_product_path(@category.id, product.id), class: " " %> </p> 
-            <%= product.description %> 
-            <br>
+  <div class="text-center px-6">
+    <h5 class="text-2xl font-normal">Please use the "Personal message area to add specific enquaries as: </h5>
+    <br>
+    <p>'Personal Name' </p> 
+    <p>'Desired Letter' </p>
+    <p>'Shape of Body Chain' </p>
+    <p>'Any message you want to include to your order' </p>
+  </div>
+  <div class="flex flex-wrap justify-around">
+    <% @products.each do |product| %> 
+      <%= link_to category_product_path(@category.id, product.id), class: 'hover:no-underline hover:text-purple-800 md:w-1/3 mx-6' do %> 
+      <%# <div class="  "> %>
+        <div class="box-shadow  py-6 px-6 lg:px-12 my-6 " > 
+        <%= image_tag product.photo_1, class: 'product-image ', alt: 'imageeee' %>
+          <%# <div class="product-card"> %>
+            <h5 class="mt-2 text-2xl"><%= product.title %></h5>  
             <i class="fas fa-star product-star"></i>
             <i class="fas fa-star product-star"></i>
             <i class="fas fa-star product-star"></i>
             <i class="fas fa-star product-star"></i> 
             <i class="far fa-star product-star"></i>
             <br>
-            <br>
-            <strong><h4><%= humanized_money_with_symbol(product.price) %></h4> </strong> 
-          </div>
-          <div class="product-body">
-            <% case product.category.title%>
-                <% when 'Personalised Mugs'%>
-                  <%= form_tag order_items_path, multipart: true do %>
-                    <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
-                        <br>
-                        <strong>Personal message</strong> 
-                        <br>
-                        <%= text_area_tag 'message', "", size: "20x3" %>
-                        <br>
-                        <%# ------------- file upload ------------- %>
-                        <div class="d-flex"> 
-                            <label for="file">Upload Photo</label><%= file_field_tag 'user_pic', accept: 'image/png,image/gif,image/jpeg' %>
-                        </div>
-
-                        <%# ----------- TODO check if image nill with if statement----------------- %>
-                        <br>
-                      <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
-                        raw('<i class="far fa-heart"></i>')
-                        # content_tag(:strong, 'Add to cart') 
-                      end %>
-                  <% end %>
-                <% when 'Custom Bracelets'%>
-                  <%= form_tag order_items_path do %>
-                    <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
-                      <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
-                        raw('<i class="far fa-heart"></i>') 
-                      end %>
-                  <% end %>
-                <% when 'Glitter Glasses'%> 
-                  <%= form_tag order_items_path do %>
-                    <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
-                        <br>
-                        <strong>Personal message</strong> 
-                        <br>
-                        <%= text_area_tag 'message', "", size: "20x3" %>
-                        <br>
-                        <strong>Colour</strong> 
-                        <br>
-                        <%= select_tag "color", raw("<option>Red</option><option>Green</option><option>Blue</option><option>yellow</option><option>brown</option><option>white</option>"), multiple: false %>
-                      <br>
-                      <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
-                        content_tag(:strong, 'Add to cart') 
-                      end %>
-                  <% end %>
-                <%when 'Key Chain'%> 
-                  <%= form_tag order_items_path do %>
-                    <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
-                        <br>
-                        <strong>Personal message</strong> 
-                        <br>
-                        <%= text_area_tag 'message', "", size: "20x3" %>
-                        <br>
-                        <strong>Colour</strong> 
-                        <br>
-                        <%= select_tag "color", raw("<option>Red</option><option>Green</option><option>Blue</option><option>yellow</option><option>brown</option><option>white</option>"), multiple: false %>
-                      <br>
-                      <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
-                        content_tag(:strong, 'Add to cart') 
-                      end %>
-                  <% end %>
-                <%when 'Art Domino'%> 
-                  <%= form_tag order_items_path do %>
-                    <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
-                        <br>
-                        <strong>Personal message</strong> 
-                        <br>
-                        <%= text_area_tag 'message', "", size: "20x3" %>
-                        <br>
-                        <strong>Colour</strong> 
-                        <br>
-                        <%= select_tag "color", raw("<option>Red</option><option>Green</option><option>Blue</option><option>yellow</option><option>brown</option><option>white</option>"), multiple: false %>
-                      <br>
-                      <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
-                        content_tag(:strong, 'Add to cart') 
-                      end %>
-                  <% end %>
-                <%when 'Body Key Chain'%> 
-                  <%= form_tag order_items_path do %>
-                    <%= hidden_field_tag :product_id, product.id%>
-                    <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 1, class: "product-number-field"%>
-                        <br>
-                        <strong>Personal message</strong> 
-                        <br>
-                        <%= text_area_tag 'message', "", size: "20x3" %>
-                        <br>
-                        <strong>Colour</strong> 
-                        <br>
-                        <%= select_tag "color", raw("<option>Red</option><option>Green</option><option>Blue</option><option>yellow</option><option>brown</option><option>white</option>"), multiple: false %>
-                      <br>
-                      <%= button_tag(type: 'submit', class: "btn-lg form-button", title: 'Add to cart') do
-                        content_tag(:strong, 'Add to cart') 
-                      end %>
-                  <% end %>
-                <%else%> 
-                  "Something went wrong!"
-                <%end %> 
-              
-            </div>
+            <strong><h4 class="text-2xl"><%= humanized_money_with_symbol(product.price) %></h4> </strong> 
+          <%# </div> %>
         </div> 
-      </div>
+      <%# </div> %>
+      <% end %>
     <% end %>
   </div>
   <div class=" d-flex justify-content-between">
@@ -137,16 +39,12 @@
   </div>
   <br> 
   <%# iterate over categories and display links  %>
-  <div class=" d-flex justify-content-center"> 
-    
-      <p class="p-5 heading2"><%=link_to "Mugs", category_products_path(7), class: "nav-link text-dark"  %></p>
-      <p class="p-5 heading2"><%=link_to "Bracelets", category_products_path(8), class: "nav-link text-dark"  %></p>
-      <p class="p-5 heading2"><%=link_to "Glasses", category_products_path(9), class: "nav-link text-dark"  %></p>
+    <h3 class='text-5xl text-center mt-6'>Go back to Categories</h3>
+    <div class='flex flex-wrap justify-around h-60 my-6 w-1/2 mx-auto mb-6'>
+      <% @categories.each do |category|%>
+        <p class="text-2xl"><%=link_to category.title, category_products_path(category), class: "
+         hover:text-purple-800"  %></p>
+      <% end %>
     </div>
-    <div class=" d-flex justify-content-center">
-      <p class="p-5 heading2"><%=link_to "Key Chain", category_products_path(10), class: "nav-link text-dark"  %></p>
-      <p class="p-5 heading2"><%=link_to "Domino", category_products_path(11), class: "nav-link text-dark"  %></p>
-      <p class="p-5 heading2"><%=link_to "Body Key Chain", category_products_path(12), class: "nav-link text-dark"  %></p>
-  </div>
 </div>
 

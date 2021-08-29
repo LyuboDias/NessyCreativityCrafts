@@ -1,6 +1,6 @@
 
-<div class="form-wrap">
-  <p class="heading2 text-center">Forgot your password?</p>
+<div class="form-wrap mb-6">
+  <h3 class="text-center text-5xl my-6">Forgot your password?</h3>
 
   <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= f.error_notification %>
