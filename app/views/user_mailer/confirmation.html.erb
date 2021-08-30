@@ -1,16 +1,15 @@
-<p>Thank you for adding your details <%= @user.user_detail.f_name %></p>
+<h2>Thank you for adding your details <%= @user.user_detail.f_name %></h2>
+<p>Please check that your details are correct:</p>
 <br>
-<p>Please check ypur details are correct:</p>
+<p><strong> Full name:</strong> <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %></p>
+<p><strong>Street:</strong>  <%= @user.user_detail.door_number %> <%= @user.user_detail.street %></p>
+<p><strong>Postcode:</strong>  <%= @user.user_detail.postcode %></p>
+<p><strong>Town/City:</strong>  <%= @user.user_detail.city %></p>
+<p><strong>Contact number:</strong>  <%= @user.user_detail.phone %></p>
 <br>
-<p>Full name: <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %></p>
-<p>Street: <%= @user.user_detail.door_number %> <%= @user.user_detail.street %></p>
-<p>Postcode: <%= @user.user_detail.postcode %></p>
-<p>Town/City: <%= @user.user_detail.city %></p>
-<p>Contact number: <%= @user.user_detail.phone %></p>
-<%= link_to "Change details", root_url %>
+<p>Doesnt look right? <%= link_to "Change details here", profile_url %></p>
 <br>
-<p>Looks good? <br> Great! you are ready to browse through our awesome items, just click <a href="www.nessycreativitycrafts.com">HERE</a></p>
-
+<p>Otherwise you are ready to browse through our awesome items, just click  <%= link_to "Here", categories_url %></p>
 <br>
-<h2>Reagrds</h2>
-<h2>NCC TEAM</h2>
+<p><strong> Regards</strong></p>
+<p><strong>"NCC Team"</strong> </p>

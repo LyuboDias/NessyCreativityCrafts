@@ -6,7 +6,7 @@
         <br>
         <br>
         <div class="hr"></div>
-        <p class="my-40"> <%= link_to "Add details", new_user_detail_path, class: "form-button btn-lg " %> </p>
+        <p class="my-40 "> <%= link_to "Add details", new_user_detail_path, class: "form-button btn-lg px-12 py-6 text-2xl" %> </p>
       <% end %>
   </div>
   <div class="profile  mb-5">
@@ -18,7 +18,7 @@
       <br>
       <p class="heading2 text-center">Here are your details...</p>
       <br>
-      <div class="lg:px-16 py-6 px-6">
+      <div class="md:w-2/4 w-full mx-auto my-20 px-6">
         <p ><strong>First name - </strong><%= @user.user_detail.f_name %></p>
         <p ><strong>Last name - </strong> <%= @user.user_detail.l_name %></p>
         <% if current_cart.items_count == 0%>
@@ -27,10 +27,6 @@
           <p><strong>Cart -  </strong><%= current_cart.items_count %> items <%= link_to "Checkout Now", cart_path, class: "btn btn-success" %></p>
         <% end %>
         <p> <strong>Email - </strong> <%= @user.email %></p>
-
-          <%# <% if @user_detail.photo.attached? %> 
-          <%# <%= cl_image_tag @user_detail.photo.key, width: 360, fetch_format: :auto, quality: :auto, class: 'cloudinary-img responsive-img-phone' %> 
-          <%# <% end %> 
 
             <p><strong>Address - </strong> <%= @user.user_detail.door_number %> <%= @user.user_detail.street %>, <%= @user.user_detail.city %></p>
             <p><strong> Postcode - </strong><%= @user.user_detail.postcode %></p>
@@ -41,7 +37,7 @@
           <%= link_to user_detail_path(@user.user_detail),
                       method: :delete,
                       data: { confirm: "Are you sure you want to delete?" },
-                      class: 'btn btn-danger mb-2' do %>
+                      class: 'btn bg-red-500 text-white hover:bg-red-600 mb-2' do %>
           Delete <i class="far fa-trash-alt"></i>
           <% end %>
           <br>

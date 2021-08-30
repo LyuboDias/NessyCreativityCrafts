@@ -1,16 +1,8 @@
-<h2> Hello <%= @user.email %> and Welcome to Nessy Creativity Crafts</h2>
-<p>
-
- 
-Ready for shopping?
-<br>
-Please add you details such as Name,adddress <%= link_to "HERE", root_url, target: "_blanked" %> to be able to make purchase on our website!
-<br>
-We’re here to help
-If you have any questions, please write to  contact@nessycreativitycrafts.com</p>
- <br>
- <p>We cant wait to see you soon</p>
- <p>Kind Regards</p>
-
-
+<div class="lg:px-16 py-6 px-6 email-bg">
+  <h2> Hello <%= @user.email %> and Welcome to Nessy Creativity Crafts</h2>
+  <h5>Ready for shopping?</h5>
+  <p>Please add you details, such as Name, adddress and contact details <%= link_to "HERE", profile_url, target: "_blanked" %> to be able to make purchase on our website!</p>
+  <p>We’re here to help, if you have any questions, please email us on <strong>contact@nessycreativitycrafts.com</strong> </p>
+   <p>We cant wait to see you soon!</p>
+</div>
 

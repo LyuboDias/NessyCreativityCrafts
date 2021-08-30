@@ -1,31 +1,27 @@
-<div class="container">
-  <%# <div class="row py-4"> %>
-    <%# <div class="col-md-3"></div> %>
-    <%# <div class="col"> %>
+<div class="lg:px-16 py-6 px-6">
       <% if @user.user_detail != nil%>
-        <p class="heading2 text-center">Checkout summary</p>
+        <h3 class="text-center text-5xl my-6">Checkout Summary</h3>
         <br>
-        <div class="hr"></div>
+        <div class="hr my-6"></div>
         <br>
-        <ul>
+        <div class="flex flex-wrap  mx-4 my-6 justify-around">
           <% @cart.each do |item| %>
-            <li><p>Product: <%= item.product.title %></p></li>
-            <li><p>Proce: <%= humanized_money_with_symbol(item.price) %> </p></li>
-            <li><p>Quantity: <%= item.quantity %></p></li>
-            <li><p>Personal message: <%= item.message %></p></li>
-            <% if  item.product.category.title == 'Personalised Mugs' %>
-              <li><p>Photo: <%= image_tag item.user_pic, class: 'w-25' %></p></li> 
-            <% end %>
-            <li><p>Colour: <%= item.color %></p></li>
-            <li><p>Size: <%= item.size %></p></li>
+            <div class='lg:w-1/4 my-2 md:w-1/3 w-3/4 box-shadow md:px-2 md:mx-6 px-6 py-6 '>
+              <p class="text-xl mb-2"><strong> <%= item.product.title %></strong></p>
+              <ul>
+                <li><p><strong>Proce: </strong><%= humanized_money_with_symbol(item.price) %> </p></li>
+                <li><p><strong>Quantity: </strong><%= item.quantity %></p></li>
+                <li><p><strong>Personal message: </strong><%= item.message %></p></li>
+                <li><p><strong>Colour: </strong><%= item.color %></p></li>
+                <li><p><strong>Size: </strong><%= item.size %></p></li>
+              </ul>
+            </div>
           <% end %>
-        </ul>
-        <p class="heading2">Total including discounts: <strong><%= humanized_money_with_symbol @purchase.amount %></strong></p>
+        </div>
         <br>
-        <div class="d-flex justify-content-between w-100">
-          <p class="mt-5">  <%= link_to "Go back", cart_path, class: "btn-lg form-button"%></p>
-          <br>
-          <button id="pay" class="form-button btn-lg text-white ">Confirm and pay</button>
+        <div class="flex justify-between items-center">
+          <p >  <%= link_to "Go back", cart_path, class: "px-10 py-3 form-button"%></p>
+          <button id="pay" class="form-button text-2xl px-10 py-2 text-white m-0">Pay <strong><%= humanized_money_with_symbol @purchase.amount %></strong></button>
           <script src="https://js.stripe.com/v3/"></script>
           <script>
             const paymentButton = document.getElementById('pay');
@@ -48,6 +44,4 @@
         <br>
         <p class="text-center "><%= link_to "Return to My profile", profile_path, class: 'form-button btn-lg text-white'  %></p> 
       <% end %>
-    <%# </div> %>
-  <%# </div> %>
 </div>

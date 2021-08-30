@@ -14,84 +14,95 @@
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div> 
   </div>
-</div> %>
+</div> %> 
+<div class="container my-20 text-center">
+  <p class="heading2">Follow Us</p>
+    <p><a href="" target="blanked" class="text-purple-800 text-3xl mx-2"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="blanked" class="text-purple-800 text-3xl mx-2"><i class="fab fa-instagram"></i></a> <a href="#" target="blanked" class="text-purple-800 text-3xl mx-2"><i class="fab fa-facebook-square"></i></a></p>
+</div>
+
+<div class="container my-10">
+  <hr>
+  <div class="lg:px-20 py-6 px-6 ">
+    <p class="text-2xl my-10">High quality handmade business that delivers <span class="main-color"> creativity</span>  and handmade items paying close attention to details and <span class="second-color"> quality at affordable prices.</span>  Our products range from custom bracelets, glittered wine glasses, custom mugs and more.</p>
+  </div>
+  <hr>  
+</div>
 
 <br> 
 <br>
 <div class="info mt-5">
   <div class="container">  
-      <div class="container">
+      <%# <div class="container">
         <p data-aos="fade-right"  data-aos-duration="3000" class="heading2">High quality handmade business that delivers <span class="main-color"> creativity</span>  and handmade items paying close attention to details and <span class="second-color"> quality at affordable prices.</span>  Our products range from custom bracelets, glittered wine glasses, custom mugs and more.</p>
-      </div>
-      <br>
-      <br>
-      <div class="find-craft container">
+      </div> %>
+
+      <%# <div class="find-craft container">
         <p class="text-center heading2" data-aos="zoom-in-up">Find your perfect Craft</p>
-      </div>
-      <br>
-      <br>
+      </div> %>
+
       <%# ----------flipping cards ------- %>
       <div class="flipping-cards" id="cards">
           <%# -------- Mugs ---------------- %>
-          <div class="flipping-card">
-            <div class="front card-1">
-              <p class="heading2">Mugs</p>
+          <div class="flipping-card rounded-xl">
+            <div class="front card-1 rounded-xl">
+              <p class="md:text-5xl text-3xl">Mugs</p>
             </div>
-            <div class="back">
-              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png" alt="Mugs" />
-              <%= link_to "Buy Now", category_products_path(7), class: "nav-link  " %>
+            <div class="back rounded-xl">
+              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png" alt="Mugs" />
+              <%= link_to "Buy Now", category_products_path(7), class: "text-black md:text-2xl md:pt-2 text-lg  " %>
             </div>
           </div>
           <!--------- Bracelets ---------------- -->
-          <div class="flipping-card">
-            <div class="front card-2">
-              <p class="heading2">Bracelets</p>
+          <div class="flipping-card rounded-xl">
+            <div class="front card-2 rounded-xl">
+              <p class="md:text-5xl text-3xl">Bracelets</p>
             </div>
-            <div class="back">
-              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/1_ivkwkz.png" alt="Bracelets" />
-              <%= link_to "Buy Now", category_products_path(8), class: "nav-link  " %>
+            <div class="back rounded-xl">
+              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/1_ivkwkz.png" alt="Bracelets" />
+              <%= link_to "Buy Now", category_products_path(8), class: "text-black md:text-2xl md:pt-2 text-lg  " %>
             </div>
           </div>
           <!-------- Glasses ----------->
-          <div class="flipping-card">
-            <div class="front card-3">
-              <p class="heading2">Glasses</p>
+          <div class="flipping-card rounded-xl">
+            <div class="front card-3 rounded-xl">
+              <p class="md:text-5xl text-3xl">Glasses</p>
             </div>
-            <div class="back">
-              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(9), class: "nav-link " %>
+            <div class="back rounded-xl">
+              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png" alt="Glasses  " />
+              <%= link_to "Buy Now", category_products_path(9), class: "text-black md:text-2xl md:pt-2 text-lg " %>
             </div>
           </div>
           <%# --------- Key Chain ---------- %>
-          <div class="flipping-card">
-            <div class="front card-3">
-              <p class="heading2">Key Chain</p>
+          <div class="flipping-card rounded-xl">
+            <div class="front card-3 rounded-xl">
+              <p class="md:text-5xl text-3xl">Key Chain</p>
             </div>
-            <div class="back">
-              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906959/NCC/4_mysffs.png" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(10), class: "nav-link " %>
+            <div class="back rounded-xl">
+              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906959/NCC/4_mysffs.png" alt="Glasses  " />
+              <%= link_to "Buy Now", category_products_path(10), class: "text-black md:text-2xl md:pt-2 text-lg " %>
             </div>
           </div>
           <%# ----------  Domino ---------- %>
-          <div class="flipping-card">
-            <div class="front card-3">
-              <p class="heading2">Domino</p>
+          <div class="flipping-card rounded-xl">
+            <div class="front card-3 rounded-xl">
+              <p class="md:text-5xl text-3xl">Domino</p>
             </div> 
-            <div class="back">
-              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906936/NCC/2_rmhez9.png" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(11), class: "nav-link " %>
+            <div class="back rounded-xl">
+              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906936/NCC/2_rmhez9.png" alt="Glasses  " />
+              <%= link_to "Buy Now", category_products_path(11), class: "text-black md:text-2xl md:pt-2 text-lg " %>
             </div>
           </div>
           <%# ---------- Bdoy Key Chain-------- %>
-          <div class="flipping-card">
-            <div class="front card-3">
-              <p class="heading2">Art Body</p>
+          <div class="flipping-card rounded-xl">
+            <div class="front card-3 rounded-xl">
+              <p class="md:text-5xl text-3xl">Art Body</p>
             </div>
-            <div class="back">
-              <img class="mb-1 flip-pic" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906890/NCC/5_uoslei.png" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(12), class: "nav-link" %>
+            <div class="back rounded-xl">
+              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906890/NCC/5_uoslei.png" alt="Glasses  " />
+              <%= link_to "Buy Now", category_products_path(12), class: "text-black md:text-2xl md:pt-2 text-lg" %>
             </div>
           </div>
         </div>
@@ -166,7 +177,7 @@
         </div>
         <br>
         <br>
-        <p data-interval="2000" data-aos="fade-left"  data-aos-duration="3000" class="heading2">
+        <p class="heading2">
           Celebrating the precious moments of life with handmade   <span class="main-color">crafts</span>  that give real meanings.
           Each one of our <span class="second-color"> handmade </span>   pieces is uniquely made just for you. With just the right designs, materials, and birthstones, your memories are captured in stunning personalized craft that speak beyond words.
           It’s a privilege to take part in your life’s journey and to see the joy our work gives you. And that’s the reason we <strong class="second-color"> Love</strong>  what we do!

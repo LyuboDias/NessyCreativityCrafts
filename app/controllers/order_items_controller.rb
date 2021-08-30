@@ -1,7 +1,10 @@
 class OrderItemsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :create ]
+
   def index
+    @categories = Category.all
     @items = current_cart.order.items
-    @user = current_user
+    @user = current_user 
   end
  
    def create

@@ -47,16 +47,21 @@ class PurchasesController < ApplicationController
   end
 
   def show
+    @categories = Category.all
     # sent payment confirmation email and reset the current cart 
     @cart = current_cart.order.items
     @user = current_user
     @purchase = current_user.purchases.find(params[:id])  
 
     # sending a confirmation email for successful payment
-    if @purchase.state == 'paid'
+    
+
+    # TODO when page is refreshed sends email!!!
+    if @purchase.state == 'paid' 
       UserMailer.payment(@user, @cart, @purchase).deliver_now
       UserMailer.order(@user, @cart, @purchase).deliver_now
     end
+    
     @cart.destroy_all
   end
   

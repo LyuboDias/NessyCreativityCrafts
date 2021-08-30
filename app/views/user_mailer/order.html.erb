@@ -1,29 +1,27 @@
-<h2>  <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %> places a NEW order!!!</p>
+<h2>  <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %> has placed a NEW order!!!</p>
+<h3>This payment was <%= @purchase.state %> !!!</h3>
 <br>
-<h3>This payment was with status: <%= @purchase.state %> !!!</h3>
-<br>
-<ul class="list-unstyled">
-  <li><p>Order id: <%= @purchase.id %></p></li>
-  <li><strong>ISSUED ON</strong> <%= @purchase.created_at.to_date %></li>
-  <% @cart.each do |item| %>
+<p>Order id: <%= @purchase.id %></p>
+<p>Issued on -  <%= @purchase.created_at.to_date %></p>
+<% @cart.each do |item| %>
+  <p>------------------------------------------------</p>
+  <ul class="list-unstyled">
     <li><p>Product: <%= item.product.title %></p></li>
     <li><p>Proce: <%= humanized_money_with_symbol(item.price) %> </p></li>
     <li><p>Quantity: <%= item.quantity %></p></li>
     <li><p>Personal Message: <%= item.message %></p></li> 
-    <li>Photo <%= image_tag item.user_pic, class: 'w-100' %></li> 
     <li><p>Color: <%= item.color %></p></li>
     <li><p>Size: <%= item.size %></p></li>
-  <% end %>
-  <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @purchase.amount %></li>
-</ul>
+  </ul>
+<% end %>
+<p><strong>TOTAL</strong> <%= humanized_money_with_symbol @purchase.amount %></p>
 <br> 
-<p>Delivere to: </p>
-<br>
+<p>Delivery address: </p>
 <p><%= @user.user_detail.door_number %> <%= @user.user_detail.street %></p>
 <p><%= @user.user_detail.postcode %></p>
 <p><%= @user.user_detail.city %></p>
 <br>
-<p>Contact number:<%= @user.user_detail.phone %></p>
+<p>Contact number: <%= @user.user_detail.phone %></p>
 <p>Contact email:<%= @user.email %></p>
 
  

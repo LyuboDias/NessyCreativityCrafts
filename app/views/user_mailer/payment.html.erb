@@ -1,31 +1,26 @@
-<h2> Dear <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %> your h2ayment was succseful!</p>
+<h2> Dear <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %> your order has being <%= @purchase.state %></h2>
 <br>
-<h3>This payment was with status: <%= @purchase.state %> !!!</h3>
-<br>
-
-<ul class="list-unstyled">
-  <li><p>You ordere id: <%= @purchase.id %></p></li>
-  <li><strong>ISSUED ON</strong> <%= @purchase.created_at.to_date %></li>
-  <% @cart.each do |item| %>
+<p>You ordere id: <%= @purchase.id %></p>
+<p><strong>ISSUED ON</strong> <%= @purchase.created_at.to_date %></p>
+<% @cart.each do |item| %>
+  <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+  <ul class="list-unstyled">
     <li><p>Product: <%= item.product.title %></p></li>
     <li><p>Proce: <%= humanized_money_with_symbol(item.price) %> </p></li>
     <li><p>Quantity: <%= item.quantity %></p></li>
     <li><p>Personal Message: <%= item.message %></p></li> 
-  <% end %>
-  <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @purchase.amount %></li>
-</ul>
+  </ul>
+<% end %>
+<strong>TOTAL</strong> <%= humanized_money_with_symbol @purchase.amount %>
 <br>
-<p>Your order will be delivered to: </p>
-<br>
+<strong> <p>Your order will be delivered to: </p></strong>
 <p><%= @user.user_detail.door_number %> <%= @user.user_detail.street %></p>
 <p><%= @user.user_detail.postcode %></p>
 <p><%= @user.user_detail.city %></p>
+<p>Your contact number is:<%= @user.user_detail.phone %></p>
 <br>
-<p>Your contact number:<%= @user.user_detail.phone %></p>
-<br>
-<br>
-<p>Delivery times at the moment are two working days.</p>
-<p>Meanwhile if you have any questions please contact us on support@nessycrativitycrafts.com</p>
+<p>Delivery times at the moment is 3 working days.</p>
+<p>Meanwhile if you have any questions please contact us on <strong>support@nessycrativitycrafts.com</strong> </p>
 <p>Thank you</p>
 
  

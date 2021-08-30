@@ -1,90 +1,109 @@
-<div class="container">
+<div class="lg:px-16 py-6 px-6">
   <% unless @items.count > 0 %>
-      <p class="heading2 text-center mt-5">Your cart is empty at the moment,please continue shopping.</p>
-      <div class="hr mt-5"></div> 
+      <h3 class="text-center text-5xl my-6">Your cart is empty</h3>
+      <br>
+      <div class="hr my-6"></div>  
       <br>
       <br>
-      <p class="heading2 text-center mt-5">Go back and browse trhough our amazing products, you can find the perfect gift for your special one. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident modi veniam mollitia rem laboriosam, minima rerum iste esse necessitatibus cumque?</p>
+      <div class="lg:w-3/4 mx-auto py-6 lg:px-12 px-6">
+        <p class="heading2 text-center mt-5">Go back and browse trhough our amazing products, you can find the perfect gift for your special one. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident modi veniam mollitia rem laboriosam, minima rerum iste esse necessitatibus cumque?</p> 
+      </div>
   <% else%>
       <% if @user.user_detail != nil%>
-        <p class="heading2 text-center"><strong><%= @user.user_detail.f_name %>`s</strong>  Cart</p>
+        <h3 class="text-center text-5xl my-6"><strong><%= @user.user_detail.f_name %>`s</strong>  Cart</h3>
+        <br>
+        <div class="hr"></div>
       <% else %>
-        <p class="heading2 text-center">Checkout</p>
-        <div class="hr mt-5"></div>
+        <h3 class="text-center text-5xl my-6">Checkout</h3>
+        <br>
+        <div class="hr my-6"></div>
       <% end %>
   <% end %> 
   <br> 
   <br>  
   <div class="cart-wrap">
-    <div class="row">
+    <div class="row flex justify-around">
       <% @items.each do |item| %>
-        <div class="col-12">
-          <div class="cart-body mb-4  box-shadow p-3">
-            <div class="cart-image">
+        <div class="box-shadow mx-auto my-4  w-5/6">
+          <div class="flex justify-center items-center mt-2 ">
+            <p class="text-2xl"><strong> <%= item.product.title %></strong></p>
+          </div>
+          <div class="cart-body mx-auto  p-3 block md:flex md:w-full ">
+            <div class="cart-image flex justify-center items-center">
               <%= image_tag item.product.photo_1, class: "cart-product-image" %>
             </div>
-            <div class="cart-product-title">
-              <p><%= item.product.title %></p> </p> 
-            </div>
-            <div class="cart-product-price">
-              <p><%= humanized_money_with_symbol(item.price) %> </p>
-            </div>
-            <div class="cart-product-quantity">
-              <p class="pl-3"><%= item.quantity  %></p>
-            </div>
-            <div class="cart-product-quantity">
-              <p class="pl-3"><%= item.message  %></p>
-            </div>
-            <%# TODO if condition to handle product without images  %>
-            <% if  item.product.category.title == 'Personalised Mugs'   %>
-              <div class="cart-product-quantity">
-                Your image:
-                <%= image_tag item.user_pic, class: 'w-25' %>
+            <div class="flex flex-wrap justify-around">
+              <div class="cart-product-price m-3">
+                <p class="text-xl pb-2"><strong>Price</strong> </p>
+                <p class="text-lg"><%= humanized_money_with_symbol(item.price) %> </p>
               </div>
-              <% elsif  %>
-                <p>You have not uopload image</p>
-            <% end %>
-            <div class="cart-product-quantity">
-              <p class="pl-3"><%= item.color  %></p>
-            </div>
-            <div class="cart-product-quantity">
-              <p class="pl-3"><%= item.size  %></p>
-            </div>
-            <div class="cart-submit">  
-            </div>
-            <div class="cart-delete">
-              <p>
-                <%= form_for item, method: :delete do |f| %>
-                  <%= f.submit 'Remove', class: "remove-btn" %>
+              <div class="cart-product-quantity m-3">
+                <p class="text-xl pb-2"><strong>QTY:</strong> </p>
+                <p class="text-lg"><%= item.quantity  %></p>
+              </div>
+
+              <div class="cart-product-quantity m-3">
+                <p class="text-xl pb-2"><strong>Message</strong> </p>
+                <% if item.message == '' %>
+                  <p class="text-lg">N/A</p>
+                <% else %>
+                  <p class="text-lg"><%= item.message  %></p>
                 <% end %>
-              </p>
+              </div m-3>
+              <div class="cart-product-quantity m-3">
+                <p class="text-xl pb-2"><strong>Colour</strong> </p>
+                <% if item.color.nil? %>
+                  <p class="text-lg">N/A</p>
+                <% else %>
+                  <p class="text-lg"><%= item.color  %></p>
+                <% end %>
+              </div>
+              <div class="cart-product-quantity m-3">
+                <p class="text-xl pb-2"><strong>Size</strong> </p>
+                <% if item.size.nil? %>
+                  <p class="text-lg">N/A</p>
+                <% else %>
+                  <p class="text-lg"><%= item.size  %></p>
+                <% end %>
+              </div>
+              
+              <div class="cart-delete m-3">
+                <p>
+                  <%= form_for item, method: :delete do |f| %>
+                    <%= f.submit 'Remove', class: "remove-btn" %>
+                  <% end %>
+                </p>
+              </div>
             </div>
           </div>
-          <%# <hr> %>
-          
         </div>
       <% end %>
-      <p class="heading2">You have <strong><%= current_cart.items_count %></strong> items in your Cart!</p>
-      <div class="d-flex justify-content-between p-5 w-100 "> 
-        <% if @items.count > 0 && current_cart.sub_total.to_f >= 3000%>
+      <div class="md:flex block justify-content-between items-center px-4 lg:px-12 w-100 "> 
+        <div class="mb-3">
+          <p class="text-2xl mb-2">Cart has <strong><%= current_cart.items_count %></strong> items</p>
+        </div>
         <%# --------- Total INCLUDING discount ove £30 spent -----------------%>
-          <p class="heading2">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 120) %></strong></p>  
-          <br> 
-          <p>You save: <%= humanized_money_with_symbol((current_cart.sub_total.to_f / 100) - (current_cart.sub_total.to_f / 120)) %></p>
-          <div>
+        <% if @items.count > 0 && current_cart.sub_total.to_f >= 3000%>
+        <div class="mb-3">
+          <p>You save: <strong><%= humanized_money_with_symbol((current_cart.sub_total.to_f / 100) - (current_cart.sub_total.to_f / 120)) %></strong> </p>
+        </div>
+        <div class="mb-3">
+            <p class="text-2xl">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 120) %></strong></p>  
+        </div>
+        <div class="mb-3">
             <%= form_tag purchases_path do %> 
+              <%= submit_tag 'Go to checkout', class: 'form-button px-8 py-3 text-white' %>
+            <% end %>
+        </div>
+          <% elsif @items.count > 0 %>
+          <%# ---------- Total WITHOUT discount -----------%>
+          <p class="text-2xl">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 100) %></strong></p>  
+          <br>
+          <div>
+            <%= form_tag purchases_path do %>
               <%= submit_tag 'Go to checkout', class: 'form-button p-2 text-white' %>
             <% end %>
           </div>
-          <% elsif @items.count > 0 %>
-            <%# ---------- Total WITHOUT discount -----------%>
-            <p class="heading2">Total Amount: <strong><%= humanized_money_with_symbol(current_cart.sub_total.to_f / 100) %></strong></p>  
-            <br>
-            <div>
-              <%= form_tag purchases_path do %>
-                <%= submit_tag 'Go to checkout', class: 'form-button p-2 text-white' %>
-              <% end %>
-            </div>
           <% else %>
           <%# ----------- EMPTY Cart ------------ %>
           <p class="heading2">Total Amount: <strong>£0</strong></p>
@@ -93,19 +112,14 @@
     </div>
   </div>
   <br>
-  <p class="text-center mt-5"><%= link_to "Continue shopping", categories_path, class: "form-button btn-lg text-white" %></p>
+  <p class="text-center mt-5"><%= link_to "Continue shopping", categories_path, class: "form-button btn-lg text-white px-6 py-4" %></p>
   <br>
-  
-  <div class=" d-flex justify-content-center">
-      <p class="p-5 heading2"><%=link_to "Mugs", category_products_path(1), class: "nav-link text-dark"  %></p>
-      <p class="p-5 heading2"><%=link_to "Bracelets", category_products_path(2), class: "nav-link text-dark"  %></p>
-      <p class="p-5 heading2"><%=link_to "Glasses", category_products_path(3), class: "nav-link text-dark"  %></p>
-    </div>
-    <div class=" d-flex justify-content-center">
-      <p class="p-5 heading2"><%=link_to "Key Chain", category_products_path(4), class: "nav-link text-dark"  %></p>
-      <p class="p-5 heading2"><%=link_to "Domino", category_products_path(5), class: "nav-link text-dark"  %></p>
-      <p class="p-5 heading2"><%=link_to "Body Key Chain", category_products_path(6), class: "nav-link text-dark"  %></p>
-  </div>
-  <hr>
+  <br>
+    <div class='flex flex-wrap justify-around h-60 my-6 w-1/2 mx-auto mb-6'>
+      <% @categories.each do |category|%>
+        <p class="text-2xl"><%=link_to category.title, category_products_path(category), class: "
+         hover:text-purple-800"  %></p>
+      <% end %>
+    </div>  
 </div>
 

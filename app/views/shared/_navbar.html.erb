@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
+        <li class="nav-item active"> 
           <%= link_to "About", about_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
@@ -38,6 +38,23 @@
           </div>
         </li>
       <% else %>
+        <li class="nav-item active"> 
+          <%= link_to "About", about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Products", categories_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contacts", contacts_path, class: "nav-link" %>
+        </li> 
+        <li class="nav-item">
+            <div class="cart">
+              <%= link_to raw('<i class="fas fa-shopping-cart "></i>'), cart_path, class: "nav-link cart-link", title: '', data: { toggle: 'tooltip', placement: 'bottom', original_title: 'My cart' } %>
+              <%= link_to current_cart.items_count, cart_path, class: " cart-counter" %>
+            </div>
+            <%# <%=  current_cart.items_count %> 
+            <%# <%= link_to pluralize(current_cart.items_count, 'item'), cart_path, class: "nav-link" %> 
+        </li>
         <li class="nav-item">
           <%= link_to "Login/Sign Up", new_user_session_path, class: "nav-link" %>
         </li>
