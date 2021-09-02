@@ -1,15 +1,38 @@
-<h2>Thank you for adding your details <%= @user.user_detail.f_name %></h2>
-<p>Please check that your details are correct:</p>
-<br>
-<p><strong> Full name:</strong> <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %></p>
-<p><strong>Street:</strong>  <%= @user.user_detail.door_number %> <%= @user.user_detail.street %></p>
-<p><strong>Postcode:</strong>  <%= @user.user_detail.postcode %></p>
-<p><strong>Town/City:</strong>  <%= @user.user_detail.city %></p>
-<p><strong>Contact number:</strong>  <%= @user.user_detail.phone %></p>
-<br>
-<p>Doesnt look right? <%= link_to "Change details here", profile_url %></p>
-<br>
-<p>Otherwise you are ready to browse through our awesome items, just click  <%= link_to "Here", categories_url %></p>
-<br>
-<p><strong> Regards</strong></p>
-<p><strong>"NCC Team"</strong> </p>
+<!DOCTYPE html>
+<html lang="en">
+<head style="padding: 0; margin: 0; overflow: hidden; box-sizing: border-box;">
+ <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+ <meta name="x-apple-disable-message-reformatting">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta content="IE=edge" http-equiv="X-UA-Compatible">
+ <title>Confirmation Email</title>
+</head>
+<body style="padding: 0; margin: 0; text-align: center; background-color: rgb(244,244,244);">
+  <div style="margin: 0 auto;">
+    <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627909810/NCC/new-ncc-logo-trans_mptn3q.png", style: 'width: 150px' %>
+  </div>
+  <div style="width: 80%; height: 1px; background-color: rgb(236, 5, 141); margin: 0 auto;"></div>
+  <h2 >Thank you for adding your details <%= @user.user_detail.f_name %></h2>
+  <p>Please check that your details are correct:</p>
+  <br>
+  <div style="text-align: left; width: 40%; margin: 0 auto;">
+    <p><strong> Full name:</strong> <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %></p>
+    <p><strong>Street:</strong>  <%= @user.user_detail.door_number %> <%= @user.user_detail.street %></p>
+    <p><strong>Postcode:</strong>  <%= @user.user_detail.postcode %></p>
+    <p><strong>Town/City:</strong>  <%= @user.user_detail.city %></p>
+    <p><strong>Contact number:</strong>  <%= @user.user_detail.phone %></p>
+    <br>
+    <p>Doesnt look right? <%= link_to "Change details here", profile_url %></p>
+    <br>
+    <p>Otherwise you are ready to browse through our awesome items, just click  <%= link_to "Here", categories_url %></p>
+    <br>
+  </div>
+  <p><strong> Regards</strong></p>
+  <p><strong>"NCC Team"</strong> </p>
+  <br>
+  <div style="width: 80%; height: 1px; background-color: rgb(87, 70, 167); margin: 0 auto;"></div>
+    <p >© 2021 <span style="color:  rgb(236, 5, 141);">Nessy</span > <span style="color: rgb(87, 70, 167);">Creativity Crafts</span></p>
+</body>
+</html>
+
+

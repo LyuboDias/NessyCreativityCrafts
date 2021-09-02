@@ -1,9 +1,10 @@
 
 
-
-  <div class="">
-    <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1630069892/NCC/Handmade_crafts._n6na6m.png", class: 'w-full lg:h-screen' %>
+  <div class="banner">
+    <%= video_tag "https://res.cloudinary.com/dxoo6hrvw/video/upload/v1630599332/Handmade_crafts._pgatjg.mp4", autoplay: true, muted: true, id: "myVideo", class: 'video' %>
+    
   </div>
+
   
   <%# ---- Arrow down animation --------- %>
 <%# <div class="flex fustify-center items-center w-full">
@@ -133,8 +134,8 @@
         <div class="hot-items mt-5">
           <p class="heading2 text-center">Hot Items this month!</p>
           <br>
-          <div class="hot-items-body d-flex justify-content-around">
-            <div  class="hot-items-inner box-shadow">
+          <div class="hot-items-body d-flex justify-between">
+            <div  class=" box-shadow">
               <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906918/NCC/3_gb1wd3.png" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
@@ -144,10 +145,10 @@
                 <i class="far fa-star product-star"></i>
                 <p class="card-title">Bracelet</p>
                 <p class="card-text">Some quick example text to build on .</p>
-                <p ><%=link_to "Buy for £9.99", category_products_path(2), class: "form-button btn-lg "  %></p>
+                <p class='mt-1'><%=link_to "Buy for £9.99", category_products_path(2), class: "form-button btn-lg "  %></p>
               </div>
             </div>
-            <div  class="hot-items-inner box-shadow">
+            <div  class=" box-shadow">
               <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
@@ -157,10 +158,10 @@
                 <i class="far fa-star product-star"></i>
                 <p class="card-title">Sparkling wine glasss</p>
                 <p class="card-text">Some quick example text to build on .</p>
-                <p ><%=link_to "Get for £12.99", category_products_path(3), class: "form-button btn-lg "  %></p>
+                <p class='mt-1'><%=link_to "Get for £12.99", category_products_path(3), class: "form-button btn-lg "  %></p>
               </div>
             </div>
-            <div  class="hot-items-inner box-shadow">
+            <div  class=" box-shadow">
               <img class="hot-item-img" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906940/NCC/4_wgf3kz.png" alt="Card image cap">
               <div class="card-body">
                 <i class="fas fa-star product-star"></i>
@@ -170,7 +171,7 @@
                 <i class="far fa-star product-star"></i>
                 <p class="card-title">Domino</p>
                 <p class="card-text">Some quick example text to build on .</p>
-                <p ><%=link_to "Add it for £10", category_products_path(1), class: "form-button btn-lg "  %></p>
+                <p class='mt-1'><%=link_to "Add it for £10", category_products_path(1), class: "form-button btn-lg "  %></p>
               </div>
             </div>
           </div>
@@ -194,7 +195,7 @@
               <div class="how-we-do-body">
                 <p class="text-center heading2">How we work</p>
                 <p class="text-center small-txt">What ever we do we do with Love!.</p>
-                <p class="text-center"><%= link_to "Learn more!", about_path, class: "form-button btn-lg text-white" %></p>
+                <p class="text-center mt-1"><%= link_to "Learn more!", about_path, class: "form-button btn-lg text-white " %></p>
               </div>
             </div>
 
@@ -206,7 +207,7 @@
               <div class="how-we-do-body">
                 <p class="text-center heading2">How we started</p>
                 <p class="text-center small-txt">We was insipred in early years.</p>
-                <p class="text-center"><%= link_to "Read some more!", about_path, class: "form-button btn-lg text-white" %></p> 
+                <p class="text-center mt-1"><%= link_to "Read some more!", about_path, class: "form-button btn-lg text-white " %></p> 
               </div>
             </div>
           </div>

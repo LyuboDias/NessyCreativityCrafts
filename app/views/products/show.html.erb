@@ -1,5 +1,5 @@
 <div class="lg:px-16 py-6 px-6"> 
-   <h2 class='text-center text-5xl py-6'><%=@product.title %></h2>
+  <h2 class='text-center text-3xl py-6 sm:block hidden'><%=@product.title %></h2>
 <br>
 <div class="hr"></div>
 <br>
@@ -52,9 +52,8 @@
             <span class="sr-only ">Next</span> 
             </a>
          </div>
-
-
-
+         <br>
+         <h2 class='text-center text-3xl py-6 sm:hidden'><%=@product.title %></h2>
          <div class="product-card md:w-2/4 px-14 py-6 mt-6">
             <p class='text-2xl'><%= @product.description %> </p> 
             <br>
@@ -258,7 +257,7 @@
       </div>
       <div class='flex flex-wrap justify-around h-60 my-6 w-1/2 mx-auto mb-6'>
          
-         <% @categories.each do |category|%>
+         <% categories.each do |category|%>
          <p class="text-2xl"><%=link_to category.title, category_products_path(category), class: "
             hover:text-purple-800"  %></p>
          <% end %>

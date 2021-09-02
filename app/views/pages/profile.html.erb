@@ -2,7 +2,7 @@
 <div class="lg:px-16 py-6 px-6"> 
   <div class=" text-center">
       <% if @user.user_detail == nil %>
-        <h3 class="text-center text-5xl my-6">Please add your details</h3>
+        <h3 class="text-center text-3xl my-6">Please add your details</h3>
         <br>
         <br>
         <div class="hr"></div>
@@ -12,7 +12,7 @@
   <div class="profile  mb-5">
 
       <% if @user.user_detail != nil %>
-      <h3 class="text-center text-5xl my-6">Welcome to your profile page <strong><%= @user.user_detail.f_name %></strong></h3>
+      <h3 class="text-center text-3xl my-6">Welcome to your profile page <strong><%= @user.user_detail.f_name %></strong></h3>
       <br>
       <div class="hr"></div>
       <br>

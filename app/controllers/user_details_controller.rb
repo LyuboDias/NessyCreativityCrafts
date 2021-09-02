@@ -1,38 +1,32 @@
 class UserDetailsController < ApplicationController
 
   def show
-    @categories = Category.all
     @user_detail = UserDetail.find(params[:id])
   end
 
   def new
-    @categories = Category.all
     @user_detail = UserDetail.new
   end
 
-  def create
-    @categories = Category.all
-  if UserDetail.count < 1
-      @user_detail = UserDetail.new(strong_params)
-      @user_detail.user = current_user
-      if @user_detail.save
-        redirect_to user_detail_path(@user_detail)
-      else
-        render :new
-      end
+  def create 
+    if current_user.user_detail == nil
+        @user_detail = UserDetail.new(strong_params)
+        @user_detail.user = current_user
+        if @user_detail.save
+          redirect_to user_detail_path(@user_detail)
+        else
+          render :new
+        end
     else  
-      
       redirect_to profile_path, notice: "You have created your details already."
-  end
+    end
   end
 
   def edit
-    @categories = Category.all
     @user_detail = UserDetail.find(params[:id])
   end
 
   def update
-    @categories = Category.all
     @user_detail = UserDetail.find(params[:id])
     if @user_detail.update(strong_params)
       redirect_to user_detail_path(@user_detail)
@@ -43,7 +37,6 @@ class UserDetailsController < ApplicationController
   end
 
   def destroy
-    @categories = Category.all
     @user_detail = UserDetail.find(params[:id])
     @user_detail.destroy
     redirect_to profile_path

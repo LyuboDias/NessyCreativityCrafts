@@ -1,8 +1,18 @@
 class ApplicationController < ActionController::Base
+  helper_method :logged_in?, :categories
   before_action :authenticate_user!
 
   # we want cart to be created as sooon as make first request
   before_action :current_cart
+
+  def categories
+    @categories = Category.all
+  end
+  
+
+  def logged_in?
+    current_user != nil
+  end
 
   def current_cart
     @current_cart ||= ShoppingCart.new(token: cart_token)

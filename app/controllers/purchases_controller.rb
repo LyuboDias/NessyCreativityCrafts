@@ -47,7 +47,6 @@ class PurchasesController < ApplicationController
   end
 
   def show
-    @categories = Category.all
     # sent payment confirmation email and reset the current cart 
     @cart = current_cart.order.items
     @user = current_user

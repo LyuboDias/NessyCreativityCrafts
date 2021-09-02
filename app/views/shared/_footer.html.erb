@@ -1,8 +1,6 @@
 
 <div class="hr mx-6"></div>
-
-<div class="flex flex-wrap justify-around items-center py-6 lg:px-12 px-6 w-full">
-  <div class=" relative w-56 h-56">
+<div class=" relative w-56 h-56 mx-auto">
   <div class="banner">
     <article class="wwdc">
       <span class="spin span-anime">
@@ -35,24 +33,26 @@
       </article>
     </div>
   </div>
+<div class="flex flex-wrap justify-around  py-6 lg:px-12 px-0 w-full">
+  
 
 
   <%# <div class='mx-6 my-2'>
     <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627909810/NCC/new-ncc-logo-trans_mptn3q.png", class: 'w-36' %>
   <%# </div> %> 
-  <div class='mx-6 my-2'>
+  <div class='mx-0 my-2'>
     <p class="text-xl font-medium">Products</p>
     
-      <%# <div class=''> %>
-      <%# @categories.each do |category|%>
-        <%# <ul> %>
-          <li><%#link_to category.title, category_products_path(category), class: " hover:text-purple-800"  %></li>
-        <%# </ul> %>
-      <%#end %>
-    <%# </div> %>
+      <div class=''>
+      <% categories.each do |category|%>
+        <ul>
+          <li><%=link_to category.title, category_products_path(category), class: " hover:text-purple-800"  %></li>
+        </ul>
+      <%end %>
+    </div>
     
   </div>
-  <div class='mx-6 my-2'>
+  <div class='mx-0 my-2'>
     <p class="text-xl font-medium">Quick Links</p>
     <ul>
       <li><%= link_to "Help", help_path, class: "hover:text-purple-800" %></li>
@@ -62,7 +62,7 @@
       <li><%= link_to "My Profile", profile_path, class: "hover:text-purple-800" %></li>
     </ul>
   </div>
-  <div class='mx-6 my-2'>
+  <div class='mx-0 my-2'>
     <p class="text-xl font-medium">Something else</p>
     <ul>
       <li>Conetent</li>
