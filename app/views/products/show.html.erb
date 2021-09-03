@@ -57,12 +57,6 @@
          <div class="product-card md:w-2/4 px-14 py-6 mt-6">
             <p class='text-2xl'><%= @product.description %> </p> 
             <br>
-            <p><i class="fas fa-star product-star"></i>
-            <i class="fas fa-star product-star"></i>
-            <i class="fas fa-star product-star"></i>
-            <i class="fas fa-star product-star"></i> 
-            <i class="far fa-star product-star"></i></p>
-            <br>
             <h4 class='text-3xl my-3 font-medium'><%= humanized_money_with_symbol(@product.price) %></h4>
             <br>
             <div class="product-body">
@@ -71,7 +65,7 @@
                      <%= form_tag order_items_path, multipart: true do %>
                         <%= hidden_field_tag :product_id, @product.id%>
                               <p><strong class='mt-2'>Add Name / Message</strong></p>  
-                              <%= text_area_tag 'message', "", size: "40x5", class: 'bg-gray-100 border-4' %>
+                              <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
                               <br>
                               <div class="w-full flex items-center inline justify-between mt-3">
                               <div>
@@ -108,7 +102,7 @@
                            <br>
                            <strong>Personal message</strong> 
                            <br>
-                           <%= text_area_tag 'message', "", size: "40x5", class: 'bg-gray-100 border-4' %>
+                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
                            <div class="w-full flex items-center inline justify-between mt-3">
                               <div>
                                  <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 5, class: "product-number-field  px-2 bg-gray-100 border-4"%>
@@ -123,7 +117,7 @@
                         <%= hidden_field_tag :product_id, @product.id%>
                            <strong>Personal message</strong> 
                            <br>
-                           <%= text_area_tag 'message', "", size: "40x5", class: 'bg-gray-100 border-4' %>
+                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
                            <br>
                            <strong>Colour</strong> 
                            <br>
@@ -144,7 +138,7 @@
                            <br>
                            <strong>Personal message</strong> 
                            <br>
-                           <%= text_area_tag 'message', "", size: "40x5", class: 'bg-gray-100 border-4' %>
+                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
                            <br>
                            <strong>Colour</strong> 
                            <br>
@@ -164,7 +158,7 @@
                            <br>
                            <strong>Personal message</strong> 
                            <br>
-                           <%= text_area_tag 'message', "", size: "40x5", class: 'bg-gray-100 border-4' %>
+                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
                            <br>
                            <strong>Colour</strong> 
                            <br>
@@ -253,14 +247,14 @@
       <div class="mx-10">
          <p class="text-2xl"><%=link_to 'Back', category_products_path(@product.category), class: "btn-lg form-button"  %></p>
       </div>
-      <div class="my-20">
-         <h3 class="text-center text-5xl py-6"> Browse Categories</h3>
+      <div class="mt-10">
+         <p class="text-center text-3xl">Quick Links</p>
       </div>
-      <div class='flex flex-wrap justify-around h-60 my-6 w-1/2 mx-auto mb-6'>
-         
+      <div class='flex flex-wrap justify-center mx-auto my-6'>
          <% categories.each do |category|%>
-         <p class="text-2xl"><%=link_to category.title, category_products_path(category), class: "
-            hover:text-purple-800"  %></p>
+         <div class="box-shadow px-4 py-2 m-2">
+            <p class="text-2xl"><%=link_to category.title, category_products_path(category), class: "hover:text-purple-800"  %></p>
+         </div>
          <% end %>
       </div>
    </div>

@@ -50,7 +50,7 @@
     
   </div>
   <div class='mx-0 my-2'>
-    <p class="text-xl font-medium">Quick Links</p>
+    <p class="text-xl font-medium">Site map</p>
     <ul>
       <li><%= link_to "Help", help_path, class: "hover:text-purple-800" %></li>
       <li><%= link_to "About", about_path, class: "hover:text-purple-800" %></li>
@@ -60,13 +60,14 @@
     </ul>
   </div>
   <div class='mx-0 my-2'>
-    <p class="text-xl font-medium">Something else</p>
+    <p class="text-xl font-medium">Legal</p>
     <ul>
-      <li>Conetent</li>
-      <li>Lorem</li>
-      <li>Hellooo</li>
-      <li>News</li>
-      <li>Careers</li>
+      <li><%= link_to "Terms & Conditions", terms_path, class: "hover:text-purple-800" %></li>
+      <li><%= link_to "Privacy & Cookies Policy", privacy_path, class: "hover:text-purple-800" %></li>
+      <li><%= link_to "Delivery", delivery_path, class: "hover:text-purple-800" %></li>
+      <li><%= link_to "Returns", returns_path, class: "hover:text-purple-800" %></li>
+      <li><%= link_to "Q&A", qanda_path, class: "hover:text-purple-800" %></li>
+      <li><%= link_to "Covid-19", covid_path, class: "hover:text-purple-800" %></li>
     </ul>
   </div>
 </div>

@@ -371,12 +371,11 @@ $transparency: 0.75;
 // ---------flipping cards --------
 .flipping-cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
   padding: 2%;
   text-align: center;
   color: white;
-  padding-top: 10%;
   flex-wrap: wrap;
   p {
     padding-top: 35%;
@@ -387,9 +386,17 @@ $transparency: 0.75;
   box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border: none;
   position: relative;
-  width: 30%;
-  padding-bottom: 30%;
-  margin-bottom: 40px;
+  width: 20%;
+  padding-bottom: 20%;
+  margin: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+  .flipping-card {
+    width: 30%;
+    padding-bottom: 30%;
+    margin: 10px;
+  }
 }
 
 .front,
@@ -598,8 +605,40 @@ $transparency: 0.75;
       #f77638 70%,
       #fec66d 100%
     );
+
   // -webkit-background-clip: text;
   // /* Also define standard property for compatibility */
   // background-clip: text;
   // -webkit-text-fill-color: transparent;
+}
+
+.insta-div {
+  position: relative;
+  width: 25%;
+}
+
+.insta-img {
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.insta-mid {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.insta-div:hover .insta-img {
+  opacity: 0.3;
+}
+
+.insta-div:hover .insta-mid {
+  opacity: 1;
 }
