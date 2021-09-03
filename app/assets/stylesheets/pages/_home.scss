@@ -217,9 +217,9 @@ $transparency: 0.75;
   .video {
     margin: 0 auto;
     width: 100%;
-    max-height: 760px;
+    max-height: 820px;
   }
-  background-image: url("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626115193/NCC/how-we-started_msrcar.jpg");
+  // background-image: url("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1626115193/NCC/how-we-started_msrcar.jpg");
   // position: fixed;
   // height: 100%;
   // width: 100%;
@@ -448,6 +448,7 @@ $transparency: 0.75;
 
 .container-carousel {
   position: relative;
+  width: 100%;
 }
 
 .mySlides {
@@ -487,19 +488,9 @@ $transparency: 0.75;
   transition: 0.5s ease;
 }
 
-.numbertext {
-  color: white;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
 .caption-container {
   text-align: center;
-  background-color: rgba(233, 233, 233, 0.8);
-  padding: 10px 16px;
-  width: 80%;
+  max-height: 50px;
   margin: 0 auto;
 }
 
@@ -547,7 +538,6 @@ $transparency: 0.75;
 // -------------how we do section------------------
 .how-we-do {
   .card {
-    margin-bottom: 140px;
     border: none;
   }
 }
@@ -557,17 +547,10 @@ $transparency: 0.75;
 .how-we-do-body {
   background-color: white;
   width: 100%;
-  height: 115px;
+  min-height: 160px;
 }
 // ------------hot items------------------
 
-.hot-item-img {
-  height: 300px;
-  padding: 1.25rem;
-}
-.hot-items-body {
-  flex-wrap: wrap;
-}
 // ------------------------Media  queries ----------------------
 @media only screen and (max-width: 500px) {
   .front {
@@ -586,4 +569,37 @@ $transparency: 0.75;
       font-size: 16px;
     }
   }
+}
+// ----- instagram--------
+.insta {
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+  // -webkit-background-clip: text;
+  // /* Also define standard property for compatibility */
+  // background-clip: text;
+  // -webkit-text-fill-color: transparent;
 }
