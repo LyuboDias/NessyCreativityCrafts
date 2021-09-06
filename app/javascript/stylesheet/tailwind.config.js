@@ -8,11 +8,12 @@ module.exports = {
       full: "100%",
     },
   },
-  purge: {
-    enabled: process.env.NODE_ENV === "production",
-    content: ["views/**/*.erb", "layouts/**/*.erb", "pages/**/*.erb"],
-  },
-  darkMode: false, // or 'media' or 'class'
+  purge: [
+    "./app/**/*.html.erb",
+    "./app/helpers/**/*.html.rb",
+    "./app/javascript/**/*.js",
+  ],
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {},
   },

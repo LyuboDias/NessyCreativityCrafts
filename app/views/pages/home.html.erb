@@ -33,68 +33,20 @@
 
       <%# ----------flipping cards ------- %>
       <div class="flipping-cards" id="cards">
+        <% @categories.each do |category|%>
           <%# -------- Mugs ---------------- %>
           <div class="flipping-card rounded-xl ">
             <div class="front card-1 rounded-xl">
-              <p class="md:text-5xl text-3xl">Mugs</p>
+              <p class="md:text-3xl text-xs"><%= category.title %> <br>( <%= category.products.count %>   )</p>
             </div>
             <div class="back rounded-xl">
               <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png" alt="Mugs" />
-              <%= link_to "Buy Now", category_products_path(7), class: "text-black md:text-2xl md:pt-2 text-lg  " %>
+              <%= link_to "Buy Now", category_products_path(category), class: "text-black md:text-2xl md:pt-2 text-sm  " %>
             </div>
           </div>
-          <!--------- Bracelets ---------------- -->
-          <div class="flipping-card rounded-xl">
-            <div class="front card-2 rounded-xl">
-              <p class="md:text-5xl text-3xl">Bracelets</p>
-            </div>
-            <div class="back rounded-xl">
-              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906916/NCC/1_ivkwkz.png" alt="Bracelets" />
-              <%= link_to "Buy Now", category_products_path(8), class: "text-black md:text-2xl md:pt-2 text-lg  " %>
-            </div>
-          </div>
-          <!-------- Glasses ----------->
-          <div class="flipping-card rounded-xl">
-            <div class="front card-3 rounded-xl">
-              <p class="md:text-5xl text-3xl">Glasses</p>
-            </div>
-            <div class="back rounded-xl">
-              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906984/NCC/1_afgf7t.png" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(9), class: "text-black md:text-2xl md:pt-2 text-lg " %>
-            </div>
-          </div>
-          <%# --------- Key Chain ---------- %>
-          <div class="flipping-card rounded-xl">
-            <div class="front card-3 rounded-xl">
-              <p class="md:text-5xl text-3xl">Key Chain</p>
-            </div>
-            <div class="back rounded-xl">
-              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906959/NCC/4_mysffs.png" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(10), class: "text-black md:text-2xl md:pt-2 text-lg " %>
-            </div>
-          </div>
-          <%# ----------  Domino ---------- %>
-          <div class="flipping-card rounded-xl">
-            <div class="front card-3 rounded-xl">
-              <p class="md:text-5xl text-3xl">Domino</p>
-            </div> 
-            <div class="back rounded-xl">
-              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906936/NCC/2_rmhez9.png" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(11), class: "text-black md:text-2xl md:pt-2 text-lg " %>
-            </div>
-          </div>
-          <%# ---------- Bdoy Key Chain-------- %>
-          <div class="flipping-card rounded-xl">
-            <div class="front card-3 rounded-xl">
-              <p class="md:text-5xl text-3xl">Art Body</p>
-            </div>
-            <div class="back rounded-xl">
-              <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906890/NCC/5_uoslei.png" alt="Glasses  " />
-              <%= link_to "Buy Now", category_products_path(12), class: "text-black md:text-2xl md:pt-2 text-lg" %>
-            </div>
-          </div>
-        </div>
-        <br>
+        <% end %>          
+      </div>
+      <br>
     <%# -----------------touts---------------- %>
         <hr>
         <div class="touts d-flex justify-content-around align-items-center mt-5 mb-5">

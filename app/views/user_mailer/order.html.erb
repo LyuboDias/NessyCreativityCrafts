@@ -12,13 +12,14 @@
 </head>
 <body style="padding: 0; margin: 0; text-align: center; background-color: rgb(244,244,244);">
   <div style="margin: 0 auto;">
-    <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627909810/NCC/new-ncc-logo-trans_mptn3q.png", style: 'width: 150px' %>
+    <%= image_tag "https://res.cloudinary.com/dxoo6hrvw/image/upload/v1630665229/NCC/logo-full_ty7sc2.png", style: 'width: 150px' %>
   </div>
   <div style="width: 80%; height: 1px; background-color: rgb(236, 5, 141); margin: 0 auto;"></div>
+  <br>
   <h2>  <%= @user.user_detail.f_name %> <%= @user.user_detail.l_name %> has placed a NEW order!!!</p>
   <h3>This payment was <%= @purchase.state %> !!!</h3>
   <br>
-  <div style="text-align: left; width: 40%; margin: 0 auto;">
+  <div style="text-align: left; width: 80%; margin: 0 auto;">
     <br>
     <p>Order id: <%= @purchase.id %></p>
     <p>Issued on -  <%= @purchase.created_at.to_date %></p>
