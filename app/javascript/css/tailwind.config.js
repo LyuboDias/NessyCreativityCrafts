@@ -8,7 +8,10 @@ module.exports = {
       full: "100%",
     },
   },
-  purge: [],
+  purge: {
+    enabled: process.env.NODE_ENV === "production",
+    content: ["views/**/*.erb", "layouts/**/*.erb", "pages/**/*.erb"],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
