@@ -3,8 +3,8 @@ require "open-uri"
 require "faker"
 
 puts 'Cleaning database ...'
-Product.destroy_all 
-Category.destroy_all 
+Product.destroy_all if Rails.env.development?
+Category.destroy_all if Rails.env.development?
 puts 'Database cleaned!'
 puts 'Creating new data base ...'
 
