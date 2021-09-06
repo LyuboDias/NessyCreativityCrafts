@@ -19,6 +19,28 @@ body_chain = Category.create!(title: 'Body Key Chain', images: "https://res.clou
 # -----------Products-----------------
 
 
+test_mug = Product.create!({
+  title: 'Bday mug',
+  sku: 'Bday mug',
+  price: 1, 
+  description: "Birth day custome made mug, ideal for special ocassions gift.\n
+  
+  You can chose from many different styles.", 
+  photo_1: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png',
+  photo_2: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png',
+  photo_3: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/2_utpg6n.png',
+  photo_4: 'https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/3_u7umqm.png',
+  category: mugs
+})
+# pic_1 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png")
+# pic_2 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906859/NCC/2_utpg6n.png")
+# pic_3 = URI.open("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/4_qfocd3.png")
+# test_mug.images.attach(io: pic_1, filename: "pic_1.jpg", content_type: "image/png")
+# test_mug.images.attach(io: pic_2, filename: "pic_2.jpg", content_type: "image/png")
+# test_mug.images.attach(io: pic_3, filename: "pic_3.jpg", content_type: "image/png")
+test_mug.save!
+
+
 bday_mug = Product.create!({
   title: 'Bday mug',
   sku: 'Bday mug',
