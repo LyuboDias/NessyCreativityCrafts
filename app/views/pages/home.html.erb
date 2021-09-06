@@ -1,5 +1,5 @@
 <div class="banner">
-  <%= video_tag "https://res.cloudinary.com/dxoo6hrvw/video/upload/v1630599332/Handmade_crafts._pgatjg.mp4", autoplay: true, muted: true, id: "myVideo", class: 'video' %>
+  <%= video_tag "https://res.cloudinary.com/dxoo6hrvw/video/upload/v1630599332/Handmade_crafts._pgatjg.mp4", autoplay: true, muted: true, id: "myVideo", class: 'video', playsinline: true %>
   
 </div>
   <%# ---- Arrow down animation --------- %>
@@ -37,7 +37,7 @@
           <%# -------- Mugs ---------------- %>
           <div class="flipping-card rounded-xl ">
             <div class="front card-1 rounded-xl">
-              <p class="md:text-3xl text-xs"><%= category.title %> <br>( <%= category.products.count %>   )</p>
+              <p class="md:text-3xl text-xs"><%= category.title %> <br><span class="md:text-sm text-xs">( <%= category.products.count %>   )</span> </p>
             </div>
             <div class="back rounded-xl">
               <img class="mb-1 flip-pic rounded-xl" src="https://res.cloudinary.com/dxoo6hrvw/image/upload/v1627906860/NCC/1_bggu3t.png" alt="Mugs" />
@@ -126,7 +126,7 @@
               <div class="how-we-do-body flex flex-column justify-around">
                 <p class="text-center heading2">How we work</p>
                 <p class="text-center small-txt">What ever we do we do with Love!.</p>
-                <p class="text-center mt-1"><%= link_to "Learn more!", about_path, class: "form-button btn-lg text-white " %></p>
+                <p class="text-center mt-1"><%= link_to "Learn more!", about_path, class: "form-button btn-lg text-white text-xs md:text-lg" %></p>
               </div>
             </div>
             <div class="card box-shadow mx-1" style="width: 30rem;">
@@ -136,7 +136,7 @@
               <div class="how-we-do-body flex flex-column justify-around">
                 <p class="text-center heading2">How we started</p>
                 <p class="text-center small-txt">We was insipred in early years.</p>
-                <p class="text-center mt-1"><%= link_to "Read some more!", about_path, class: "form-button btn-lg text-white " %></p> 
+                <p class="text-center mt-1"><%= link_to "Read some more!", about_path, class: "form-button btn-lg text-white text-xs md:text-lg" %></p> 
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@
 <%# ------------------------contact us form -------------------%>
 <br>
 <br>
-<div class="container mb-5 ">
+<div class="container mb-5 px-10">
   <section class="mb-4">
       <p class="heading2  text-center my-4">Contact us</p>
       <div class="contact-us-form ">
@@ -356,8 +356,8 @@
 </div>
 <div class='flex flex-wrap justify-center mx-auto my-6'>
   <% categories.each do |category|%>
-    <div class="box-shadow px-4 py-2 m-2">
-      <p class="text-2xl"><%=link_to category.title, category_products_path(category), class: "hover:text-purple-800"  %></p>
+    <div class="box-shadow px-2 py-1 m-2">
+      <p class="text-lg"><%=link_to category.title, category_products_path(category), class: "hover:text-purple-800"  %></p>
     </div>
   <% end %>
 </div>

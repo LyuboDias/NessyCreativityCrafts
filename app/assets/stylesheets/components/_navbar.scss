@@ -9,7 +9,8 @@
 }
 
 .navbar-toggler-icon {
-  background-image: url("mobile-menu-icon.png") !important;
+  z-index: 99;
+  background-image: url("https://res.cloudinary.com/dxoo6hrvw/image/upload/v1630964755/NCC/mobile-menu-icon_mqy851.png") !important;
 }
 
 .cart {
