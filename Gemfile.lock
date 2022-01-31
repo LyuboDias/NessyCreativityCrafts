@@ -97,6 +97,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    digest (3.1.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.6)
@@ -115,6 +116,7 @@ GEM
       domain_name (~> 0.5)
     i18n (1.9.1)
       concurrent-ruby (~> 1.0)
+    io-wait (0.2.1)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -150,6 +152,13 @@ GEM
       money (~> 6.13)
       railties (>= 3.0)
     msgpack (1.4.4)
+    net-protocol (0.1.2)
+      io-wait
+      timeout
+    net-smtp (0.3.1)
+      digest
+      net-protocol
+      timeout
     netrc (0.11.0)
     nio4r (2.5.8)
     nokogiri (1.13.1)
@@ -256,6 +265,7 @@ GEM
     thor (1.2.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    timeout (0.2.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -303,6 +313,7 @@ DEPENDENCIES
   letter_opener
   listen (~> 3.2)
   money-rails
+  net-smtp
   pg (>= 0.18, < 2.0)
   postmark-rails
   pry-byebug
@@ -324,7 +335,7 @@ DEPENDENCIES
   webpacker (~> 4.0)
 
 RUBY VERSION
-   ruby 3.1.0p0
+   ruby 2.6.6p146
 
 BUNDLED WITH
    2.3.6
