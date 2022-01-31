@@ -64,8 +64,9 @@
                      <% when 'Personalised Mugs'%>
                      <%= form_tag order_items_path, multipart: true do %>
                         <%= hidden_field_tag :product_id, @product.id%>
-                              <p><strong class='mt-2'>Add Name / Message</strong></p>  
-                              <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
+                              <%# <p><strong class='mt-2'>Add Name / Message</strong></p>  
+                              <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %> 
+                              <%#  ADD INPUT VALIDATIONS %>
                               <br>
                               <div class="w-full flex items-center inline justify-between mt-3">
                               <div>
@@ -100,9 +101,9 @@
                               </div>
                            </div>
                            <br>
-                           <strong>Personal message</strong> 
+                           <%# <strong>Personal message</strong> 
                            <br>
-                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
+                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %> 
                            <div class="w-full flex items-center inline justify-between mt-3">
                               <div>
                                  <strong>QTY:</strong>  <%= number_field_tag :quantity, 1, min: 1, max: 5, class: "product-number-field  px-2 bg-gray-100 border-4"%>
@@ -115,9 +116,9 @@
                      <% when 'Glitter Glasses'%> 
                      <%= form_tag order_items_path do %>
                         <%= hidden_field_tag :product_id, @product.id%>
-                           <strong>Personal message</strong> 
+                           <%# <strong>Personal message</strong> 
                            <br>
-                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
+                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %> 
                            <br>
                            <strong>Colour</strong> 
                            <br>
@@ -136,9 +137,9 @@
                      <%= form_tag order_items_path do %>
                         <%= hidden_field_tag :product_id, @product.id%>
                            <br>
-                           <strong>Personal message</strong> 
+                           <%# <strong>Personal message</strong> 
                            <br>
-                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
+                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %> 
                            <br>
                            <strong>Colour</strong> 
                            <br>
@@ -156,9 +157,9 @@
                      <%= form_tag order_items_path do %>
                         <%= hidden_field_tag :product_id, @product.id%>
                            <br>
-                           <strong>Personal message</strong> 
+                           <%# <strong>Personal message</strong> 
                            <br>
-                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %>
+                           <%= text_area_tag 'message', "", size: "35x5", class: 'bg-gray-100 border-4' %> 
                            <br>
                            <strong>Colour</strong> 
                            <br>
@@ -176,9 +177,9 @@
                      <%= form_tag order_items_path do %>
                         <%= hidden_field_tag :product_id, @product.id%>
                            <br>
-                           <strong>Personal message</strong> 
+                           <%# <strong>Personal message</strong> 
                            <br>
-                           <%= text_area_tag 'message', "", size: "40x5", class: 'bg-gray-100 border-4' %>
+                           <%= text_area_tag 'message', "", size: "40x5", class: 'bg-gray-100 border-4' %> 
                            <br>
                            <strong>Colour</strong> 
                            <br>
