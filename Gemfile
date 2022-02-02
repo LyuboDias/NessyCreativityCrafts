@@ -7,6 +7,7 @@ gem 'stripe'
 gem 'stripe_event'
 gem 'postmark-rails'
 gem 'net-smtp', require: false
+gem 'net-http'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use postgresql as the database for Active Record
